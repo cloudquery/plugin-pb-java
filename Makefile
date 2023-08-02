@@ -1,12 +1,3 @@
-test:
-	pytest .
-
-fmt:
-	black . --exclude=cloudquery
-
-fmt-check:
-	black --check . --exclude=cloudquery
-
 clone-proto:
 	git clone https://github.com/cloudquery/plugin-pb
 
