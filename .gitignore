@@ -27,8 +27,7 @@ replay_pid*
 plugin-pb/
 
 # generated proto files
-build/*
-!build/generated/
+build/
 
 .gradle
 .DS_Store

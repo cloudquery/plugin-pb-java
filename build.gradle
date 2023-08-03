@@ -3,6 +3,7 @@ plugins {
     id 'com.google.protobuf' version '0.9.1'
     // Generate IntelliJ IDEA's .idea & .iml project files
     id 'idea'
+    id "maven-publish"
 }
 
 repositories {
@@ -51,6 +52,24 @@ sourceSets {
         java {
             srcDirs 'build/generated/source/proto/main/grpc'
             srcDirs 'build/generated/source/proto/main/java'
+        }
+    }
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/cloudquery/plugin-pb-java")
+            credentials {
+                username = System.getenv("USERNAME")
+                password = System.getenv("PASSWORD")
+            }
+        }
+    }
+    publications {
+        gpr(MavenPublication) {
+            from(components.java)
         }
     }
 }
