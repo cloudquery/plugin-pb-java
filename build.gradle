@@ -10,7 +10,7 @@ mainClassName = 'main.Main'
 
 group 'com.cloudquery'
 // x-release-please-start-version
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 // x-release-please-end
 
 repositories {
