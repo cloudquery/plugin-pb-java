@@ -1,0 +1,36 @@
+name: Generate Python Code from plugin-pb
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+jobs:
+  regen:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '18'
+          cache: 'gradle'
+      - name: Validate Gradle wrapper
+        uses: gradle/wrapper-validation-action@ccb4328a959376b642e027874838f60f8e596de3
+      - name: Generate code
+        run: |
+          make clone-proto
+          make gen-proto
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          # required so the PR triggers workflow runs
+          token: ${{ secrets.GH_CQ_BOT }}
+          branch: fix/gen_proto
+          base: main
+          title: "fix: Generate Python Code from `plugin-pb`"
+          commit-message: "fix: Generate Python Code from `plugin-pb`"
+          body: This PR was created by a scheduled workflow to regenerate the Python code from `plugin-pb`.
+          author: cq-bot <cq-bot@users.noreply.github.com>
+          labels: automerge
