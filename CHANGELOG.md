@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.0.3](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.2...v0.0.3) (2023-08-03)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency com.google.protobuf:protobuf-java-util to v3.23.4 ([#19](https://github.com/cloudquery/plugin-pb-java/issues/19)) ([06c7f64](https://github.com/cloudquery/plugin-pb-java/commit/06c7f6432cebf740963420d64917522843511c45))
+* **deps:** Update dependency org.mockito:mockito-core to v3.12.4 ([#20](https://github.com/cloudquery/plugin-pb-java/issues/20)) ([b70eb74](https://github.com/cloudquery/plugin-pb-java/commit/b70eb74bd3d5ca116c1005476c373ad09fc807ff))
+* **deps:** Update grpcVersion to v1.57.1 ([#15](https://github.com/cloudquery/plugin-pb-java/issues/15)) ([19ca381](https://github.com/cloudquery/plugin-pb-java/commit/19ca38185b4265407ebc51c520cbef5a704b7759))
+* **deps:** Update peter-evans/create-pull-request action to v5 ([#22](https://github.com/cloudquery/plugin-pb-java/issues/22)) ([09076e0](https://github.com/cloudquery/plugin-pb-java/commit/09076e02513b772b3f83c600e56b856d4416f575))
+* **deps:** Update plugin com.google.protobuf to v0.9.4 ([#16](https://github.com/cloudquery/plugin-pb-java/issues/16)) ([d3f8c99](https://github.com/cloudquery/plugin-pb-java/commit/d3f8c9903e79d71485ce348dafc2c550d3dce93d))
+
 ## [0.0.2](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.1...v0.0.2) (2023-08-03)
 
 
