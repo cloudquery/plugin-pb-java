@@ -15,8 +15,9 @@ jobs:
            distribution: 'temurin'
            java-version: '18'
            cache: 'gradle'
-       - name: Publish to GitHub Packages
-         run: ./gradlew publish
+       - name: Publish package
+         uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
+         with:
+           arguments: publish
          env:
-           USERNAME: ${{ github.actor }}
-           PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
