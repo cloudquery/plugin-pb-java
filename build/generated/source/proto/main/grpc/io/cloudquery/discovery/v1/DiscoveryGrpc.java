@@ -1,4 +1,4 @@
-package cloudquery.discovery.v1;
+package io.cloudquery.discovery.v1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -15,29 +15,29 @@ public final class DiscoveryGrpc {
   public static final java.lang.String SERVICE_NAME = "cloudquery.discovery.v1.Discovery";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Request,
-      cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Response> getGetVersionsMethod;
+  private static volatile io.grpc.MethodDescriptor<io.cloudquery.discovery.v1.GetVersions.Request,
+      io.cloudquery.discovery.v1.GetVersions.Response> getGetVersionsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetVersions",
-      requestType = cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Request.class,
-      responseType = cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Response.class,
+      requestType = io.cloudquery.discovery.v1.GetVersions.Request.class,
+      responseType = io.cloudquery.discovery.v1.GetVersions.Response.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Request,
-      cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Response> getGetVersionsMethod() {
-    io.grpc.MethodDescriptor<cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Request, cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Response> getGetVersionsMethod;
+  public static io.grpc.MethodDescriptor<io.cloudquery.discovery.v1.GetVersions.Request,
+      io.cloudquery.discovery.v1.GetVersions.Response> getGetVersionsMethod() {
+    io.grpc.MethodDescriptor<io.cloudquery.discovery.v1.GetVersions.Request, io.cloudquery.discovery.v1.GetVersions.Response> getGetVersionsMethod;
     if ((getGetVersionsMethod = DiscoveryGrpc.getGetVersionsMethod) == null) {
       synchronized (DiscoveryGrpc.class) {
         if ((getGetVersionsMethod = DiscoveryGrpc.getGetVersionsMethod) == null) {
           DiscoveryGrpc.getGetVersionsMethod = getGetVersionsMethod =
-              io.grpc.MethodDescriptor.<cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Request, cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Response>newBuilder()
+              io.grpc.MethodDescriptor.<io.cloudquery.discovery.v1.GetVersions.Request, io.cloudquery.discovery.v1.GetVersions.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetVersions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Request.getDefaultInstance()))
+                  io.cloudquery.discovery.v1.GetVersions.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Response.getDefaultInstance()))
+                  io.cloudquery.discovery.v1.GetVersions.Response.getDefaultInstance()))
               .setSchemaDescriptor(new DiscoveryMethodDescriptorSupplier("GetVersions"))
               .build();
         }
@@ -99,8 +99,8 @@ public final class DiscoveryGrpc {
      * Get the name of the plugin
      * </pre>
      */
-    default void getVersions(cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Request request,
-        io.grpc.stub.StreamObserver<cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Response> responseObserver) {
+    default void getVersions(io.cloudquery.discovery.v1.GetVersions.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.discovery.v1.GetVersions.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetVersionsMethod(), responseObserver);
     }
   }
@@ -137,8 +137,8 @@ public final class DiscoveryGrpc {
      * Get the name of the plugin
      * </pre>
      */
-    public void getVersions(cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Request request,
-        io.grpc.stub.StreamObserver<cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Response> responseObserver) {
+    public void getVersions(io.cloudquery.discovery.v1.GetVersions.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.discovery.v1.GetVersions.Response> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetVersionsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -165,7 +165,7 @@ public final class DiscoveryGrpc {
      * Get the name of the plugin
      * </pre>
      */
-    public cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Response getVersions(cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Request request) {
+    public io.cloudquery.discovery.v1.GetVersions.Response getVersions(io.cloudquery.discovery.v1.GetVersions.Request request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetVersionsMethod(), getCallOptions(), request);
     }
@@ -192,8 +192,8 @@ public final class DiscoveryGrpc {
      * Get the name of the plugin
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Response> getVersions(
-        cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Request request) {
+    public com.google.common.util.concurrent.ListenableFuture<io.cloudquery.discovery.v1.GetVersions.Response> getVersions(
+        io.cloudquery.discovery.v1.GetVersions.Request request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetVersionsMethod(), getCallOptions()), request);
     }
@@ -219,8 +219,8 @@ public final class DiscoveryGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_VERSIONS:
-          serviceImpl.getVersions((cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Request) request,
-              (io.grpc.stub.StreamObserver<cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Response>) responseObserver);
+          serviceImpl.getVersions((io.cloudquery.discovery.v1.GetVersions.Request) request,
+              (io.grpc.stub.StreamObserver<io.cloudquery.discovery.v1.GetVersions.Response>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -244,8 +244,8 @@ public final class DiscoveryGrpc {
           getGetVersionsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Request,
-              cloudquery.discovery.v1.DiscoveryOuterClass.GetVersions.Response>(
+              io.cloudquery.discovery.v1.GetVersions.Request,
+              io.cloudquery.discovery.v1.GetVersions.Response>(
                 service, METHODID_GET_VERSIONS)))
         .build();
   }
@@ -256,7 +256,7 @@ public final class DiscoveryGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return cloudquery.discovery.v1.DiscoveryOuterClass.getDescriptor();
+      return io.cloudquery.discovery.v1.DiscoveryOuterClass.getDescriptor();
     }
 
     @java.lang.Override

@@ -1,4 +1,4 @@
-package cloudquery.plugin.v3;
+package io.cloudquery.plugin.v3;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -15,29 +15,29 @@ public final class PluginGrpc {
   public static final java.lang.String SERVICE_NAME = "cloudquery.plugin.v3.Plugin";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.GetName.Request,
-      cloudquery.plugin.v3.PluginOuterClass.GetName.Response> getGetNameMethod;
+  private static volatile io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.GetName.Request,
+      io.cloudquery.plugin.v3.GetName.Response> getGetNameMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetName",
-      requestType = cloudquery.plugin.v3.PluginOuterClass.GetName.Request.class,
-      responseType = cloudquery.plugin.v3.PluginOuterClass.GetName.Response.class,
+      requestType = io.cloudquery.plugin.v3.GetName.Request.class,
+      responseType = io.cloudquery.plugin.v3.GetName.Response.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.GetName.Request,
-      cloudquery.plugin.v3.PluginOuterClass.GetName.Response> getGetNameMethod() {
-    io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.GetName.Request, cloudquery.plugin.v3.PluginOuterClass.GetName.Response> getGetNameMethod;
+  public static io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.GetName.Request,
+      io.cloudquery.plugin.v3.GetName.Response> getGetNameMethod() {
+    io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.GetName.Request, io.cloudquery.plugin.v3.GetName.Response> getGetNameMethod;
     if ((getGetNameMethod = PluginGrpc.getGetNameMethod) == null) {
       synchronized (PluginGrpc.class) {
         if ((getGetNameMethod = PluginGrpc.getGetNameMethod) == null) {
           PluginGrpc.getGetNameMethod = getGetNameMethod =
-              io.grpc.MethodDescriptor.<cloudquery.plugin.v3.PluginOuterClass.GetName.Request, cloudquery.plugin.v3.PluginOuterClass.GetName.Response>newBuilder()
+              io.grpc.MethodDescriptor.<io.cloudquery.plugin.v3.GetName.Request, io.cloudquery.plugin.v3.GetName.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetName"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.plugin.v3.PluginOuterClass.GetName.Request.getDefaultInstance()))
+                  io.cloudquery.plugin.v3.GetName.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.plugin.v3.PluginOuterClass.GetName.Response.getDefaultInstance()))
+                  io.cloudquery.plugin.v3.GetName.Response.getDefaultInstance()))
               .setSchemaDescriptor(new PluginMethodDescriptorSupplier("GetName"))
               .build();
         }
@@ -46,29 +46,29 @@ public final class PluginGrpc {
     return getGetNameMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.GetVersion.Request,
-      cloudquery.plugin.v3.PluginOuterClass.GetVersion.Response> getGetVersionMethod;
+  private static volatile io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.GetVersion.Request,
+      io.cloudquery.plugin.v3.GetVersion.Response> getGetVersionMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetVersion",
-      requestType = cloudquery.plugin.v3.PluginOuterClass.GetVersion.Request.class,
-      responseType = cloudquery.plugin.v3.PluginOuterClass.GetVersion.Response.class,
+      requestType = io.cloudquery.plugin.v3.GetVersion.Request.class,
+      responseType = io.cloudquery.plugin.v3.GetVersion.Response.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.GetVersion.Request,
-      cloudquery.plugin.v3.PluginOuterClass.GetVersion.Response> getGetVersionMethod() {
-    io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.GetVersion.Request, cloudquery.plugin.v3.PluginOuterClass.GetVersion.Response> getGetVersionMethod;
+  public static io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.GetVersion.Request,
+      io.cloudquery.plugin.v3.GetVersion.Response> getGetVersionMethod() {
+    io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.GetVersion.Request, io.cloudquery.plugin.v3.GetVersion.Response> getGetVersionMethod;
     if ((getGetVersionMethod = PluginGrpc.getGetVersionMethod) == null) {
       synchronized (PluginGrpc.class) {
         if ((getGetVersionMethod = PluginGrpc.getGetVersionMethod) == null) {
           PluginGrpc.getGetVersionMethod = getGetVersionMethod =
-              io.grpc.MethodDescriptor.<cloudquery.plugin.v3.PluginOuterClass.GetVersion.Request, cloudquery.plugin.v3.PluginOuterClass.GetVersion.Response>newBuilder()
+              io.grpc.MethodDescriptor.<io.cloudquery.plugin.v3.GetVersion.Request, io.cloudquery.plugin.v3.GetVersion.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetVersion"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.plugin.v3.PluginOuterClass.GetVersion.Request.getDefaultInstance()))
+                  io.cloudquery.plugin.v3.GetVersion.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.plugin.v3.PluginOuterClass.GetVersion.Response.getDefaultInstance()))
+                  io.cloudquery.plugin.v3.GetVersion.Response.getDefaultInstance()))
               .setSchemaDescriptor(new PluginMethodDescriptorSupplier("GetVersion"))
               .build();
         }
@@ -77,29 +77,29 @@ public final class PluginGrpc {
     return getGetVersionMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.Init.Request,
-      cloudquery.plugin.v3.PluginOuterClass.Init.Response> getInitMethod;
+  private static volatile io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Init.Request,
+      io.cloudquery.plugin.v3.Init.Response> getInitMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Init",
-      requestType = cloudquery.plugin.v3.PluginOuterClass.Init.Request.class,
-      responseType = cloudquery.plugin.v3.PluginOuterClass.Init.Response.class,
+      requestType = io.cloudquery.plugin.v3.Init.Request.class,
+      responseType = io.cloudquery.plugin.v3.Init.Response.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.Init.Request,
-      cloudquery.plugin.v3.PluginOuterClass.Init.Response> getInitMethod() {
-    io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.Init.Request, cloudquery.plugin.v3.PluginOuterClass.Init.Response> getInitMethod;
+  public static io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Init.Request,
+      io.cloudquery.plugin.v3.Init.Response> getInitMethod() {
+    io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Init.Request, io.cloudquery.plugin.v3.Init.Response> getInitMethod;
     if ((getInitMethod = PluginGrpc.getInitMethod) == null) {
       synchronized (PluginGrpc.class) {
         if ((getInitMethod = PluginGrpc.getInitMethod) == null) {
           PluginGrpc.getInitMethod = getInitMethod =
-              io.grpc.MethodDescriptor.<cloudquery.plugin.v3.PluginOuterClass.Init.Request, cloudquery.plugin.v3.PluginOuterClass.Init.Response>newBuilder()
+              io.grpc.MethodDescriptor.<io.cloudquery.plugin.v3.Init.Request, io.cloudquery.plugin.v3.Init.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Init"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.plugin.v3.PluginOuterClass.Init.Request.getDefaultInstance()))
+                  io.cloudquery.plugin.v3.Init.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.plugin.v3.PluginOuterClass.Init.Response.getDefaultInstance()))
+                  io.cloudquery.plugin.v3.Init.Response.getDefaultInstance()))
               .setSchemaDescriptor(new PluginMethodDescriptorSupplier("Init"))
               .build();
         }
@@ -108,29 +108,29 @@ public final class PluginGrpc {
     return getInitMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.GetTables.Request,
-      cloudquery.plugin.v3.PluginOuterClass.GetTables.Response> getGetTablesMethod;
+  private static volatile io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.GetTables.Request,
+      io.cloudquery.plugin.v3.GetTables.Response> getGetTablesMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetTables",
-      requestType = cloudquery.plugin.v3.PluginOuterClass.GetTables.Request.class,
-      responseType = cloudquery.plugin.v3.PluginOuterClass.GetTables.Response.class,
+      requestType = io.cloudquery.plugin.v3.GetTables.Request.class,
+      responseType = io.cloudquery.plugin.v3.GetTables.Response.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.GetTables.Request,
-      cloudquery.plugin.v3.PluginOuterClass.GetTables.Response> getGetTablesMethod() {
-    io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.GetTables.Request, cloudquery.plugin.v3.PluginOuterClass.GetTables.Response> getGetTablesMethod;
+  public static io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.GetTables.Request,
+      io.cloudquery.plugin.v3.GetTables.Response> getGetTablesMethod() {
+    io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.GetTables.Request, io.cloudquery.plugin.v3.GetTables.Response> getGetTablesMethod;
     if ((getGetTablesMethod = PluginGrpc.getGetTablesMethod) == null) {
       synchronized (PluginGrpc.class) {
         if ((getGetTablesMethod = PluginGrpc.getGetTablesMethod) == null) {
           PluginGrpc.getGetTablesMethod = getGetTablesMethod =
-              io.grpc.MethodDescriptor.<cloudquery.plugin.v3.PluginOuterClass.GetTables.Request, cloudquery.plugin.v3.PluginOuterClass.GetTables.Response>newBuilder()
+              io.grpc.MethodDescriptor.<io.cloudquery.plugin.v3.GetTables.Request, io.cloudquery.plugin.v3.GetTables.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTables"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.plugin.v3.PluginOuterClass.GetTables.Request.getDefaultInstance()))
+                  io.cloudquery.plugin.v3.GetTables.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.plugin.v3.PluginOuterClass.GetTables.Response.getDefaultInstance()))
+                  io.cloudquery.plugin.v3.GetTables.Response.getDefaultInstance()))
               .setSchemaDescriptor(new PluginMethodDescriptorSupplier("GetTables"))
               .build();
         }
@@ -139,29 +139,29 @@ public final class PluginGrpc {
     return getGetTablesMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.Sync.Request,
-      cloudquery.plugin.v3.PluginOuterClass.Sync.Response> getSyncMethod;
+  private static volatile io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Sync.Request,
+      io.cloudquery.plugin.v3.Sync.Response> getSyncMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Sync",
-      requestType = cloudquery.plugin.v3.PluginOuterClass.Sync.Request.class,
-      responseType = cloudquery.plugin.v3.PluginOuterClass.Sync.Response.class,
+      requestType = io.cloudquery.plugin.v3.Sync.Request.class,
+      responseType = io.cloudquery.plugin.v3.Sync.Response.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.Sync.Request,
-      cloudquery.plugin.v3.PluginOuterClass.Sync.Response> getSyncMethod() {
-    io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.Sync.Request, cloudquery.plugin.v3.PluginOuterClass.Sync.Response> getSyncMethod;
+  public static io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Sync.Request,
+      io.cloudquery.plugin.v3.Sync.Response> getSyncMethod() {
+    io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Sync.Request, io.cloudquery.plugin.v3.Sync.Response> getSyncMethod;
     if ((getSyncMethod = PluginGrpc.getSyncMethod) == null) {
       synchronized (PluginGrpc.class) {
         if ((getSyncMethod = PluginGrpc.getSyncMethod) == null) {
           PluginGrpc.getSyncMethod = getSyncMethod =
-              io.grpc.MethodDescriptor.<cloudquery.plugin.v3.PluginOuterClass.Sync.Request, cloudquery.plugin.v3.PluginOuterClass.Sync.Response>newBuilder()
+              io.grpc.MethodDescriptor.<io.cloudquery.plugin.v3.Sync.Request, io.cloudquery.plugin.v3.Sync.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Sync"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.plugin.v3.PluginOuterClass.Sync.Request.getDefaultInstance()))
+                  io.cloudquery.plugin.v3.Sync.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.plugin.v3.PluginOuterClass.Sync.Response.getDefaultInstance()))
+                  io.cloudquery.plugin.v3.Sync.Response.getDefaultInstance()))
               .setSchemaDescriptor(new PluginMethodDescriptorSupplier("Sync"))
               .build();
         }
@@ -170,29 +170,29 @@ public final class PluginGrpc {
     return getSyncMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.Read.Request,
-      cloudquery.plugin.v3.PluginOuterClass.Read.Response> getReadMethod;
+  private static volatile io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Read.Request,
+      io.cloudquery.plugin.v3.Read.Response> getReadMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Read",
-      requestType = cloudquery.plugin.v3.PluginOuterClass.Read.Request.class,
-      responseType = cloudquery.plugin.v3.PluginOuterClass.Read.Response.class,
+      requestType = io.cloudquery.plugin.v3.Read.Request.class,
+      responseType = io.cloudquery.plugin.v3.Read.Response.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.Read.Request,
-      cloudquery.plugin.v3.PluginOuterClass.Read.Response> getReadMethod() {
-    io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.Read.Request, cloudquery.plugin.v3.PluginOuterClass.Read.Response> getReadMethod;
+  public static io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Read.Request,
+      io.cloudquery.plugin.v3.Read.Response> getReadMethod() {
+    io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Read.Request, io.cloudquery.plugin.v3.Read.Response> getReadMethod;
     if ((getReadMethod = PluginGrpc.getReadMethod) == null) {
       synchronized (PluginGrpc.class) {
         if ((getReadMethod = PluginGrpc.getReadMethod) == null) {
           PluginGrpc.getReadMethod = getReadMethod =
-              io.grpc.MethodDescriptor.<cloudquery.plugin.v3.PluginOuterClass.Read.Request, cloudquery.plugin.v3.PluginOuterClass.Read.Response>newBuilder()
+              io.grpc.MethodDescriptor.<io.cloudquery.plugin.v3.Read.Request, io.cloudquery.plugin.v3.Read.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Read"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.plugin.v3.PluginOuterClass.Read.Request.getDefaultInstance()))
+                  io.cloudquery.plugin.v3.Read.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.plugin.v3.PluginOuterClass.Read.Response.getDefaultInstance()))
+                  io.cloudquery.plugin.v3.Read.Response.getDefaultInstance()))
               .setSchemaDescriptor(new PluginMethodDescriptorSupplier("Read"))
               .build();
         }
@@ -201,29 +201,29 @@ public final class PluginGrpc {
     return getReadMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.Write.Request,
-      cloudquery.plugin.v3.PluginOuterClass.Write.Response> getWriteMethod;
+  private static volatile io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Write.Request,
+      io.cloudquery.plugin.v3.Write.Response> getWriteMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Write",
-      requestType = cloudquery.plugin.v3.PluginOuterClass.Write.Request.class,
-      responseType = cloudquery.plugin.v3.PluginOuterClass.Write.Response.class,
+      requestType = io.cloudquery.plugin.v3.Write.Request.class,
+      responseType = io.cloudquery.plugin.v3.Write.Response.class,
       methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-  public static io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.Write.Request,
-      cloudquery.plugin.v3.PluginOuterClass.Write.Response> getWriteMethod() {
-    io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.Write.Request, cloudquery.plugin.v3.PluginOuterClass.Write.Response> getWriteMethod;
+  public static io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Write.Request,
+      io.cloudquery.plugin.v3.Write.Response> getWriteMethod() {
+    io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Write.Request, io.cloudquery.plugin.v3.Write.Response> getWriteMethod;
     if ((getWriteMethod = PluginGrpc.getWriteMethod) == null) {
       synchronized (PluginGrpc.class) {
         if ((getWriteMethod = PluginGrpc.getWriteMethod) == null) {
           PluginGrpc.getWriteMethod = getWriteMethod =
-              io.grpc.MethodDescriptor.<cloudquery.plugin.v3.PluginOuterClass.Write.Request, cloudquery.plugin.v3.PluginOuterClass.Write.Response>newBuilder()
+              io.grpc.MethodDescriptor.<io.cloudquery.plugin.v3.Write.Request, io.cloudquery.plugin.v3.Write.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Write"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.plugin.v3.PluginOuterClass.Write.Request.getDefaultInstance()))
+                  io.cloudquery.plugin.v3.Write.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.plugin.v3.PluginOuterClass.Write.Response.getDefaultInstance()))
+                  io.cloudquery.plugin.v3.Write.Response.getDefaultInstance()))
               .setSchemaDescriptor(new PluginMethodDescriptorSupplier("Write"))
               .build();
         }
@@ -232,29 +232,29 @@ public final class PluginGrpc {
     return getWriteMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.Close.Request,
-      cloudquery.plugin.v3.PluginOuterClass.Close.Response> getCloseMethod;
+  private static volatile io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Close.Request,
+      io.cloudquery.plugin.v3.Close.Response> getCloseMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "Close",
-      requestType = cloudquery.plugin.v3.PluginOuterClass.Close.Request.class,
-      responseType = cloudquery.plugin.v3.PluginOuterClass.Close.Response.class,
+      requestType = io.cloudquery.plugin.v3.Close.Request.class,
+      responseType = io.cloudquery.plugin.v3.Close.Response.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.Close.Request,
-      cloudquery.plugin.v3.PluginOuterClass.Close.Response> getCloseMethod() {
-    io.grpc.MethodDescriptor<cloudquery.plugin.v3.PluginOuterClass.Close.Request, cloudquery.plugin.v3.PluginOuterClass.Close.Response> getCloseMethod;
+  public static io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Close.Request,
+      io.cloudquery.plugin.v3.Close.Response> getCloseMethod() {
+    io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Close.Request, io.cloudquery.plugin.v3.Close.Response> getCloseMethod;
     if ((getCloseMethod = PluginGrpc.getCloseMethod) == null) {
       synchronized (PluginGrpc.class) {
         if ((getCloseMethod = PluginGrpc.getCloseMethod) == null) {
           PluginGrpc.getCloseMethod = getCloseMethod =
-              io.grpc.MethodDescriptor.<cloudquery.plugin.v3.PluginOuterClass.Close.Request, cloudquery.plugin.v3.PluginOuterClass.Close.Response>newBuilder()
+              io.grpc.MethodDescriptor.<io.cloudquery.plugin.v3.Close.Request, io.cloudquery.plugin.v3.Close.Response>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Close"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.plugin.v3.PluginOuterClass.Close.Request.getDefaultInstance()))
+                  io.cloudquery.plugin.v3.Close.Request.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cloudquery.plugin.v3.PluginOuterClass.Close.Response.getDefaultInstance()))
+                  io.cloudquery.plugin.v3.Close.Response.getDefaultInstance()))
               .setSchemaDescriptor(new PluginMethodDescriptorSupplier("Close"))
               .build();
         }
@@ -316,8 +316,8 @@ public final class PluginGrpc {
      * Get the name of the plugin
      * </pre>
      */
-    default void getName(cloudquery.plugin.v3.PluginOuterClass.GetName.Request request,
-        io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.GetName.Response> responseObserver) {
+    default void getName(io.cloudquery.plugin.v3.GetName.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.GetName.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetNameMethod(), responseObserver);
     }
 
@@ -326,8 +326,8 @@ public final class PluginGrpc {
      * Get the current version of the plugin
      * </pre>
      */
-    default void getVersion(cloudquery.plugin.v3.PluginOuterClass.GetVersion.Request request,
-        io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.GetVersion.Response> responseObserver) {
+    default void getVersion(io.cloudquery.plugin.v3.GetVersion.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.GetVersion.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetVersionMethod(), responseObserver);
     }
 
@@ -336,8 +336,8 @@ public final class PluginGrpc {
      * Configure the plugin with the given credentials and mode
      * </pre>
      */
-    default void init(cloudquery.plugin.v3.PluginOuterClass.Init.Request request,
-        io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Init.Response> responseObserver) {
+    default void init(io.cloudquery.plugin.v3.Init.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Init.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInitMethod(), responseObserver);
     }
 
@@ -346,8 +346,8 @@ public final class PluginGrpc {
      * Get all tables the source plugin supports. Must be called after Init
      * </pre>
      */
-    default void getTables(cloudquery.plugin.v3.PluginOuterClass.GetTables.Request request,
-        io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.GetTables.Response> responseObserver) {
+    default void getTables(io.cloudquery.plugin.v3.GetTables.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.GetTables.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTablesMethod(), responseObserver);
     }
 
@@ -356,8 +356,8 @@ public final class PluginGrpc {
      * Start a sync on the source plugin. It streams messages as output.
      * </pre>
      */
-    default void sync(cloudquery.plugin.v3.PluginOuterClass.Sync.Request request,
-        io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Sync.Response> responseObserver) {
+    default void sync(io.cloudquery.plugin.v3.Sync.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Sync.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSyncMethod(), responseObserver);
     }
 
@@ -367,8 +367,8 @@ public final class PluginGrpc {
      * The plugin assume that that schema was used to also write the data beforehand
      * </pre>
      */
-    default void read(cloudquery.plugin.v3.PluginOuterClass.Read.Request request,
-        io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Read.Response> responseObserver) {
+    default void read(io.cloudquery.plugin.v3.Read.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Read.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReadMethod(), responseObserver);
     }
 
@@ -377,8 +377,8 @@ public final class PluginGrpc {
      * Write resources. Write is the mirror of Sync, expecting a stream of messages as input.
      * </pre>
      */
-    default io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Write.Request> write(
-        io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Write.Response> responseObserver) {
+    default io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Write.Request> write(
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Write.Response> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getWriteMethod(), responseObserver);
     }
 
@@ -387,8 +387,8 @@ public final class PluginGrpc {
      * Send signal to flush and close open connections
      * </pre>
      */
-    default void close(cloudquery.plugin.v3.PluginOuterClass.Close.Request request,
-        io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Close.Response> responseObserver) {
+    default void close(io.cloudquery.plugin.v3.Close.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Close.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCloseMethod(), responseObserver);
     }
   }
@@ -425,8 +425,8 @@ public final class PluginGrpc {
      * Get the name of the plugin
      * </pre>
      */
-    public void getName(cloudquery.plugin.v3.PluginOuterClass.GetName.Request request,
-        io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.GetName.Response> responseObserver) {
+    public void getName(io.cloudquery.plugin.v3.GetName.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.GetName.Response> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetNameMethod(), getCallOptions()), request, responseObserver);
     }
@@ -436,8 +436,8 @@ public final class PluginGrpc {
      * Get the current version of the plugin
      * </pre>
      */
-    public void getVersion(cloudquery.plugin.v3.PluginOuterClass.GetVersion.Request request,
-        io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.GetVersion.Response> responseObserver) {
+    public void getVersion(io.cloudquery.plugin.v3.GetVersion.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.GetVersion.Response> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetVersionMethod(), getCallOptions()), request, responseObserver);
     }
@@ -447,8 +447,8 @@ public final class PluginGrpc {
      * Configure the plugin with the given credentials and mode
      * </pre>
      */
-    public void init(cloudquery.plugin.v3.PluginOuterClass.Init.Request request,
-        io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Init.Response> responseObserver) {
+    public void init(io.cloudquery.plugin.v3.Init.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Init.Response> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getInitMethod(), getCallOptions()), request, responseObserver);
     }
@@ -458,8 +458,8 @@ public final class PluginGrpc {
      * Get all tables the source plugin supports. Must be called after Init
      * </pre>
      */
-    public void getTables(cloudquery.plugin.v3.PluginOuterClass.GetTables.Request request,
-        io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.GetTables.Response> responseObserver) {
+    public void getTables(io.cloudquery.plugin.v3.GetTables.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.GetTables.Response> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetTablesMethod(), getCallOptions()), request, responseObserver);
     }
@@ -469,8 +469,8 @@ public final class PluginGrpc {
      * Start a sync on the source plugin. It streams messages as output.
      * </pre>
      */
-    public void sync(cloudquery.plugin.v3.PluginOuterClass.Sync.Request request,
-        io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Sync.Response> responseObserver) {
+    public void sync(io.cloudquery.plugin.v3.Sync.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Sync.Response> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getSyncMethod(), getCallOptions()), request, responseObserver);
     }
@@ -481,8 +481,8 @@ public final class PluginGrpc {
      * The plugin assume that that schema was used to also write the data beforehand
      * </pre>
      */
-    public void read(cloudquery.plugin.v3.PluginOuterClass.Read.Request request,
-        io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Read.Response> responseObserver) {
+    public void read(io.cloudquery.plugin.v3.Read.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Read.Response> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getReadMethod(), getCallOptions()), request, responseObserver);
     }
@@ -492,8 +492,8 @@ public final class PluginGrpc {
      * Write resources. Write is the mirror of Sync, expecting a stream of messages as input.
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Write.Request> write(
-        io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Write.Response> responseObserver) {
+    public io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Write.Request> write(
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Write.Response> responseObserver) {
       return io.grpc.stub.ClientCalls.asyncClientStreamingCall(
           getChannel().newCall(getWriteMethod(), getCallOptions()), responseObserver);
     }
@@ -503,8 +503,8 @@ public final class PluginGrpc {
      * Send signal to flush and close open connections
      * </pre>
      */
-    public void close(cloudquery.plugin.v3.PluginOuterClass.Close.Request request,
-        io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Close.Response> responseObserver) {
+    public void close(io.cloudquery.plugin.v3.Close.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Close.Response> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCloseMethod(), getCallOptions()), request, responseObserver);
     }
@@ -531,7 +531,7 @@ public final class PluginGrpc {
      * Get the name of the plugin
      * </pre>
      */
-    public cloudquery.plugin.v3.PluginOuterClass.GetName.Response getName(cloudquery.plugin.v3.PluginOuterClass.GetName.Request request) {
+    public io.cloudquery.plugin.v3.GetName.Response getName(io.cloudquery.plugin.v3.GetName.Request request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetNameMethod(), getCallOptions(), request);
     }
@@ -541,7 +541,7 @@ public final class PluginGrpc {
      * Get the current version of the plugin
      * </pre>
      */
-    public cloudquery.plugin.v3.PluginOuterClass.GetVersion.Response getVersion(cloudquery.plugin.v3.PluginOuterClass.GetVersion.Request request) {
+    public io.cloudquery.plugin.v3.GetVersion.Response getVersion(io.cloudquery.plugin.v3.GetVersion.Request request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetVersionMethod(), getCallOptions(), request);
     }
@@ -551,7 +551,7 @@ public final class PluginGrpc {
      * Configure the plugin with the given credentials and mode
      * </pre>
      */
-    public cloudquery.plugin.v3.PluginOuterClass.Init.Response init(cloudquery.plugin.v3.PluginOuterClass.Init.Request request) {
+    public io.cloudquery.plugin.v3.Init.Response init(io.cloudquery.plugin.v3.Init.Request request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getInitMethod(), getCallOptions(), request);
     }
@@ -561,7 +561,7 @@ public final class PluginGrpc {
      * Get all tables the source plugin supports. Must be called after Init
      * </pre>
      */
-    public cloudquery.plugin.v3.PluginOuterClass.GetTables.Response getTables(cloudquery.plugin.v3.PluginOuterClass.GetTables.Request request) {
+    public io.cloudquery.plugin.v3.GetTables.Response getTables(io.cloudquery.plugin.v3.GetTables.Request request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetTablesMethod(), getCallOptions(), request);
     }
@@ -571,8 +571,8 @@ public final class PluginGrpc {
      * Start a sync on the source plugin. It streams messages as output.
      * </pre>
      */
-    public java.util.Iterator<cloudquery.plugin.v3.PluginOuterClass.Sync.Response> sync(
-        cloudquery.plugin.v3.PluginOuterClass.Sync.Request request) {
+    public java.util.Iterator<io.cloudquery.plugin.v3.Sync.Response> sync(
+        io.cloudquery.plugin.v3.Sync.Request request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getSyncMethod(), getCallOptions(), request);
     }
@@ -583,8 +583,8 @@ public final class PluginGrpc {
      * The plugin assume that that schema was used to also write the data beforehand
      * </pre>
      */
-    public java.util.Iterator<cloudquery.plugin.v3.PluginOuterClass.Read.Response> read(
-        cloudquery.plugin.v3.PluginOuterClass.Read.Request request) {
+    public java.util.Iterator<io.cloudquery.plugin.v3.Read.Response> read(
+        io.cloudquery.plugin.v3.Read.Request request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getReadMethod(), getCallOptions(), request);
     }
@@ -594,7 +594,7 @@ public final class PluginGrpc {
      * Send signal to flush and close open connections
      * </pre>
      */
-    public cloudquery.plugin.v3.PluginOuterClass.Close.Response close(cloudquery.plugin.v3.PluginOuterClass.Close.Request request) {
+    public io.cloudquery.plugin.v3.Close.Response close(io.cloudquery.plugin.v3.Close.Request request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCloseMethod(), getCallOptions(), request);
     }
@@ -621,8 +621,8 @@ public final class PluginGrpc {
      * Get the name of the plugin
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<cloudquery.plugin.v3.PluginOuterClass.GetName.Response> getName(
-        cloudquery.plugin.v3.PluginOuterClass.GetName.Request request) {
+    public com.google.common.util.concurrent.ListenableFuture<io.cloudquery.plugin.v3.GetName.Response> getName(
+        io.cloudquery.plugin.v3.GetName.Request request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetNameMethod(), getCallOptions()), request);
     }
@@ -632,8 +632,8 @@ public final class PluginGrpc {
      * Get the current version of the plugin
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<cloudquery.plugin.v3.PluginOuterClass.GetVersion.Response> getVersion(
-        cloudquery.plugin.v3.PluginOuterClass.GetVersion.Request request) {
+    public com.google.common.util.concurrent.ListenableFuture<io.cloudquery.plugin.v3.GetVersion.Response> getVersion(
+        io.cloudquery.plugin.v3.GetVersion.Request request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetVersionMethod(), getCallOptions()), request);
     }
@@ -643,8 +643,8 @@ public final class PluginGrpc {
      * Configure the plugin with the given credentials and mode
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<cloudquery.plugin.v3.PluginOuterClass.Init.Response> init(
-        cloudquery.plugin.v3.PluginOuterClass.Init.Request request) {
+    public com.google.common.util.concurrent.ListenableFuture<io.cloudquery.plugin.v3.Init.Response> init(
+        io.cloudquery.plugin.v3.Init.Request request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getInitMethod(), getCallOptions()), request);
     }
@@ -654,8 +654,8 @@ public final class PluginGrpc {
      * Get all tables the source plugin supports. Must be called after Init
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<cloudquery.plugin.v3.PluginOuterClass.GetTables.Response> getTables(
-        cloudquery.plugin.v3.PluginOuterClass.GetTables.Request request) {
+    public com.google.common.util.concurrent.ListenableFuture<io.cloudquery.plugin.v3.GetTables.Response> getTables(
+        io.cloudquery.plugin.v3.GetTables.Request request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetTablesMethod(), getCallOptions()), request);
     }
@@ -665,8 +665,8 @@ public final class PluginGrpc {
      * Send signal to flush and close open connections
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<cloudquery.plugin.v3.PluginOuterClass.Close.Response> close(
-        cloudquery.plugin.v3.PluginOuterClass.Close.Request request) {
+    public com.google.common.util.concurrent.ListenableFuture<io.cloudquery.plugin.v3.Close.Response> close(
+        io.cloudquery.plugin.v3.Close.Request request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCloseMethod(), getCallOptions()), request);
     }
@@ -699,32 +699,32 @@ public final class PluginGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_NAME:
-          serviceImpl.getName((cloudquery.plugin.v3.PluginOuterClass.GetName.Request) request,
-              (io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.GetName.Response>) responseObserver);
+          serviceImpl.getName((io.cloudquery.plugin.v3.GetName.Request) request,
+              (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.GetName.Response>) responseObserver);
           break;
         case METHODID_GET_VERSION:
-          serviceImpl.getVersion((cloudquery.plugin.v3.PluginOuterClass.GetVersion.Request) request,
-              (io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.GetVersion.Response>) responseObserver);
+          serviceImpl.getVersion((io.cloudquery.plugin.v3.GetVersion.Request) request,
+              (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.GetVersion.Response>) responseObserver);
           break;
         case METHODID_INIT:
-          serviceImpl.init((cloudquery.plugin.v3.PluginOuterClass.Init.Request) request,
-              (io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Init.Response>) responseObserver);
+          serviceImpl.init((io.cloudquery.plugin.v3.Init.Request) request,
+              (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Init.Response>) responseObserver);
           break;
         case METHODID_GET_TABLES:
-          serviceImpl.getTables((cloudquery.plugin.v3.PluginOuterClass.GetTables.Request) request,
-              (io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.GetTables.Response>) responseObserver);
+          serviceImpl.getTables((io.cloudquery.plugin.v3.GetTables.Request) request,
+              (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.GetTables.Response>) responseObserver);
           break;
         case METHODID_SYNC:
-          serviceImpl.sync((cloudquery.plugin.v3.PluginOuterClass.Sync.Request) request,
-              (io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Sync.Response>) responseObserver);
+          serviceImpl.sync((io.cloudquery.plugin.v3.Sync.Request) request,
+              (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Sync.Response>) responseObserver);
           break;
         case METHODID_READ:
-          serviceImpl.read((cloudquery.plugin.v3.PluginOuterClass.Read.Request) request,
-              (io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Read.Response>) responseObserver);
+          serviceImpl.read((io.cloudquery.plugin.v3.Read.Request) request,
+              (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Read.Response>) responseObserver);
           break;
         case METHODID_CLOSE:
-          serviceImpl.close((cloudquery.plugin.v3.PluginOuterClass.Close.Request) request,
-              (io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Close.Response>) responseObserver);
+          serviceImpl.close((io.cloudquery.plugin.v3.Close.Request) request,
+              (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Close.Response>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -738,7 +738,7 @@ public final class PluginGrpc {
       switch (methodId) {
         case METHODID_WRITE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.write(
-              (io.grpc.stub.StreamObserver<cloudquery.plugin.v3.PluginOuterClass.Write.Response>) responseObserver);
+              (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Write.Response>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -751,57 +751,57 @@ public final class PluginGrpc {
           getGetNameMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              cloudquery.plugin.v3.PluginOuterClass.GetName.Request,
-              cloudquery.plugin.v3.PluginOuterClass.GetName.Response>(
+              io.cloudquery.plugin.v3.GetName.Request,
+              io.cloudquery.plugin.v3.GetName.Response>(
                 service, METHODID_GET_NAME)))
         .addMethod(
           getGetVersionMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              cloudquery.plugin.v3.PluginOuterClass.GetVersion.Request,
-              cloudquery.plugin.v3.PluginOuterClass.GetVersion.Response>(
+              io.cloudquery.plugin.v3.GetVersion.Request,
+              io.cloudquery.plugin.v3.GetVersion.Response>(
                 service, METHODID_GET_VERSION)))
         .addMethod(
           getInitMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              cloudquery.plugin.v3.PluginOuterClass.Init.Request,
-              cloudquery.plugin.v3.PluginOuterClass.Init.Response>(
+              io.cloudquery.plugin.v3.Init.Request,
+              io.cloudquery.plugin.v3.Init.Response>(
                 service, METHODID_INIT)))
         .addMethod(
           getGetTablesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              cloudquery.plugin.v3.PluginOuterClass.GetTables.Request,
-              cloudquery.plugin.v3.PluginOuterClass.GetTables.Response>(
+              io.cloudquery.plugin.v3.GetTables.Request,
+              io.cloudquery.plugin.v3.GetTables.Response>(
                 service, METHODID_GET_TABLES)))
         .addMethod(
           getSyncMethod(),
           io.grpc.stub.ServerCalls.asyncServerStreamingCall(
             new MethodHandlers<
-              cloudquery.plugin.v3.PluginOuterClass.Sync.Request,
-              cloudquery.plugin.v3.PluginOuterClass.Sync.Response>(
+              io.cloudquery.plugin.v3.Sync.Request,
+              io.cloudquery.plugin.v3.Sync.Response>(
                 service, METHODID_SYNC)))
         .addMethod(
           getReadMethod(),
           io.grpc.stub.ServerCalls.asyncServerStreamingCall(
             new MethodHandlers<
-              cloudquery.plugin.v3.PluginOuterClass.Read.Request,
-              cloudquery.plugin.v3.PluginOuterClass.Read.Response>(
+              io.cloudquery.plugin.v3.Read.Request,
+              io.cloudquery.plugin.v3.Read.Response>(
                 service, METHODID_READ)))
         .addMethod(
           getWriteMethod(),
           io.grpc.stub.ServerCalls.asyncClientStreamingCall(
             new MethodHandlers<
-              cloudquery.plugin.v3.PluginOuterClass.Write.Request,
-              cloudquery.plugin.v3.PluginOuterClass.Write.Response>(
+              io.cloudquery.plugin.v3.Write.Request,
+              io.cloudquery.plugin.v3.Write.Response>(
                 service, METHODID_WRITE)))
         .addMethod(
           getCloseMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              cloudquery.plugin.v3.PluginOuterClass.Close.Request,
-              cloudquery.plugin.v3.PluginOuterClass.Close.Response>(
+              io.cloudquery.plugin.v3.Close.Request,
+              io.cloudquery.plugin.v3.Close.Response>(
                 service, METHODID_CLOSE)))
         .build();
   }
@@ -812,7 +812,7 @@ public final class PluginGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return cloudquery.plugin.v3.PluginOuterClass.getDescriptor();
+      return io.cloudquery.plugin.v3.PluginOuterClass.getDescriptor();
     }
 
     @java.lang.Override
