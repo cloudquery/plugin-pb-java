@@ -8,7 +8,7 @@ plugins {
 
 mainClassName = 'main.Main'
 
-group 'com.cloudquery'
+group 'io.cloudquery'
 // x-release-please-start-version
 version = '0.0.4'
 // x-release-please-end
