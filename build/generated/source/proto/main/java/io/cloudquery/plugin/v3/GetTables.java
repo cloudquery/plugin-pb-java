@@ -91,6 +91,12 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getSkipTablesBytes(int index);
+
+    /**
+     * <code>bool skip_dependent_tables = 3;</code>
+     * @return The skipDependentTables.
+     */
+    boolean getSkipDependentTables();
   }
   /**
    * Protobuf type {@code cloudquery.plugin.v3.GetTables.Request}
@@ -205,6 +211,17 @@ private static final long serialVersionUID = 0L;
       return skipTables_.getByteString(index);
     }
 
+    public static final int SKIP_DEPENDENT_TABLES_FIELD_NUMBER = 3;
+    private boolean skipDependentTables_ = false;
+    /**
+     * <code>bool skip_dependent_tables = 3;</code>
+     * @return The skipDependentTables.
+     */
+    @java.lang.Override
+    public boolean getSkipDependentTables() {
+      return skipDependentTables_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -224,6 +241,9 @@ private static final long serialVersionUID = 0L;
       }
       for (int i = 0; i < skipTables_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, skipTables_.getRaw(i));
+      }
+      if (skipDependentTables_ != false) {
+        output.writeBool(3, skipDependentTables_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -250,6 +270,10 @@ private static final long serialVersionUID = 0L;
         size += dataSize;
         size += 1 * getSkipTablesList().size();
       }
+      if (skipDependentTables_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, skipDependentTables_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -269,6 +293,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getTablesList())) return false;
       if (!getSkipTablesList()
           .equals(other.getSkipTablesList())) return false;
+      if (getSkipDependentTables()
+          != other.getSkipDependentTables()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -288,6 +314,9 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + SKIP_TABLES_FIELD_NUMBER;
         hash = (53 * hash) + getSkipTablesList().hashCode();
       }
+      hash = (37 * hash) + SKIP_DEPENDENT_TABLES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSkipDependentTables());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -423,6 +452,7 @@ private static final long serialVersionUID = 0L;
             com.google.protobuf.LazyStringArrayList.emptyList();
         skipTables_ =
             com.google.protobuf.LazyStringArrayList.emptyList();
+        skipDependentTables_ = false;
         return this;
       }
 
@@ -463,6 +493,9 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           skipTables_.makeImmutable();
           result.skipTables_ = skipTables_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.skipDependentTables_ = skipDependentTables_;
         }
       }
 
@@ -530,6 +563,9 @@ private static final long serialVersionUID = 0L;
           }
           onChanged();
         }
+        if (other.getSkipDependentTables() != false) {
+          setSkipDependentTables(other.getSkipDependentTables());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -568,6 +604,11 @@ private static final long serialVersionUID = 0L;
                 skipTables_.add(s);
                 break;
               } // case 18
+              case 24: {
+                skipDependentTables_ = input.readBool();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 24
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -803,6 +844,38 @@ private static final long serialVersionUID = 0L;
         ensureSkipTablesIsMutable();
         skipTables_.add(value);
         bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private boolean skipDependentTables_ ;
+      /**
+       * <code>bool skip_dependent_tables = 3;</code>
+       * @return The skipDependentTables.
+       */
+      @java.lang.Override
+      public boolean getSkipDependentTables() {
+        return skipDependentTables_;
+      }
+      /**
+       * <code>bool skip_dependent_tables = 3;</code>
+       * @param value The skipDependentTables to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSkipDependentTables(boolean value) {
+
+        skipDependentTables_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool skip_dependent_tables = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSkipDependentTables() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        skipDependentTables_ = false;
         onChanged();
         return this;
       }
