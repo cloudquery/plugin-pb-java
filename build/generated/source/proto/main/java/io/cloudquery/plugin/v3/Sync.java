@@ -1924,6 +1924,7 @@ private static final long serialVersionUID = 0L;
               io.cloudquery.plugin.v3.Sync.Request.class, io.cloudquery.plugin.v3.Sync.Request.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TABLES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringArrayList tables_ =
@@ -2028,7 +2029,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasBackend() {
-      return backend_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.cloudquery.plugin.v3.Sync.BackendOptions backend = 5;</code>
@@ -2072,7 +2073,7 @@ private static final long serialVersionUID = 0L;
       if (deterministicCqId_ != false) {
         output.writeBool(4, deterministicCqId_);
       }
-      if (backend_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getBackend());
       }
       getUnknownFields().writeTo(output);
@@ -2108,7 +2109,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(4, deterministicCqId_);
       }
-      if (backend_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getBackend());
       }
@@ -2288,13 +2289,19 @@ private static final long serialVersionUID = 0L;
 
       // Construct using io.cloudquery.plugin.v3.Sync.Request.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBackendFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -2358,11 +2365,14 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.deterministicCqId_ = deterministicCqId_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.backend_ = backendBuilder_ == null
               ? backend_
               : backendBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -2862,8 +2872,10 @@ private static final long serialVersionUID = 0L;
         } else {
           backendBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000010;
-        onChanged();
+        if (backend_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
         return this;
       }
       /**
