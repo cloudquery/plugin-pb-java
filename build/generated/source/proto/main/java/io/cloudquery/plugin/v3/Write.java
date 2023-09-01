@@ -1198,6 +1198,7 @@ private static final long serialVersionUID = 0L;
               io.cloudquery.plugin.v3.Write.MessageDeleteStale.class, io.cloudquery.plugin.v3.Write.MessageDeleteStale.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TABLE_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString table_ = com.google.protobuf.ByteString.EMPTY;
     /**
@@ -1262,7 +1263,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasSyncTime() {
-      return syncTime_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.google.protobuf.Timestamp sync_time = 3;</code>
@@ -1339,7 +1340,7 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, sourceName_);
       }
-      if (syncTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getSyncTime());
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tableName_)) {
@@ -1361,7 +1362,7 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(sourceName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, sourceName_);
       }
-      if (syncTime_ != null) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getSyncTime());
       }
@@ -1534,13 +1535,19 @@ private static final long serialVersionUID = 0L;
 
       // Construct using io.cloudquery.plugin.v3.Write.MessageDeleteStale.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getSyncTimeFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
@@ -1593,14 +1600,17 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.sourceName_ = sourceName_;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.syncTime_ = syncTimeBuilder_ == null
               ? syncTime_
               : syncTimeBuilder_.build();
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.tableName_ = tableName_;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1916,8 +1926,10 @@ private static final long serialVersionUID = 0L;
         } else {
           syncTimeBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000004;
-        onChanged();
+        if (syncTime_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         return this;
       }
       /**

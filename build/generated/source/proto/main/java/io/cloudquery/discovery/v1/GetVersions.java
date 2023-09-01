@@ -494,7 +494,8 @@ private static final long serialVersionUID = 0L;
 
     public static final int VERSIONS_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.Internal.IntList versions_;
+    private com.google.protobuf.Internal.IntList versions_ =
+        emptyIntList();
     /**
      * <code>repeated int32 versions = 1;</code>
      * @return A list containing the versions.
@@ -756,22 +757,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public io.cloudquery.discovery.v1.GetVersions.Response buildPartial() {
         io.cloudquery.discovery.v1.GetVersions.Response result = new io.cloudquery.discovery.v1.GetVersions.Response(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(io.cloudquery.discovery.v1.GetVersions.Response result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          versions_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.versions_ = versions_;
-      }
-
       private void buildPartial0(io.cloudquery.discovery.v1.GetVersions.Response result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          versions_.makeImmutable();
+          result.versions_ = versions_;
+        }
       }
 
       @java.lang.Override
@@ -821,7 +817,8 @@ private static final long serialVersionUID = 0L;
         if (!other.versions_.isEmpty()) {
           if (versions_.isEmpty()) {
             versions_ = other.versions_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            versions_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureVersionsIsMutable();
             versions_.addAll(other.versions_);
@@ -889,10 +886,10 @@ private static final long serialVersionUID = 0L;
 
       private com.google.protobuf.Internal.IntList versions_ = emptyIntList();
       private void ensureVersionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          versions_ = mutableCopy(versions_);
-          bitField0_ |= 0x00000001;
+        if (!versions_.isModifiable()) {
+          versions_ = makeMutableCopy(versions_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated int32 versions = 1;</code>
@@ -900,8 +897,8 @@ private static final long serialVersionUID = 0L;
        */
       public java.util.List<java.lang.Integer>
           getVersionsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(versions_) : versions_;
+        versions_.makeImmutable();
+        return versions_;
       }
       /**
        * <code>repeated int32 versions = 1;</code>
@@ -929,6 +926,7 @@ private static final long serialVersionUID = 0L;
 
         ensureVersionsIsMutable();
         versions_.setInt(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -941,6 +939,7 @@ private static final long serialVersionUID = 0L;
 
         ensureVersionsIsMutable();
         versions_.addInt(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -954,6 +953,7 @@ private static final long serialVersionUID = 0L;
         ensureVersionsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, versions_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }

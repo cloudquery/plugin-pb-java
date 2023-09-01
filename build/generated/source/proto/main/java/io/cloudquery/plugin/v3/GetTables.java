@@ -989,7 +989,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Response() {
-      tables_ = java.util.Collections.emptyList();
+      tables_ = emptyList(com.google.protobuf.ByteString.class);
     }
 
     @java.lang.Override
@@ -1014,7 +1014,8 @@ private static final long serialVersionUID = 0L;
 
     public static final int TABLES_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private java.util.List<com.google.protobuf.ByteString> tables_;
+    private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> tables_ =
+        emptyList(com.google.protobuf.ByteString.class);
     /**
      * <pre>
      * marshalled []arrow.Schema
@@ -1250,7 +1251,7 @@ private static final long serialVersionUID = 0L;
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        tables_ = java.util.Collections.emptyList();
+        tables_ = emptyList(com.google.protobuf.ByteString.class);
         return this;
       }
 
@@ -1277,22 +1278,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public io.cloudquery.plugin.v3.GetTables.Response buildPartial() {
         io.cloudquery.plugin.v3.GetTables.Response result = new io.cloudquery.plugin.v3.GetTables.Response(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(io.cloudquery.plugin.v3.GetTables.Response result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          tables_ = java.util.Collections.unmodifiableList(tables_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.tables_ = tables_;
-      }
-
       private void buildPartial0(io.cloudquery.plugin.v3.GetTables.Response result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          tables_.makeImmutable();
+          result.tables_ = tables_;
+        }
       }
 
       @java.lang.Override
@@ -1342,7 +1338,8 @@ private static final long serialVersionUID = 0L;
         if (!other.tables_.isEmpty()) {
           if (tables_.isEmpty()) {
             tables_ = other.tables_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            tables_.makeImmutable();
+            bitField0_ |= 0x00000001;
           } else {
             ensureTablesIsMutable();
             tables_.addAll(other.tables_);
@@ -1398,12 +1395,12 @@ private static final long serialVersionUID = 0L;
       }
       private int bitField0_;
 
-      private java.util.List<com.google.protobuf.ByteString> tables_ = java.util.Collections.emptyList();
+      private com.google.protobuf.Internal.ProtobufList<com.google.protobuf.ByteString> tables_ = emptyList(com.google.protobuf.ByteString.class);
       private void ensureTablesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          tables_ = new java.util.ArrayList<com.google.protobuf.ByteString>(tables_);
-          bitField0_ |= 0x00000001;
+        if (!tables_.isModifiable()) {
+          tables_ = makeMutableCopy(tables_);
         }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <pre>
@@ -1415,8 +1412,8 @@ private static final long serialVersionUID = 0L;
        */
       public java.util.List<com.google.protobuf.ByteString>
           getTablesList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(tables_) : tables_;
+        tables_.makeImmutable();
+        return tables_;
       }
       /**
        * <pre>
@@ -1456,6 +1453,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureTablesIsMutable();
         tables_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1472,6 +1470,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureTablesIsMutable();
         tables_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1489,6 +1488,7 @@ private static final long serialVersionUID = 0L;
         ensureTablesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, tables_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1501,7 +1501,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearTables() {
-        tables_ = java.util.Collections.emptyList();
+        tables_ = emptyList(com.google.protobuf.ByteString.class);
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
