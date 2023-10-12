@@ -1116,7 +1116,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bytes table = 1 [deprecated = true];</code>
      * @deprecated cloudquery.plugin.v3.Write.MessageDeleteStale.table is deprecated.
-     *     See cloudquery/plugin/v3/plugin.proto;l=116
+     *     See cloudquery/plugin/v3/plugin.proto;l=155
      * @return The table.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString getTable();
@@ -1208,7 +1208,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bytes table = 1 [deprecated = true];</code>
      * @deprecated cloudquery.plugin.v3.Write.MessageDeleteStale.table is deprecated.
-     *     See cloudquery/plugin/v3/plugin.proto;l=116
+     *     See cloudquery/plugin/v3/plugin.proto;l=155
      * @return The table.
      */
     @java.lang.Override
@@ -1746,7 +1746,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>bytes table = 1 [deprecated = true];</code>
        * @deprecated cloudquery.plugin.v3.Write.MessageDeleteStale.table is deprecated.
-       *     See cloudquery/plugin/v3/plugin.proto;l=116
+       *     See cloudquery/plugin/v3/plugin.proto;l=155
        * @return The table.
        */
       @java.lang.Override
@@ -1760,7 +1760,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>bytes table = 1 [deprecated = true];</code>
        * @deprecated cloudquery.plugin.v3.Write.MessageDeleteStale.table is deprecated.
-       *     See cloudquery/plugin/v3/plugin.proto;l=116
+       *     See cloudquery/plugin/v3/plugin.proto;l=155
        * @param value The table to set.
        * @return This builder for chaining.
        */
@@ -1778,7 +1778,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>bytes table = 1 [deprecated = true];</code>
        * @deprecated cloudquery.plugin.v3.Write.MessageDeleteStale.table is deprecated.
-       *     See cloudquery/plugin/v3/plugin.proto;l=116
+       *     See cloudquery/plugin/v3/plugin.proto;l=155
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTable() {
@@ -2116,6 +2116,1310 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface MessageDeleteRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cloudquery.plugin.v3.Write.MessageDeleteRecord)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string table_name = 1;</code>
+     * @return The tableName.
+     */
+    java.lang.String getTableName();
+    /**
+     * <code>string table_name = 1;</code>
+     * @return The bytes for tableName.
+     */
+    com.google.protobuf.ByteString
+        getTableNameBytes();
+
+    /**
+     * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+     */
+    java.util.List<io.cloudquery.plugin.v3.PredicatesGroup> 
+        getWhereClauseList();
+    /**
+     * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+     */
+    io.cloudquery.plugin.v3.PredicatesGroup getWhereClause(int index);
+    /**
+     * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+     */
+    int getWhereClauseCount();
+    /**
+     * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+     */
+    java.util.List<? extends io.cloudquery.plugin.v3.PredicatesGroupOrBuilder> 
+        getWhereClauseOrBuilderList();
+    /**
+     * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+     */
+    io.cloudquery.plugin.v3.PredicatesGroupOrBuilder getWhereClauseOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+     */
+    java.util.List<io.cloudquery.plugin.v3.TableRelation> 
+        getTableRelationsList();
+    /**
+     * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+     */
+    io.cloudquery.plugin.v3.TableRelation getTableRelations(int index);
+    /**
+     * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+     */
+    int getTableRelationsCount();
+    /**
+     * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+     */
+    java.util.List<? extends io.cloudquery.plugin.v3.TableRelationOrBuilder> 
+        getTableRelationsOrBuilderList();
+    /**
+     * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+     */
+    io.cloudquery.plugin.v3.TableRelationOrBuilder getTableRelationsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code cloudquery.plugin.v3.Write.MessageDeleteRecord}
+   */
+  public static final class MessageDeleteRecord extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cloudquery.plugin.v3.Write.MessageDeleteRecord)
+      MessageDeleteRecordOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MessageDeleteRecord.newBuilder() to construct.
+    private MessageDeleteRecord(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MessageDeleteRecord() {
+      tableName_ = "";
+      whereClause_ = java.util.Collections.emptyList();
+      tableRelations_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MessageDeleteRecord();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Write_MessageDeleteRecord_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Write_MessageDeleteRecord_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.cloudquery.plugin.v3.Write.MessageDeleteRecord.class, io.cloudquery.plugin.v3.Write.MessageDeleteRecord.Builder.class);
+    }
+
+    public static final int TABLE_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tableName_ = "";
+    /**
+     * <code>string table_name = 1;</code>
+     * @return The tableName.
+     */
+    @java.lang.Override
+    public java.lang.String getTableName() {
+      java.lang.Object ref = tableName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tableName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string table_name = 1;</code>
+     * @return The bytes for tableName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTableNameBytes() {
+      java.lang.Object ref = tableName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tableName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int WHERE_CLAUSE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<io.cloudquery.plugin.v3.PredicatesGroup> whereClause_;
+    /**
+     * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<io.cloudquery.plugin.v3.PredicatesGroup> getWhereClauseList() {
+      return whereClause_;
+    }
+    /**
+     * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends io.cloudquery.plugin.v3.PredicatesGroupOrBuilder> 
+        getWhereClauseOrBuilderList() {
+      return whereClause_;
+    }
+    /**
+     * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+     */
+    @java.lang.Override
+    public int getWhereClauseCount() {
+      return whereClause_.size();
+    }
+    /**
+     * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+     */
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.PredicatesGroup getWhereClause(int index) {
+      return whereClause_.get(index);
+    }
+    /**
+     * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+     */
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.PredicatesGroupOrBuilder getWhereClauseOrBuilder(
+        int index) {
+      return whereClause_.get(index);
+    }
+
+    public static final int TABLE_RELATIONS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private java.util.List<io.cloudquery.plugin.v3.TableRelation> tableRelations_;
+    /**
+     * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<io.cloudquery.plugin.v3.TableRelation> getTableRelationsList() {
+      return tableRelations_;
+    }
+    /**
+     * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends io.cloudquery.plugin.v3.TableRelationOrBuilder> 
+        getTableRelationsOrBuilderList() {
+      return tableRelations_;
+    }
+    /**
+     * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+     */
+    @java.lang.Override
+    public int getTableRelationsCount() {
+      return tableRelations_.size();
+    }
+    /**
+     * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+     */
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.TableRelation getTableRelations(int index) {
+      return tableRelations_.get(index);
+    }
+    /**
+     * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+     */
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.TableRelationOrBuilder getTableRelationsOrBuilder(
+        int index) {
+      return tableRelations_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tableName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tableName_);
+      }
+      for (int i = 0; i < whereClause_.size(); i++) {
+        output.writeMessage(2, whereClause_.get(i));
+      }
+      for (int i = 0; i < tableRelations_.size(); i++) {
+        output.writeMessage(3, tableRelations_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tableName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tableName_);
+      }
+      for (int i = 0; i < whereClause_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, whereClause_.get(i));
+      }
+      for (int i = 0; i < tableRelations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, tableRelations_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.cloudquery.plugin.v3.Write.MessageDeleteRecord)) {
+        return super.equals(obj);
+      }
+      io.cloudquery.plugin.v3.Write.MessageDeleteRecord other = (io.cloudquery.plugin.v3.Write.MessageDeleteRecord) obj;
+
+      if (!getTableName()
+          .equals(other.getTableName())) return false;
+      if (!getWhereClauseList()
+          .equals(other.getWhereClauseList())) return false;
+      if (!getTableRelationsList()
+          .equals(other.getTableRelationsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TABLE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTableName().hashCode();
+      if (getWhereClauseCount() > 0) {
+        hash = (37 * hash) + WHERE_CLAUSE_FIELD_NUMBER;
+        hash = (53 * hash) + getWhereClauseList().hashCode();
+      }
+      if (getTableRelationsCount() > 0) {
+        hash = (37 * hash) + TABLE_RELATIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getTableRelationsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.cloudquery.plugin.v3.Write.MessageDeleteRecord parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageDeleteRecord parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageDeleteRecord parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageDeleteRecord parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageDeleteRecord parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageDeleteRecord parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageDeleteRecord parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageDeleteRecord parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static io.cloudquery.plugin.v3.Write.MessageDeleteRecord parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static io.cloudquery.plugin.v3.Write.MessageDeleteRecord parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageDeleteRecord parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageDeleteRecord parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.cloudquery.plugin.v3.Write.MessageDeleteRecord prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cloudquery.plugin.v3.Write.MessageDeleteRecord}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cloudquery.plugin.v3.Write.MessageDeleteRecord)
+        io.cloudquery.plugin.v3.Write.MessageDeleteRecordOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Write_MessageDeleteRecord_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Write_MessageDeleteRecord_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.cloudquery.plugin.v3.Write.MessageDeleteRecord.class, io.cloudquery.plugin.v3.Write.MessageDeleteRecord.Builder.class);
+      }
+
+      // Construct using io.cloudquery.plugin.v3.Write.MessageDeleteRecord.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        tableName_ = "";
+        if (whereClauseBuilder_ == null) {
+          whereClause_ = java.util.Collections.emptyList();
+        } else {
+          whereClause_ = null;
+          whereClauseBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (tableRelationsBuilder_ == null) {
+          tableRelations_ = java.util.Collections.emptyList();
+        } else {
+          tableRelations_ = null;
+          tableRelationsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Write_MessageDeleteRecord_descriptor;
+      }
+
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Write.MessageDeleteRecord getDefaultInstanceForType() {
+        return io.cloudquery.plugin.v3.Write.MessageDeleteRecord.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Write.MessageDeleteRecord build() {
+        io.cloudquery.plugin.v3.Write.MessageDeleteRecord result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Write.MessageDeleteRecord buildPartial() {
+        io.cloudquery.plugin.v3.Write.MessageDeleteRecord result = new io.cloudquery.plugin.v3.Write.MessageDeleteRecord(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(io.cloudquery.plugin.v3.Write.MessageDeleteRecord result) {
+        if (whereClauseBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            whereClause_ = java.util.Collections.unmodifiableList(whereClause_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.whereClause_ = whereClause_;
+        } else {
+          result.whereClause_ = whereClauseBuilder_.build();
+        }
+        if (tableRelationsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            tableRelations_ = java.util.Collections.unmodifiableList(tableRelations_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.tableRelations_ = tableRelations_;
+        } else {
+          result.tableRelations_ = tableRelationsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(io.cloudquery.plugin.v3.Write.MessageDeleteRecord result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tableName_ = tableName_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.cloudquery.plugin.v3.Write.MessageDeleteRecord) {
+          return mergeFrom((io.cloudquery.plugin.v3.Write.MessageDeleteRecord)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.cloudquery.plugin.v3.Write.MessageDeleteRecord other) {
+        if (other == io.cloudquery.plugin.v3.Write.MessageDeleteRecord.getDefaultInstance()) return this;
+        if (!other.getTableName().isEmpty()) {
+          tableName_ = other.tableName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (whereClauseBuilder_ == null) {
+          if (!other.whereClause_.isEmpty()) {
+            if (whereClause_.isEmpty()) {
+              whereClause_ = other.whereClause_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureWhereClauseIsMutable();
+              whereClause_.addAll(other.whereClause_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.whereClause_.isEmpty()) {
+            if (whereClauseBuilder_.isEmpty()) {
+              whereClauseBuilder_.dispose();
+              whereClauseBuilder_ = null;
+              whereClause_ = other.whereClause_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              whereClauseBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getWhereClauseFieldBuilder() : null;
+            } else {
+              whereClauseBuilder_.addAllMessages(other.whereClause_);
+            }
+          }
+        }
+        if (tableRelationsBuilder_ == null) {
+          if (!other.tableRelations_.isEmpty()) {
+            if (tableRelations_.isEmpty()) {
+              tableRelations_ = other.tableRelations_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureTableRelationsIsMutable();
+              tableRelations_.addAll(other.tableRelations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tableRelations_.isEmpty()) {
+            if (tableRelationsBuilder_.isEmpty()) {
+              tableRelationsBuilder_.dispose();
+              tableRelationsBuilder_ = null;
+              tableRelations_ = other.tableRelations_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              tableRelationsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTableRelationsFieldBuilder() : null;
+            } else {
+              tableRelationsBuilder_.addAllMessages(other.tableRelations_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                tableName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                io.cloudquery.plugin.v3.PredicatesGroup m =
+                    input.readMessage(
+                        io.cloudquery.plugin.v3.PredicatesGroup.parser(),
+                        extensionRegistry);
+                if (whereClauseBuilder_ == null) {
+                  ensureWhereClauseIsMutable();
+                  whereClause_.add(m);
+                } else {
+                  whereClauseBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              case 26: {
+                io.cloudquery.plugin.v3.TableRelation m =
+                    input.readMessage(
+                        io.cloudquery.plugin.v3.TableRelation.parser(),
+                        extensionRegistry);
+                if (tableRelationsBuilder_ == null) {
+                  ensureTableRelationsIsMutable();
+                  tableRelations_.add(m);
+                } else {
+                  tableRelationsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object tableName_ = "";
+      /**
+       * <code>string table_name = 1;</code>
+       * @return The tableName.
+       */
+      public java.lang.String getTableName() {
+        java.lang.Object ref = tableName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tableName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string table_name = 1;</code>
+       * @return The bytes for tableName.
+       */
+      public com.google.protobuf.ByteString
+          getTableNameBytes() {
+        java.lang.Object ref = tableName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tableName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string table_name = 1;</code>
+       * @param value The tableName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTableName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tableName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string table_name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTableName() {
+        tableName_ = getDefaultInstance().getTableName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string table_name = 1;</code>
+       * @param value The bytes for tableName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTableNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tableName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<io.cloudquery.plugin.v3.PredicatesGroup> whereClause_ =
+        java.util.Collections.emptyList();
+      private void ensureWhereClauseIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          whereClause_ = new java.util.ArrayList<io.cloudquery.plugin.v3.PredicatesGroup>(whereClause_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.cloudquery.plugin.v3.PredicatesGroup, io.cloudquery.plugin.v3.PredicatesGroup.Builder, io.cloudquery.plugin.v3.PredicatesGroupOrBuilder> whereClauseBuilder_;
+
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public java.util.List<io.cloudquery.plugin.v3.PredicatesGroup> getWhereClauseList() {
+        if (whereClauseBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(whereClause_);
+        } else {
+          return whereClauseBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public int getWhereClauseCount() {
+        if (whereClauseBuilder_ == null) {
+          return whereClause_.size();
+        } else {
+          return whereClauseBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public io.cloudquery.plugin.v3.PredicatesGroup getWhereClause(int index) {
+        if (whereClauseBuilder_ == null) {
+          return whereClause_.get(index);
+        } else {
+          return whereClauseBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public Builder setWhereClause(
+          int index, io.cloudquery.plugin.v3.PredicatesGroup value) {
+        if (whereClauseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWhereClauseIsMutable();
+          whereClause_.set(index, value);
+          onChanged();
+        } else {
+          whereClauseBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public Builder setWhereClause(
+          int index, io.cloudquery.plugin.v3.PredicatesGroup.Builder builderForValue) {
+        if (whereClauseBuilder_ == null) {
+          ensureWhereClauseIsMutable();
+          whereClause_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          whereClauseBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public Builder addWhereClause(io.cloudquery.plugin.v3.PredicatesGroup value) {
+        if (whereClauseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWhereClauseIsMutable();
+          whereClause_.add(value);
+          onChanged();
+        } else {
+          whereClauseBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public Builder addWhereClause(
+          int index, io.cloudquery.plugin.v3.PredicatesGroup value) {
+        if (whereClauseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureWhereClauseIsMutable();
+          whereClause_.add(index, value);
+          onChanged();
+        } else {
+          whereClauseBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public Builder addWhereClause(
+          io.cloudquery.plugin.v3.PredicatesGroup.Builder builderForValue) {
+        if (whereClauseBuilder_ == null) {
+          ensureWhereClauseIsMutable();
+          whereClause_.add(builderForValue.build());
+          onChanged();
+        } else {
+          whereClauseBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public Builder addWhereClause(
+          int index, io.cloudquery.plugin.v3.PredicatesGroup.Builder builderForValue) {
+        if (whereClauseBuilder_ == null) {
+          ensureWhereClauseIsMutable();
+          whereClause_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          whereClauseBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public Builder addAllWhereClause(
+          java.lang.Iterable<? extends io.cloudquery.plugin.v3.PredicatesGroup> values) {
+        if (whereClauseBuilder_ == null) {
+          ensureWhereClauseIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, whereClause_);
+          onChanged();
+        } else {
+          whereClauseBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public Builder clearWhereClause() {
+        if (whereClauseBuilder_ == null) {
+          whereClause_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          whereClauseBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public Builder removeWhereClause(int index) {
+        if (whereClauseBuilder_ == null) {
+          ensureWhereClauseIsMutable();
+          whereClause_.remove(index);
+          onChanged();
+        } else {
+          whereClauseBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public io.cloudquery.plugin.v3.PredicatesGroup.Builder getWhereClauseBuilder(
+          int index) {
+        return getWhereClauseFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public io.cloudquery.plugin.v3.PredicatesGroupOrBuilder getWhereClauseOrBuilder(
+          int index) {
+        if (whereClauseBuilder_ == null) {
+          return whereClause_.get(index);  } else {
+          return whereClauseBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public java.util.List<? extends io.cloudquery.plugin.v3.PredicatesGroupOrBuilder> 
+           getWhereClauseOrBuilderList() {
+        if (whereClauseBuilder_ != null) {
+          return whereClauseBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(whereClause_);
+        }
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public io.cloudquery.plugin.v3.PredicatesGroup.Builder addWhereClauseBuilder() {
+        return getWhereClauseFieldBuilder().addBuilder(
+            io.cloudquery.plugin.v3.PredicatesGroup.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public io.cloudquery.plugin.v3.PredicatesGroup.Builder addWhereClauseBuilder(
+          int index) {
+        return getWhereClauseFieldBuilder().addBuilder(
+            index, io.cloudquery.plugin.v3.PredicatesGroup.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.PredicatesGroup where_clause = 2;</code>
+       */
+      public java.util.List<io.cloudquery.plugin.v3.PredicatesGroup.Builder> 
+           getWhereClauseBuilderList() {
+        return getWhereClauseFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.cloudquery.plugin.v3.PredicatesGroup, io.cloudquery.plugin.v3.PredicatesGroup.Builder, io.cloudquery.plugin.v3.PredicatesGroupOrBuilder> 
+          getWhereClauseFieldBuilder() {
+        if (whereClauseBuilder_ == null) {
+          whereClauseBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              io.cloudquery.plugin.v3.PredicatesGroup, io.cloudquery.plugin.v3.PredicatesGroup.Builder, io.cloudquery.plugin.v3.PredicatesGroupOrBuilder>(
+                  whereClause_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          whereClause_ = null;
+        }
+        return whereClauseBuilder_;
+      }
+
+      private java.util.List<io.cloudquery.plugin.v3.TableRelation> tableRelations_ =
+        java.util.Collections.emptyList();
+      private void ensureTableRelationsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          tableRelations_ = new java.util.ArrayList<io.cloudquery.plugin.v3.TableRelation>(tableRelations_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.cloudquery.plugin.v3.TableRelation, io.cloudquery.plugin.v3.TableRelation.Builder, io.cloudquery.plugin.v3.TableRelationOrBuilder> tableRelationsBuilder_;
+
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public java.util.List<io.cloudquery.plugin.v3.TableRelation> getTableRelationsList() {
+        if (tableRelationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tableRelations_);
+        } else {
+          return tableRelationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public int getTableRelationsCount() {
+        if (tableRelationsBuilder_ == null) {
+          return tableRelations_.size();
+        } else {
+          return tableRelationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public io.cloudquery.plugin.v3.TableRelation getTableRelations(int index) {
+        if (tableRelationsBuilder_ == null) {
+          return tableRelations_.get(index);
+        } else {
+          return tableRelationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public Builder setTableRelations(
+          int index, io.cloudquery.plugin.v3.TableRelation value) {
+        if (tableRelationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTableRelationsIsMutable();
+          tableRelations_.set(index, value);
+          onChanged();
+        } else {
+          tableRelationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public Builder setTableRelations(
+          int index, io.cloudquery.plugin.v3.TableRelation.Builder builderForValue) {
+        if (tableRelationsBuilder_ == null) {
+          ensureTableRelationsIsMutable();
+          tableRelations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tableRelationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public Builder addTableRelations(io.cloudquery.plugin.v3.TableRelation value) {
+        if (tableRelationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTableRelationsIsMutable();
+          tableRelations_.add(value);
+          onChanged();
+        } else {
+          tableRelationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public Builder addTableRelations(
+          int index, io.cloudquery.plugin.v3.TableRelation value) {
+        if (tableRelationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTableRelationsIsMutable();
+          tableRelations_.add(index, value);
+          onChanged();
+        } else {
+          tableRelationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public Builder addTableRelations(
+          io.cloudquery.plugin.v3.TableRelation.Builder builderForValue) {
+        if (tableRelationsBuilder_ == null) {
+          ensureTableRelationsIsMutable();
+          tableRelations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tableRelationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public Builder addTableRelations(
+          int index, io.cloudquery.plugin.v3.TableRelation.Builder builderForValue) {
+        if (tableRelationsBuilder_ == null) {
+          ensureTableRelationsIsMutable();
+          tableRelations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tableRelationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public Builder addAllTableRelations(
+          java.lang.Iterable<? extends io.cloudquery.plugin.v3.TableRelation> values) {
+        if (tableRelationsBuilder_ == null) {
+          ensureTableRelationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tableRelations_);
+          onChanged();
+        } else {
+          tableRelationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public Builder clearTableRelations() {
+        if (tableRelationsBuilder_ == null) {
+          tableRelations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          tableRelationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public Builder removeTableRelations(int index) {
+        if (tableRelationsBuilder_ == null) {
+          ensureTableRelationsIsMutable();
+          tableRelations_.remove(index);
+          onChanged();
+        } else {
+          tableRelationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public io.cloudquery.plugin.v3.TableRelation.Builder getTableRelationsBuilder(
+          int index) {
+        return getTableRelationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public io.cloudquery.plugin.v3.TableRelationOrBuilder getTableRelationsOrBuilder(
+          int index) {
+        if (tableRelationsBuilder_ == null) {
+          return tableRelations_.get(index);  } else {
+          return tableRelationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public java.util.List<? extends io.cloudquery.plugin.v3.TableRelationOrBuilder> 
+           getTableRelationsOrBuilderList() {
+        if (tableRelationsBuilder_ != null) {
+          return tableRelationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tableRelations_);
+        }
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public io.cloudquery.plugin.v3.TableRelation.Builder addTableRelationsBuilder() {
+        return getTableRelationsFieldBuilder().addBuilder(
+            io.cloudquery.plugin.v3.TableRelation.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public io.cloudquery.plugin.v3.TableRelation.Builder addTableRelationsBuilder(
+          int index) {
+        return getTableRelationsFieldBuilder().addBuilder(
+            index, io.cloudquery.plugin.v3.TableRelation.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cloudquery.plugin.v3.TableRelation table_relations = 3;</code>
+       */
+      public java.util.List<io.cloudquery.plugin.v3.TableRelation.Builder> 
+           getTableRelationsBuilderList() {
+        return getTableRelationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          io.cloudquery.plugin.v3.TableRelation, io.cloudquery.plugin.v3.TableRelation.Builder, io.cloudquery.plugin.v3.TableRelationOrBuilder> 
+          getTableRelationsFieldBuilder() {
+        if (tableRelationsBuilder_ == null) {
+          tableRelationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              io.cloudquery.plugin.v3.TableRelation, io.cloudquery.plugin.v3.TableRelation.Builder, io.cloudquery.plugin.v3.TableRelationOrBuilder>(
+                  tableRelations_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          tableRelations_ = null;
+        }
+        return tableRelationsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cloudquery.plugin.v3.Write.MessageDeleteRecord)
+    }
+
+    // @@protoc_insertion_point(class_scope:cloudquery.plugin.v3.Write.MessageDeleteRecord)
+    private static final io.cloudquery.plugin.v3.Write.MessageDeleteRecord DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.cloudquery.plugin.v3.Write.MessageDeleteRecord();
+    }
+
+    public static io.cloudquery.plugin.v3.Write.MessageDeleteRecord getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MessageDeleteRecord>
+        PARSER = new com.google.protobuf.AbstractParser<MessageDeleteRecord>() {
+      @java.lang.Override
+      public MessageDeleteRecord parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MessageDeleteRecord> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MessageDeleteRecord> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.Write.MessageDeleteRecord getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface RequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cloudquery.plugin.v3.Write.Request)
       com.google.protobuf.MessageOrBuilder {
@@ -2165,6 +3469,21 @@ private static final long serialVersionUID = 0L;
      */
     io.cloudquery.plugin.v3.Write.MessageDeleteStaleOrBuilder getDeleteOrBuilder();
 
+    /**
+     * <code>.cloudquery.plugin.v3.Write.MessageDeleteRecord delete_record = 4;</code>
+     * @return Whether the deleteRecord field is set.
+     */
+    boolean hasDeleteRecord();
+    /**
+     * <code>.cloudquery.plugin.v3.Write.MessageDeleteRecord delete_record = 4;</code>
+     * @return The deleteRecord.
+     */
+    io.cloudquery.plugin.v3.Write.MessageDeleteRecord getDeleteRecord();
+    /**
+     * <code>.cloudquery.plugin.v3.Write.MessageDeleteRecord delete_record = 4;</code>
+     */
+    io.cloudquery.plugin.v3.Write.MessageDeleteRecordOrBuilder getDeleteRecordOrBuilder();
+
     io.cloudquery.plugin.v3.Write.Request.MessageCase getMessageCase();
   }
   /**
@@ -2211,6 +3530,7 @@ private static final long serialVersionUID = 0L;
       MIGRATE_TABLE(1),
       INSERT(2),
       DELETE(3),
+      DELETE_RECORD(4),
       MESSAGE_NOT_SET(0);
       private final int value;
       private MessageCase(int value) {
@@ -2231,6 +3551,7 @@ private static final long serialVersionUID = 0L;
           case 1: return MIGRATE_TABLE;
           case 2: return INSERT;
           case 3: return DELETE;
+          case 4: return DELETE_RECORD;
           case 0: return MESSAGE_NOT_SET;
           default: return null;
         }
@@ -2339,6 +3660,37 @@ private static final long serialVersionUID = 0L;
       return io.cloudquery.plugin.v3.Write.MessageDeleteStale.getDefaultInstance();
     }
 
+    public static final int DELETE_RECORD_FIELD_NUMBER = 4;
+    /**
+     * <code>.cloudquery.plugin.v3.Write.MessageDeleteRecord delete_record = 4;</code>
+     * @return Whether the deleteRecord field is set.
+     */
+    @java.lang.Override
+    public boolean hasDeleteRecord() {
+      return messageCase_ == 4;
+    }
+    /**
+     * <code>.cloudquery.plugin.v3.Write.MessageDeleteRecord delete_record = 4;</code>
+     * @return The deleteRecord.
+     */
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.Write.MessageDeleteRecord getDeleteRecord() {
+      if (messageCase_ == 4) {
+         return (io.cloudquery.plugin.v3.Write.MessageDeleteRecord) message_;
+      }
+      return io.cloudquery.plugin.v3.Write.MessageDeleteRecord.getDefaultInstance();
+    }
+    /**
+     * <code>.cloudquery.plugin.v3.Write.MessageDeleteRecord delete_record = 4;</code>
+     */
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.Write.MessageDeleteRecordOrBuilder getDeleteRecordOrBuilder() {
+      if (messageCase_ == 4) {
+         return (io.cloudquery.plugin.v3.Write.MessageDeleteRecord) message_;
+      }
+      return io.cloudquery.plugin.v3.Write.MessageDeleteRecord.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2362,6 +3714,9 @@ private static final long serialVersionUID = 0L;
       if (messageCase_ == 3) {
         output.writeMessage(3, (io.cloudquery.plugin.v3.Write.MessageDeleteStale) message_);
       }
+      if (messageCase_ == 4) {
+        output.writeMessage(4, (io.cloudquery.plugin.v3.Write.MessageDeleteRecord) message_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2382,6 +3737,10 @@ private static final long serialVersionUID = 0L;
       if (messageCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (io.cloudquery.plugin.v3.Write.MessageDeleteStale) message_);
+      }
+      if (messageCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (io.cloudquery.plugin.v3.Write.MessageDeleteRecord) message_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -2412,6 +3771,10 @@ private static final long serialVersionUID = 0L;
           if (!getDelete()
               .equals(other.getDelete())) return false;
           break;
+        case 4:
+          if (!getDeleteRecord()
+              .equals(other.getDeleteRecord())) return false;
+          break;
         case 0:
         default:
       }
@@ -2438,6 +3801,10 @@ private static final long serialVersionUID = 0L;
         case 3:
           hash = (37 * hash) + DELETE_FIELD_NUMBER;
           hash = (53 * hash) + getDelete().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + DELETE_RECORD_FIELD_NUMBER;
+          hash = (53 * hash) + getDeleteRecord().hashCode();
           break;
         case 0:
         default:
@@ -2582,6 +3949,9 @@ private static final long serialVersionUID = 0L;
         if (deleteBuilder_ != null) {
           deleteBuilder_.clear();
         }
+        if (deleteRecordBuilder_ != null) {
+          deleteRecordBuilder_.clear();
+        }
         messageCase_ = 0;
         message_ = null;
         return this;
@@ -2634,6 +4004,10 @@ private static final long serialVersionUID = 0L;
         if (messageCase_ == 3 &&
             deleteBuilder_ != null) {
           result.message_ = deleteBuilder_.build();
+        }
+        if (messageCase_ == 4 &&
+            deleteRecordBuilder_ != null) {
+          result.message_ = deleteRecordBuilder_.build();
         }
       }
 
@@ -2694,6 +4068,10 @@ private static final long serialVersionUID = 0L;
             mergeDelete(other.getDelete());
             break;
           }
+          case DELETE_RECORD: {
+            mergeDeleteRecord(other.getDeleteRecord());
+            break;
+          }
           case MESSAGE_NOT_SET: {
             break;
           }
@@ -2745,6 +4123,13 @@ private static final long serialVersionUID = 0L;
                 messageCase_ = 3;
                 break;
               } // case 26
+              case 34: {
+                input.readMessage(
+                    getDeleteRecordFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                messageCase_ = 4;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -3201,6 +4586,148 @@ private static final long serialVersionUID = 0L;
         messageCase_ = 3;
         onChanged();
         return deleteBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.cloudquery.plugin.v3.Write.MessageDeleteRecord, io.cloudquery.plugin.v3.Write.MessageDeleteRecord.Builder, io.cloudquery.plugin.v3.Write.MessageDeleteRecordOrBuilder> deleteRecordBuilder_;
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageDeleteRecord delete_record = 4;</code>
+       * @return Whether the deleteRecord field is set.
+       */
+      @java.lang.Override
+      public boolean hasDeleteRecord() {
+        return messageCase_ == 4;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageDeleteRecord delete_record = 4;</code>
+       * @return The deleteRecord.
+       */
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Write.MessageDeleteRecord getDeleteRecord() {
+        if (deleteRecordBuilder_ == null) {
+          if (messageCase_ == 4) {
+            return (io.cloudquery.plugin.v3.Write.MessageDeleteRecord) message_;
+          }
+          return io.cloudquery.plugin.v3.Write.MessageDeleteRecord.getDefaultInstance();
+        } else {
+          if (messageCase_ == 4) {
+            return deleteRecordBuilder_.getMessage();
+          }
+          return io.cloudquery.plugin.v3.Write.MessageDeleteRecord.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageDeleteRecord delete_record = 4;</code>
+       */
+      public Builder setDeleteRecord(io.cloudquery.plugin.v3.Write.MessageDeleteRecord value) {
+        if (deleteRecordBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          message_ = value;
+          onChanged();
+        } else {
+          deleteRecordBuilder_.setMessage(value);
+        }
+        messageCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageDeleteRecord delete_record = 4;</code>
+       */
+      public Builder setDeleteRecord(
+          io.cloudquery.plugin.v3.Write.MessageDeleteRecord.Builder builderForValue) {
+        if (deleteRecordBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          deleteRecordBuilder_.setMessage(builderForValue.build());
+        }
+        messageCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageDeleteRecord delete_record = 4;</code>
+       */
+      public Builder mergeDeleteRecord(io.cloudquery.plugin.v3.Write.MessageDeleteRecord value) {
+        if (deleteRecordBuilder_ == null) {
+          if (messageCase_ == 4 &&
+              message_ != io.cloudquery.plugin.v3.Write.MessageDeleteRecord.getDefaultInstance()) {
+            message_ = io.cloudquery.plugin.v3.Write.MessageDeleteRecord.newBuilder((io.cloudquery.plugin.v3.Write.MessageDeleteRecord) message_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          if (messageCase_ == 4) {
+            deleteRecordBuilder_.mergeFrom(value);
+          } else {
+            deleteRecordBuilder_.setMessage(value);
+          }
+        }
+        messageCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageDeleteRecord delete_record = 4;</code>
+       */
+      public Builder clearDeleteRecord() {
+        if (deleteRecordBuilder_ == null) {
+          if (messageCase_ == 4) {
+            messageCase_ = 0;
+            message_ = null;
+            onChanged();
+          }
+        } else {
+          if (messageCase_ == 4) {
+            messageCase_ = 0;
+            message_ = null;
+          }
+          deleteRecordBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageDeleteRecord delete_record = 4;</code>
+       */
+      public io.cloudquery.plugin.v3.Write.MessageDeleteRecord.Builder getDeleteRecordBuilder() {
+        return getDeleteRecordFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageDeleteRecord delete_record = 4;</code>
+       */
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Write.MessageDeleteRecordOrBuilder getDeleteRecordOrBuilder() {
+        if ((messageCase_ == 4) && (deleteRecordBuilder_ != null)) {
+          return deleteRecordBuilder_.getMessageOrBuilder();
+        } else {
+          if (messageCase_ == 4) {
+            return (io.cloudquery.plugin.v3.Write.MessageDeleteRecord) message_;
+          }
+          return io.cloudquery.plugin.v3.Write.MessageDeleteRecord.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageDeleteRecord delete_record = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.cloudquery.plugin.v3.Write.MessageDeleteRecord, io.cloudquery.plugin.v3.Write.MessageDeleteRecord.Builder, io.cloudquery.plugin.v3.Write.MessageDeleteRecordOrBuilder> 
+          getDeleteRecordFieldBuilder() {
+        if (deleteRecordBuilder_ == null) {
+          if (!(messageCase_ == 4)) {
+            message_ = io.cloudquery.plugin.v3.Write.MessageDeleteRecord.getDefaultInstance();
+          }
+          deleteRecordBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.cloudquery.plugin.v3.Write.MessageDeleteRecord, io.cloudquery.plugin.v3.Write.MessageDeleteRecord.Builder, io.cloudquery.plugin.v3.Write.MessageDeleteRecordOrBuilder>(
+                  (io.cloudquery.plugin.v3.Write.MessageDeleteRecord) message_,
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        messageCase_ = 4;
+        onChanged();
+        return deleteRecordBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
