@@ -90,6 +90,11 @@ public final class PluginOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cloudquery_plugin_v3_Sync_MessageMigrateTable_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cloudquery_plugin_v3_Sync_MessageDeleteRecord_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_cloudquery_plugin_v3_Sync_MessageDeleteRecord_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cloudquery_plugin_v3_Sync_BackendOptions_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -120,6 +125,21 @@ public final class PluginOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cloudquery_plugin_v3_Read_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cloudquery_plugin_v3_TableRelation_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_cloudquery_plugin_v3_TableRelation_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cloudquery_plugin_v3_Predicate_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_cloudquery_plugin_v3_Predicate_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cloudquery_plugin_v3_PredicatesGroup_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_cloudquery_plugin_v3_PredicatesGroup_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cloudquery_plugin_v3_Write_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -139,6 +159,11 @@ public final class PluginOuterClass {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cloudquery_plugin_v3_Write_MessageDeleteStale_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cloudquery_plugin_v3_Write_MessageDeleteRecord_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_cloudquery_plugin_v3_Write_MessageDeleteRecord_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cloudquery_plugin_v3_Write_Request_descriptor;
   static final 
@@ -182,53 +207,74 @@ public final class PluginOuterClass {
       "on\030\002 \001(\010\032\n\n\010Response\"v\n\tGetTables\032M\n\007Req" +
       "uest\022\016\n\006tables\030\001 \003(\t\022\023\n\013skip_tables\030\002 \003(" +
       "\t\022\035\n\025skip_dependent_tables\030\003 \001(\010\032\032\n\010Resp" +
-      "onse\022\016\n\006tables\030\001 \003(\014\"\315\003\n\004Sync\032\037\n\rMessage" +
+      "onse\022\016\n\006tables\030\001 \003(\014\"\275\005\n\004Sync\032\037\n\rMessage" +
       "Insert\022\016\n\006record\030\001 \001(\014\032$\n\023MessageMigrate" +
-      "Table\022\r\n\005table\030\001 \001(\014\0328\n\016BackendOptions\022\022" +
-      "\n\ntable_name\030\001 \001(\t\022\022\n\nconnection\030\002 \001(\t\032\246" +
-      "\001\n\007Request\022\016\n\006tables\030\001 \003(\t\022\023\n\013skip_table" +
-      "s\030\002 \003(\t\022\035\n\025skip_dependent_tables\030\003 \001(\010\022\033" +
-      "\n\023deterministic_cq_id\030\004 \001(\010\022:\n\007backend\030\005" +
-      " \001(\0132).cloudquery.plugin.v3.Sync.Backend" +
-      "Options\032\232\001\n\010Response\022G\n\rmigrate_table\030\001 " +
-      "\001(\0132..cloudquery.plugin.v3.Sync.MessageM" +
-      "igrateTableH\000\022:\n\006insert\030\002 \001(\0132(.cloudque" +
-      "ry.plugin.v3.Sync.MessageInsertH\000B\t\n\007mes" +
+      "Table\022\r\n\005table\030\001 \001(\014\032\244\001\n\023MessageDeleteRe" +
+      "cord\022\022\n\ntable_name\030\001 \001(\t\022;\n\014where_clause" +
+      "\030\002 \003(\0132%.cloudquery.plugin.v3.Predicates" +
+      "Group\022<\n\017table_relations\030\003 \003(\0132#.cloudqu" +
+      "ery.plugin.v3.TableRelation\0328\n\016BackendOp" +
+      "tions\022\022\n\ntable_name\030\001 \001(\t\022\022\n\nconnection\030" +
+      "\002 \001(\t\032\246\001\n\007Request\022\016\n\006tables\030\001 \003(\t\022\023\n\013ski" +
+      "p_tables\030\002 \003(\t\022\035\n\025skip_dependent_tables\030" +
+      "\003 \001(\010\022\033\n\023deterministic_cq_id\030\004 \001(\010\022:\n\007ba" +
+      "ckend\030\005 \001(\0132).cloudquery.plugin.v3.Sync." +
+      "BackendOptions\032\343\001\n\010Response\022G\n\rmigrate_t" +
+      "able\030\001 \001(\0132..cloudquery.plugin.v3.Sync.M" +
+      "essageMigrateTableH\000\022:\n\006insert\030\002 \001(\0132(.c" +
+      "loudquery.plugin.v3.Sync.MessageInsertH\000" +
+      "\022G\n\rdelete_record\030\003 \001(\0132..cloudquery.plu" +
+      "gin.v3.Sync.MessageDeleteRecordH\000B\t\n\007mes" +
       "sage\"<\n\004Read\032\030\n\007Request\022\r\n\005table\030\001 \001(\014\032\032" +
-      "\n\010Response\022\016\n\006record\030\001 \001(\014\"\322\003\n\005Write\032;\n\023" +
-      "MessageMigrateTable\022\r\n\005table\030\001 \001(\014\022\025\n\rmi" +
-      "grate_force\030\002 \001(\010\032\037\n\rMessageInsert\022\016\n\006re" +
-      "cord\030\001 \001(\014\032\177\n\022MessageDeleteStale\022\021\n\005tabl" +
-      "e\030\001 \001(\014B\002\030\001\022\023\n\013source_name\030\002 \001(\t\022-\n\tsync" +
-      "_time\030\003 \001(\0132\032.google.protobuf.Timestamp\022" +
-      "\022\n\ntable_name\030\004 \001(\t\032\335\001\n\007Request\022H\n\rmigra" +
-      "te_table\030\001 \001(\0132/.cloudquery.plugin.v3.Wr" +
-      "ite.MessageMigrateTableH\000\022;\n\006insert\030\002 \001(" +
-      "\0132).cloudquery.plugin.v3.Write.MessageIn" +
-      "sertH\000\022@\n\006delete\030\003 \001(\0132..cloudquery.plug" +
-      "in.v3.Write.MessageDeleteStaleH\000B\t\n\007mess" +
-      "age\032\n\n\010Response\"\036\n\005Close\032\t\n\007Request\032\n\n\010R" +
-      "esponse2\306\005\n\006Plugin\022X\n\007GetName\022%.cloudque" +
-      "ry.plugin.v3.GetName.Request\032&.cloudquer" +
-      "y.plugin.v3.GetName.Response\022a\n\nGetVersi" +
-      "on\022(.cloudquery.plugin.v3.GetVersion.Req" +
-      "uest\032).cloudquery.plugin.v3.GetVersion.R" +
-      "esponse\022O\n\004Init\022\".cloudquery.plugin.v3.I" +
-      "nit.Request\032#.cloudquery.plugin.v3.Init." +
-      "Response\022^\n\tGetTables\022\'.cloudquery.plugi" +
-      "n.v3.GetTables.Request\032(.cloudquery.plug" +
-      "in.v3.GetTables.Response\022Q\n\004Sync\022\".cloud" +
-      "query.plugin.v3.Sync.Request\032#.cloudquer" +
-      "y.plugin.v3.Sync.Response0\001\022Q\n\004Read\022\".cl" +
-      "oudquery.plugin.v3.Read.Request\032#.cloudq" +
-      "uery.plugin.v3.Read.Response0\001\022T\n\005Write\022" +
-      "#.cloudquery.plugin.v3.Write.Request\032$.c" +
-      "loudquery.plugin.v3.Write.Response(\001\022R\n\005" +
-      "Close\022#.cloudquery.plugin.v3.Close.Reque" +
-      "st\032$.cloudquery.plugin.v3.Close.Response" +
-      "BS\n\027io.cloudquery.plugin.v3P\001Z6github.co" +
-      "m/cloudquery/plugin-pb-go/pb/plugin/v3;p" +
-      "luginb\006proto3"
+      "\n\010Response\022\016\n\006record\030\001 \001(\014\"9\n\rTableRelat" +
+      "ion\022\022\n\ntable_name\030\001 \001(\t\022\024\n\014parent_table\030" +
+      "\002 \001(\t\"{\n\tPredicate\022:\n\010operator\030\001 \001(\0162(.c" +
+      "loudquery.plugin.v3.Predicate.Operator\022\016" +
+      "\n\006column\030\002 \001(\t\022\016\n\006record\030\003 \001(\014\"\022\n\010Operat" +
+      "or\022\006\n\002EQ\020\000\"\262\001\n\017PredicatesGroup\022I\n\rgroupi" +
+      "ng_type\030\001 \001(\01622.cloudquery.plugin.v3.Pre" +
+      "dicatesGroup.GroupingType\0223\n\npredicates\030" +
+      "\002 \003(\0132\037.cloudquery.plugin.v3.Predicate\"\037" +
+      "\n\014GroupingType\022\007\n\003AND\020\000\022\006\n\002OR\020\001\"\303\005\n\005Writ" +
+      "e\032;\n\023MessageMigrateTable\022\r\n\005table\030\001 \001(\014\022" +
+      "\025\n\rmigrate_force\030\002 \001(\010\032\037\n\rMessageInsert\022" +
+      "\016\n\006record\030\001 \001(\014\032\177\n\022MessageDeleteStale\022\021\n" +
+      "\005table\030\001 \001(\014B\002\030\001\022\023\n\013source_name\030\002 \001(\t\022-\n" +
+      "\tsync_time\030\003 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022\022\n\ntable_name\030\004 \001(\t\032\244\001\n\023MessageDele" +
+      "teRecord\022\022\n\ntable_name\030\001 \001(\t\022;\n\014where_cl" +
+      "ause\030\002 \003(\0132%.cloudquery.plugin.v3.Predic" +
+      "atesGroup\022<\n\017table_relations\030\003 \003(\0132#.clo" +
+      "udquery.plugin.v3.TableRelation\032\247\002\n\007Requ" +
+      "est\022H\n\rmigrate_table\030\001 \001(\0132/.cloudquery." +
+      "plugin.v3.Write.MessageMigrateTableH\000\022;\n" +
+      "\006insert\030\002 \001(\0132).cloudquery.plugin.v3.Wri" +
+      "te.MessageInsertH\000\022@\n\006delete\030\003 \001(\0132..clo" +
+      "udquery.plugin.v3.Write.MessageDeleteSta" +
+      "leH\000\022H\n\rdelete_record\030\004 \001(\0132/.cloudquery" +
+      ".plugin.v3.Write.MessageDeleteRecordH\000B\t" +
+      "\n\007message\032\n\n\010Response\"\036\n\005Close\032\t\n\007Reques" +
+      "t\032\n\n\010Response2\306\005\n\006Plugin\022X\n\007GetName\022%.cl" +
+      "oudquery.plugin.v3.GetName.Request\032&.clo" +
+      "udquery.plugin.v3.GetName.Response\022a\n\nGe" +
+      "tVersion\022(.cloudquery.plugin.v3.GetVersi" +
+      "on.Request\032).cloudquery.plugin.v3.GetVer" +
+      "sion.Response\022O\n\004Init\022\".cloudquery.plugi" +
+      "n.v3.Init.Request\032#.cloudquery.plugin.v3" +
+      ".Init.Response\022^\n\tGetTables\022\'.cloudquery" +
+      ".plugin.v3.GetTables.Request\032(.cloudquer" +
+      "y.plugin.v3.GetTables.Response\022Q\n\004Sync\022\"" +
+      ".cloudquery.plugin.v3.Sync.Request\032#.clo" +
+      "udquery.plugin.v3.Sync.Response0\001\022Q\n\004Rea" +
+      "d\022\".cloudquery.plugin.v3.Read.Request\032#." +
+      "cloudquery.plugin.v3.Read.Response0\001\022T\n\005" +
+      "Write\022#.cloudquery.plugin.v3.Write.Reque" +
+      "st\032$.cloudquery.plugin.v3.Write.Response" +
+      "(\001\022R\n\005Close\022#.cloudquery.plugin.v3.Close" +
+      ".Request\032$.cloudquery.plugin.v3.Close.Re" +
+      "sponseBS\n\027io.cloudquery.plugin.v3P\001Z6git" +
+      "hub.com/cloudquery/plugin-pb-go/pb/plugi" +
+      "n/v3;pluginb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -325,24 +371,30 @@ public final class PluginOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cloudquery_plugin_v3_Sync_MessageMigrateTable_descriptor,
         new java.lang.String[] { "Table", });
-    internal_static_cloudquery_plugin_v3_Sync_BackendOptions_descriptor =
+    internal_static_cloudquery_plugin_v3_Sync_MessageDeleteRecord_descriptor =
       internal_static_cloudquery_plugin_v3_Sync_descriptor.getNestedTypes().get(2);
+    internal_static_cloudquery_plugin_v3_Sync_MessageDeleteRecord_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_cloudquery_plugin_v3_Sync_MessageDeleteRecord_descriptor,
+        new java.lang.String[] { "TableName", "WhereClause", "TableRelations", });
+    internal_static_cloudquery_plugin_v3_Sync_BackendOptions_descriptor =
+      internal_static_cloudquery_plugin_v3_Sync_descriptor.getNestedTypes().get(3);
     internal_static_cloudquery_plugin_v3_Sync_BackendOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cloudquery_plugin_v3_Sync_BackendOptions_descriptor,
         new java.lang.String[] { "TableName", "Connection", });
     internal_static_cloudquery_plugin_v3_Sync_Request_descriptor =
-      internal_static_cloudquery_plugin_v3_Sync_descriptor.getNestedTypes().get(3);
+      internal_static_cloudquery_plugin_v3_Sync_descriptor.getNestedTypes().get(4);
     internal_static_cloudquery_plugin_v3_Sync_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cloudquery_plugin_v3_Sync_Request_descriptor,
         new java.lang.String[] { "Tables", "SkipTables", "SkipDependentTables", "DeterministicCqId", "Backend", });
     internal_static_cloudquery_plugin_v3_Sync_Response_descriptor =
-      internal_static_cloudquery_plugin_v3_Sync_descriptor.getNestedTypes().get(4);
+      internal_static_cloudquery_plugin_v3_Sync_descriptor.getNestedTypes().get(5);
     internal_static_cloudquery_plugin_v3_Sync_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cloudquery_plugin_v3_Sync_Response_descriptor,
-        new java.lang.String[] { "MigrateTable", "Insert", "Message", });
+        new java.lang.String[] { "MigrateTable", "Insert", "DeleteRecord", "Message", });
     internal_static_cloudquery_plugin_v3_Read_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_cloudquery_plugin_v3_Read_fieldAccessorTable = new
@@ -361,8 +413,26 @@ public final class PluginOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cloudquery_plugin_v3_Read_Response_descriptor,
         new java.lang.String[] { "Record", });
-    internal_static_cloudquery_plugin_v3_Write_descriptor =
+    internal_static_cloudquery_plugin_v3_TableRelation_descriptor =
       getDescriptor().getMessageTypes().get(6);
+    internal_static_cloudquery_plugin_v3_TableRelation_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_cloudquery_plugin_v3_TableRelation_descriptor,
+        new java.lang.String[] { "TableName", "ParentTable", });
+    internal_static_cloudquery_plugin_v3_Predicate_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_cloudquery_plugin_v3_Predicate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_cloudquery_plugin_v3_Predicate_descriptor,
+        new java.lang.String[] { "Operator", "Column", "Record", });
+    internal_static_cloudquery_plugin_v3_PredicatesGroup_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_cloudquery_plugin_v3_PredicatesGroup_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_cloudquery_plugin_v3_PredicatesGroup_descriptor,
+        new java.lang.String[] { "GroupingType", "Predicates", });
+    internal_static_cloudquery_plugin_v3_Write_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_cloudquery_plugin_v3_Write_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cloudquery_plugin_v3_Write_descriptor,
@@ -385,20 +455,26 @@ public final class PluginOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cloudquery_plugin_v3_Write_MessageDeleteStale_descriptor,
         new java.lang.String[] { "Table", "SourceName", "SyncTime", "TableName", });
-    internal_static_cloudquery_plugin_v3_Write_Request_descriptor =
+    internal_static_cloudquery_plugin_v3_Write_MessageDeleteRecord_descriptor =
       internal_static_cloudquery_plugin_v3_Write_descriptor.getNestedTypes().get(3);
+    internal_static_cloudquery_plugin_v3_Write_MessageDeleteRecord_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_cloudquery_plugin_v3_Write_MessageDeleteRecord_descriptor,
+        new java.lang.String[] { "TableName", "WhereClause", "TableRelations", });
+    internal_static_cloudquery_plugin_v3_Write_Request_descriptor =
+      internal_static_cloudquery_plugin_v3_Write_descriptor.getNestedTypes().get(4);
     internal_static_cloudquery_plugin_v3_Write_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cloudquery_plugin_v3_Write_Request_descriptor,
-        new java.lang.String[] { "MigrateTable", "Insert", "Delete", "Message", });
+        new java.lang.String[] { "MigrateTable", "Insert", "Delete", "DeleteRecord", "Message", });
     internal_static_cloudquery_plugin_v3_Write_Response_descriptor =
-      internal_static_cloudquery_plugin_v3_Write_descriptor.getNestedTypes().get(4);
+      internal_static_cloudquery_plugin_v3_Write_descriptor.getNestedTypes().get(5);
     internal_static_cloudquery_plugin_v3_Write_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cloudquery_plugin_v3_Write_Response_descriptor,
         new java.lang.String[] { });
     internal_static_cloudquery_plugin_v3_Close_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_cloudquery_plugin_v3_Close_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cloudquery_plugin_v3_Close_descriptor,
