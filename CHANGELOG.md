@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.12](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.11...v0.0.12) (2024-01-02)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency org.mockito:mockito-core to v5.8.0 ([#67](https://github.com/cloudquery/plugin-pb-java/issues/67)) ([d38a665](https://github.com/cloudquery/plugin-pb-java/commit/d38a665e505c3ea4d93098c80ec53c88dfa3637d))
+* **deps:** Update grpcVersion to v1.60.1 ([#69](https://github.com/cloudquery/plugin-pb-java/issues/69)) ([17c6a7f](https://github.com/cloudquery/plugin-pb-java/commit/17c6a7fe68526491625cd68b9191ef2bf3eda8d6))
+* Generate Java Code from `plugin-pb` ([#71](https://github.com/cloudquery/plugin-pb-java/issues/71)) ([61efaa4](https://github.com/cloudquery/plugin-pb-java/commit/61efaa45044836341407fa4d5524f35d13676f95))
+
 ## [0.0.11](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.10...v0.0.11) (2023-12-04)
 
 
