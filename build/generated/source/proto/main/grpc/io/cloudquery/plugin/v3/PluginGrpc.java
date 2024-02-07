@@ -77,6 +77,37 @@ public final class PluginGrpc {
     return getGetVersionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.GetSpecSchema.Request,
+      io.cloudquery.plugin.v3.GetSpecSchema.Response> getGetSpecSchemaMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSpecSchema",
+      requestType = io.cloudquery.plugin.v3.GetSpecSchema.Request.class,
+      responseType = io.cloudquery.plugin.v3.GetSpecSchema.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.GetSpecSchema.Request,
+      io.cloudquery.plugin.v3.GetSpecSchema.Response> getGetSpecSchemaMethod() {
+    io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.GetSpecSchema.Request, io.cloudquery.plugin.v3.GetSpecSchema.Response> getGetSpecSchemaMethod;
+    if ((getGetSpecSchemaMethod = PluginGrpc.getGetSpecSchemaMethod) == null) {
+      synchronized (PluginGrpc.class) {
+        if ((getGetSpecSchemaMethod = PluginGrpc.getGetSpecSchemaMethod) == null) {
+          PluginGrpc.getGetSpecSchemaMethod = getGetSpecSchemaMethod =
+              io.grpc.MethodDescriptor.<io.cloudquery.plugin.v3.GetSpecSchema.Request, io.cloudquery.plugin.v3.GetSpecSchema.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSpecSchema"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.cloudquery.plugin.v3.GetSpecSchema.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.cloudquery.plugin.v3.GetSpecSchema.Response.getDefaultInstance()))
+              .setSchemaDescriptor(new PluginMethodDescriptorSupplier("GetSpecSchema"))
+              .build();
+        }
+      }
+    }
+    return getGetSpecSchemaMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Init.Request,
       io.cloudquery.plugin.v3.Init.Response> getInitMethod;
 
@@ -333,6 +364,18 @@ public final class PluginGrpc {
 
     /**
      * <pre>
+     * Get plugin spec schema.
+     * This will allow validating the input even before calling Init.
+     * Should be called before Init.
+     * </pre>
+     */
+    default void getSpecSchema(io.cloudquery.plugin.v3.GetSpecSchema.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.GetSpecSchema.Response> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSpecSchemaMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Configure the plugin with the given credentials and mode
      * </pre>
      */
@@ -444,6 +487,19 @@ public final class PluginGrpc {
 
     /**
      * <pre>
+     * Get plugin spec schema.
+     * This will allow validating the input even before calling Init.
+     * Should be called before Init.
+     * </pre>
+     */
+    public void getSpecSchema(io.cloudquery.plugin.v3.GetSpecSchema.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.GetSpecSchema.Response> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetSpecSchemaMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Configure the plugin with the given credentials and mode
      * </pre>
      */
@@ -548,6 +604,18 @@ public final class PluginGrpc {
 
     /**
      * <pre>
+     * Get plugin spec schema.
+     * This will allow validating the input even before calling Init.
+     * Should be called before Init.
+     * </pre>
+     */
+    public io.cloudquery.plugin.v3.GetSpecSchema.Response getSpecSchema(io.cloudquery.plugin.v3.GetSpecSchema.Request request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetSpecSchemaMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Configure the plugin with the given credentials and mode
      * </pre>
      */
@@ -640,6 +708,19 @@ public final class PluginGrpc {
 
     /**
      * <pre>
+     * Get plugin spec schema.
+     * This will allow validating the input even before calling Init.
+     * Should be called before Init.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.cloudquery.plugin.v3.GetSpecSchema.Response> getSpecSchema(
+        io.cloudquery.plugin.v3.GetSpecSchema.Request request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetSpecSchemaMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Configure the plugin with the given credentials and mode
      * </pre>
      */
@@ -674,12 +755,13 @@ public final class PluginGrpc {
 
   private static final int METHODID_GET_NAME = 0;
   private static final int METHODID_GET_VERSION = 1;
-  private static final int METHODID_INIT = 2;
-  private static final int METHODID_GET_TABLES = 3;
-  private static final int METHODID_SYNC = 4;
-  private static final int METHODID_READ = 5;
-  private static final int METHODID_CLOSE = 6;
-  private static final int METHODID_WRITE = 7;
+  private static final int METHODID_GET_SPEC_SCHEMA = 2;
+  private static final int METHODID_INIT = 3;
+  private static final int METHODID_GET_TABLES = 4;
+  private static final int METHODID_SYNC = 5;
+  private static final int METHODID_READ = 6;
+  private static final int METHODID_CLOSE = 7;
+  private static final int METHODID_WRITE = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -705,6 +787,10 @@ public final class PluginGrpc {
         case METHODID_GET_VERSION:
           serviceImpl.getVersion((io.cloudquery.plugin.v3.GetVersion.Request) request,
               (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.GetVersion.Response>) responseObserver);
+          break;
+        case METHODID_GET_SPEC_SCHEMA:
+          serviceImpl.getSpecSchema((io.cloudquery.plugin.v3.GetSpecSchema.Request) request,
+              (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.GetSpecSchema.Response>) responseObserver);
           break;
         case METHODID_INIT:
           serviceImpl.init((io.cloudquery.plugin.v3.Init.Request) request,
@@ -761,6 +847,13 @@ public final class PluginGrpc {
               io.cloudquery.plugin.v3.GetVersion.Request,
               io.cloudquery.plugin.v3.GetVersion.Response>(
                 service, METHODID_GET_VERSION)))
+        .addMethod(
+          getGetSpecSchemaMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              io.cloudquery.plugin.v3.GetSpecSchema.Request,
+              io.cloudquery.plugin.v3.GetSpecSchema.Response>(
+                service, METHODID_GET_SPEC_SCHEMA)))
         .addMethod(
           getInitMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -853,6 +946,7 @@ public final class PluginGrpc {
               .setSchemaDescriptor(new PluginFileDescriptorSupplier())
               .addMethod(getGetNameMethod())
               .addMethod(getGetVersionMethod())
+              .addMethod(getGetSpecSchemaMethod())
               .addMethod(getInitMethod())
               .addMethod(getGetTablesMethod())
               .addMethod(getSyncMethod())
