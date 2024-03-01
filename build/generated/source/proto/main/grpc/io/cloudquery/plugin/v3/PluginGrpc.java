@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.61.0)",
+    value = "by gRPC proto compiler (version 1.62.2)",
     comments = "Source: cloudquery/plugin/v3/plugin.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class PluginGrpc {
