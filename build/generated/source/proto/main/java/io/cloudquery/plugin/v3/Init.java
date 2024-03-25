@@ -62,6 +62,26 @@ private static final long serialVersionUID = 0L;
      * @return The noConnection.
      */
     boolean getNoConnection();
+
+    /**
+     * <pre>
+     * unique execution_id that will identify the invocation (sync, migrate etc)
+     * </pre>
+     *
+     * <code>string invocation_id = 3;</code>
+     * @return The invocationId.
+     */
+    java.lang.String getInvocationId();
+    /**
+     * <pre>
+     * unique execution_id that will identify the invocation (sync, migrate etc)
+     * </pre>
+     *
+     * <code>string invocation_id = 3;</code>
+     * @return The bytes for invocationId.
+     */
+    com.google.protobuf.ByteString
+        getInvocationIdBytes();
   }
   /**
    * Protobuf type {@code cloudquery.plugin.v3.Init.Request}
@@ -77,6 +97,7 @@ private static final long serialVersionUID = 0L;
     }
     private Request() {
       spec_ = com.google.protobuf.ByteString.EMPTY;
+      invocationId_ = "";
     }
 
     @java.lang.Override
@@ -129,6 +150,53 @@ private static final long serialVersionUID = 0L;
       return noConnection_;
     }
 
+    public static final int INVOCATION_ID_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object invocationId_ = "";
+    /**
+     * <pre>
+     * unique execution_id that will identify the invocation (sync, migrate etc)
+     * </pre>
+     *
+     * <code>string invocation_id = 3;</code>
+     * @return The invocationId.
+     */
+    @java.lang.Override
+    public java.lang.String getInvocationId() {
+      java.lang.Object ref = invocationId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        invocationId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * unique execution_id that will identify the invocation (sync, migrate etc)
+     * </pre>
+     *
+     * <code>string invocation_id = 3;</code>
+     * @return The bytes for invocationId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getInvocationIdBytes() {
+      java.lang.Object ref = invocationId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        invocationId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -149,6 +217,9 @@ private static final long serialVersionUID = 0L;
       if (noConnection_ != false) {
         output.writeBool(2, noConnection_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invocationId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, invocationId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -165,6 +236,9 @@ private static final long serialVersionUID = 0L;
       if (noConnection_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, noConnection_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(invocationId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, invocationId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -185,6 +259,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getSpec())) return false;
       if (getNoConnection()
           != other.getNoConnection()) return false;
+      if (!getInvocationId()
+          .equals(other.getInvocationId())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -201,6 +277,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + NO_CONNECTION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getNoConnection());
+      hash = (37 * hash) + INVOCATION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getInvocationId().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -334,6 +412,7 @@ private static final long serialVersionUID = 0L;
         bitField0_ = 0;
         spec_ = com.google.protobuf.ByteString.EMPTY;
         noConnection_ = false;
+        invocationId_ = "";
         return this;
       }
 
@@ -372,6 +451,9 @@ private static final long serialVersionUID = 0L;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.noConnection_ = noConnection_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.invocationId_ = invocationId_;
         }
       }
 
@@ -425,6 +507,11 @@ private static final long serialVersionUID = 0L;
         if (other.getNoConnection() != false) {
           setNoConnection(other.getNoConnection());
         }
+        if (!other.getInvocationId().isEmpty()) {
+          invocationId_ = other.invocationId_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -461,6 +548,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000002;
                 break;
               } // case 16
+              case 26: {
+                invocationId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -562,6 +654,98 @@ private static final long serialVersionUID = 0L;
       public Builder clearNoConnection() {
         bitField0_ = (bitField0_ & ~0x00000002);
         noConnection_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object invocationId_ = "";
+      /**
+       * <pre>
+       * unique execution_id that will identify the invocation (sync, migrate etc)
+       * </pre>
+       *
+       * <code>string invocation_id = 3;</code>
+       * @return The invocationId.
+       */
+      public java.lang.String getInvocationId() {
+        java.lang.Object ref = invocationId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          invocationId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * unique execution_id that will identify the invocation (sync, migrate etc)
+       * </pre>
+       *
+       * <code>string invocation_id = 3;</code>
+       * @return The bytes for invocationId.
+       */
+      public com.google.protobuf.ByteString
+          getInvocationIdBytes() {
+        java.lang.Object ref = invocationId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          invocationId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * unique execution_id that will identify the invocation (sync, migrate etc)
+       * </pre>
+       *
+       * <code>string invocation_id = 3;</code>
+       * @param value The invocationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvocationId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        invocationId_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unique execution_id that will identify the invocation (sync, migrate etc)
+       * </pre>
+       *
+       * <code>string invocation_id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearInvocationId() {
+        invocationId_ = getDefaultInstance().getInvocationId();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * unique execution_id that will identify the invocation (sync, migrate etc)
+       * </pre>
+       *
+       * <code>string invocation_id = 3;</code>
+       * @param value The bytes for invocationId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setInvocationIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        invocationId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
