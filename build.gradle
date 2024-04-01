@@ -24,7 +24,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 def grpcVersion = '1.62.2'
-def protobufVersion = '3.25.3'
+def protobufVersion = '4.26.1'
 def protocVersion = protobufVersion
 
 dependencies {
