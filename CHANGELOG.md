@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.17](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.16...v0.0.17) (2024-05-01)
+
+
+### Bug Fixes
+
+* **deps:** Update grpc-java monorepo to v1.63.0 ([#97](https://github.com/cloudquery/plugin-pb-java/issues/97)) ([9b5e9d4](https://github.com/cloudquery/plugin-pb-java/commit/9b5e9d4ad9eb386464681fff0f67d9b3521c6c2a))
+* Generate Java Code from `plugin-pb` ([#94](https://github.com/cloudquery/plugin-pb-java/issues/94)) ([52c313d](https://github.com/cloudquery/plugin-pb-java/commit/52c313d5e87b0730d7a28131cba97c8650274d54))
+* Generate Java Code from `plugin-pb` ([#98](https://github.com/cloudquery/plugin-pb-java/issues/98)) ([52a1999](https://github.com/cloudquery/plugin-pb-java/commit/52a1999342ba2d68452118e20b691f17a48199bb))
+
 ## [0.0.16](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.15...v0.0.16) (2024-04-01)
 
 
