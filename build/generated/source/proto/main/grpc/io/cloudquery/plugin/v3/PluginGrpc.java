@@ -294,6 +294,37 @@ public final class PluginGrpc {
     return getCloseMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.TestConnection.Request,
+      io.cloudquery.plugin.v3.TestConnection.Response> getTestConnectionMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TestConnection",
+      requestType = io.cloudquery.plugin.v3.TestConnection.Request.class,
+      responseType = io.cloudquery.plugin.v3.TestConnection.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.TestConnection.Request,
+      io.cloudquery.plugin.v3.TestConnection.Response> getTestConnectionMethod() {
+    io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.TestConnection.Request, io.cloudquery.plugin.v3.TestConnection.Response> getTestConnectionMethod;
+    if ((getTestConnectionMethod = PluginGrpc.getTestConnectionMethod) == null) {
+      synchronized (PluginGrpc.class) {
+        if ((getTestConnectionMethod = PluginGrpc.getTestConnectionMethod) == null) {
+          PluginGrpc.getTestConnectionMethod = getTestConnectionMethod =
+              io.grpc.MethodDescriptor.<io.cloudquery.plugin.v3.TestConnection.Request, io.cloudquery.plugin.v3.TestConnection.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TestConnection"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.cloudquery.plugin.v3.TestConnection.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.cloudquery.plugin.v3.TestConnection.Response.getDefaultInstance()))
+              .setSchemaDescriptor(new PluginMethodDescriptorSupplier("TestConnection"))
+              .build();
+        }
+      }
+    }
+    return getTestConnectionMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -434,6 +465,16 @@ public final class PluginGrpc {
         io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Close.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCloseMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Validate and test the connections used by the plugin
+     * </pre>
+     */
+    default void testConnection(io.cloudquery.plugin.v3.TestConnection.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.TestConnection.Response> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTestConnectionMethod(), responseObserver);
+    }
   }
 
   /**
@@ -564,6 +605,17 @@ public final class PluginGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCloseMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Validate and test the connections used by the plugin
+     * </pre>
+     */
+    public void testConnection(io.cloudquery.plugin.v3.TestConnection.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.TestConnection.Response> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTestConnectionMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -666,6 +718,16 @@ public final class PluginGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCloseMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Validate and test the connections used by the plugin
+     * </pre>
+     */
+    public io.cloudquery.plugin.v3.TestConnection.Response testConnection(io.cloudquery.plugin.v3.TestConnection.Request request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTestConnectionMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -751,6 +813,17 @@ public final class PluginGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCloseMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Validate and test the connections used by the plugin
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.cloudquery.plugin.v3.TestConnection.Response> testConnection(
+        io.cloudquery.plugin.v3.TestConnection.Request request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTestConnectionMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_NAME = 0;
@@ -761,7 +834,8 @@ public final class PluginGrpc {
   private static final int METHODID_SYNC = 5;
   private static final int METHODID_READ = 6;
   private static final int METHODID_CLOSE = 7;
-  private static final int METHODID_WRITE = 8;
+  private static final int METHODID_TEST_CONNECTION = 8;
+  private static final int METHODID_WRITE = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -811,6 +885,10 @@ public final class PluginGrpc {
         case METHODID_CLOSE:
           serviceImpl.close((io.cloudquery.plugin.v3.Close.Request) request,
               (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Close.Response>) responseObserver);
+          break;
+        case METHODID_TEST_CONNECTION:
+          serviceImpl.testConnection((io.cloudquery.plugin.v3.TestConnection.Request) request,
+              (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.TestConnection.Response>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -896,6 +974,13 @@ public final class PluginGrpc {
               io.cloudquery.plugin.v3.Close.Request,
               io.cloudquery.plugin.v3.Close.Response>(
                 service, METHODID_CLOSE)))
+        .addMethod(
+          getTestConnectionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              io.cloudquery.plugin.v3.TestConnection.Request,
+              io.cloudquery.plugin.v3.TestConnection.Response>(
+                service, METHODID_TEST_CONNECTION)))
         .build();
   }
 
@@ -953,6 +1038,7 @@ public final class PluginGrpc {
               .addMethod(getReadMethod())
               .addMethod(getWriteMethod())
               .addMethod(getCloseMethod())
+              .addMethod(getTestConnectionMethod())
               .build();
         }
       }
