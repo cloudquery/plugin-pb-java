@@ -214,6 +214,21 @@ public final class PluginOuterClass {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_cloudquery_plugin_v3_Close_Response_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cloudquery_plugin_v3_TestConnection_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cloudquery_plugin_v3_TestConnection_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cloudquery_plugin_v3_TestConnection_Request_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cloudquery_plugin_v3_TestConnection_Request_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cloudquery_plugin_v3_TestConnection_Response_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cloudquery_plugin_v3_TestConnection_Response_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -281,30 +296,36 @@ public final class PluginOuterClass {
       "v3.Write.MessageDeleteStaleH\000\022H\n\rdelete_" +
       "record\030\004 \001(\0132/.cloudquery.plugin.v3.Writ" +
       "e.MessageDeleteRecordH\000B\t\n\007message\032\n\n\010Re" +
-      "sponse\"\036\n\005Close\032\t\n\007Request\032\n\n\010Response2\262" +
-      "\006\n\006Plugin\022X\n\007GetName\022%.cloudquery.plugin" +
-      ".v3.GetName.Request\032&.cloudquery.plugin." +
-      "v3.GetName.Response\022a\n\nGetVersion\022(.clou" +
-      "dquery.plugin.v3.GetVersion.Request\032).cl" +
-      "oudquery.plugin.v3.GetVersion.Response\022j" +
-      "\n\rGetSpecSchema\022+.cloudquery.plugin.v3.G" +
-      "etSpecSchema.Request\032,.cloudquery.plugin" +
-      ".v3.GetSpecSchema.Response\022O\n\004Init\022\".clo" +
-      "udquery.plugin.v3.Init.Request\032#.cloudqu" +
-      "ery.plugin.v3.Init.Response\022^\n\tGetTables" +
-      "\022\'.cloudquery.plugin.v3.GetTables.Reques" +
-      "t\032(.cloudquery.plugin.v3.GetTables.Respo" +
-      "nse\022Q\n\004Sync\022\".cloudquery.plugin.v3.Sync." +
-      "Request\032#.cloudquery.plugin.v3.Sync.Resp" +
-      "onse0\001\022Q\n\004Read\022\".cloudquery.plugin.v3.Re" +
-      "ad.Request\032#.cloudquery.plugin.v3.Read.R" +
-      "esponse0\001\022T\n\005Write\022#.cloudquery.plugin.v" +
-      "3.Write.Request\032$.cloudquery.plugin.v3.W" +
-      "rite.Response(\001\022R\n\005Close\022#.cloudquery.pl" +
-      "ugin.v3.Close.Request\032$.cloudquery.plugi" +
-      "n.v3.Close.ResponseBS\n\027io.cloudquery.plu" +
-      "gin.v3P\001Z6github.com/cloudquery/plugin-p" +
-      "b-go/pb/plugin/v3;pluginb\006proto3"
+      "sponse\"\036\n\005Close\032\t\n\007Request\032\n\n\010Response\"y" +
+      "\n\016TestConnection\032\027\n\007Request\022\014\n\004spec\030\001 \001(" +
+      "\014\032N\n\010Response\022\017\n\007success\030\001 \001(\010\022\024\n\014failur" +
+      "e_code\030\002 \001(\t\022\033\n\023failure_description\030\003 \001(" +
+      "\t2\241\007\n\006Plugin\022X\n\007GetName\022%.cloudquery.plu" +
+      "gin.v3.GetName.Request\032&.cloudquery.plug" +
+      "in.v3.GetName.Response\022a\n\nGetVersion\022(.c" +
+      "loudquery.plugin.v3.GetVersion.Request\032)" +
+      ".cloudquery.plugin.v3.GetVersion.Respons" +
+      "e\022j\n\rGetSpecSchema\022+.cloudquery.plugin.v" +
+      "3.GetSpecSchema.Request\032,.cloudquery.plu" +
+      "gin.v3.GetSpecSchema.Response\022O\n\004Init\022\"." +
+      "cloudquery.plugin.v3.Init.Request\032#.clou" +
+      "dquery.plugin.v3.Init.Response\022^\n\tGetTab" +
+      "les\022\'.cloudquery.plugin.v3.GetTables.Req" +
+      "uest\032(.cloudquery.plugin.v3.GetTables.Re" +
+      "sponse\022Q\n\004Sync\022\".cloudquery.plugin.v3.Sy" +
+      "nc.Request\032#.cloudquery.plugin.v3.Sync.R" +
+      "esponse0\001\022Q\n\004Read\022\".cloudquery.plugin.v3" +
+      ".Read.Request\032#.cloudquery.plugin.v3.Rea" +
+      "d.Response0\001\022T\n\005Write\022#.cloudquery.plugi" +
+      "n.v3.Write.Request\032$.cloudquery.plugin.v" +
+      "3.Write.Response(\001\022R\n\005Close\022#.cloudquery" +
+      ".plugin.v3.Close.Request\032$.cloudquery.pl" +
+      "ugin.v3.Close.Response\022m\n\016TestConnection" +
+      "\022,.cloudquery.plugin.v3.TestConnection.R" +
+      "equest\032-.cloudquery.plugin.v3.TestConnec" +
+      "tion.ResponseBS\n\027io.cloudquery.plugin.v3" +
+      "P\001Z6github.com/cloudquery/plugin-pb-go/p" +
+      "b/plugin/v3;pluginb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -539,6 +560,24 @@ public final class PluginOuterClass {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cloudquery_plugin_v3_Close_Response_descriptor,
         new java.lang.String[] { });
+    internal_static_cloudquery_plugin_v3_TestConnection_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_cloudquery_plugin_v3_TestConnection_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cloudquery_plugin_v3_TestConnection_descriptor,
+        new java.lang.String[] { });
+    internal_static_cloudquery_plugin_v3_TestConnection_Request_descriptor =
+      internal_static_cloudquery_plugin_v3_TestConnection_descriptor.getNestedTypes().get(0);
+    internal_static_cloudquery_plugin_v3_TestConnection_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cloudquery_plugin_v3_TestConnection_Request_descriptor,
+        new java.lang.String[] { "Spec", });
+    internal_static_cloudquery_plugin_v3_TestConnection_Response_descriptor =
+      internal_static_cloudquery_plugin_v3_TestConnection_descriptor.getNestedTypes().get(1);
+    internal_static_cloudquery_plugin_v3_TestConnection_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cloudquery_plugin_v3_TestConnection_Response_descriptor,
+        new java.lang.String[] { "Success", "FailureCode", "FailureDescription", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
