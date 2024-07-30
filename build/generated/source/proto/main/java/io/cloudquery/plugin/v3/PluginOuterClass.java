@@ -334,7 +334,7 @@ public final class PluginOuterClass {
       "\007Request\032\n\n\010Response\"y\n\016TestConnection\032\027" +
       "\n\007Request\022\014\n\004spec\030\001 \001(\014\032N\n\010Response\022\017\n\007s" +
       "uccess\030\001 \001(\010\022\024\n\014failure_code\030\002 \001(\t\022\033\n\023fa" +
-      "ilure_description\030\003 \001(\t2\373\010\n\006Plugin\022X\n\007Ge" +
+      "ilure_description\030\003 \001(\t2\367\010\n\006Plugin\022X\n\007Ge" +
       "tName\022%.cloudquery.plugin.v3.GetName.Req" +
       "uest\032&.cloudquery.plugin.v3.GetName.Resp" +
       "onse\022a\n\nGetVersion\022(.cloudquery.plugin.v" +
@@ -355,17 +355,17 @@ public final class PluginOuterClass {
       "\032$.cloudquery.plugin.v3.Write.Response(\001" +
       "\022b\n\tTransform\022\'.cloudquery.plugin.v3.Tra" +
       "nsform.Request\032(.cloudquery.plugin.v3.Tr" +
-      "ansform.Response(\0010\001\022t\n\017TransformSchema\022" +
+      "ansform.Response(\0010\001\022p\n\017TransformSchema\022" +
       "-.cloudquery.plugin.v3.TransformSchema.R" +
       "equest\032..cloudquery.plugin.v3.TransformS" +
-      "chema.Response(\0010\001\022R\n\005Close\022#.cloudquery" +
-      ".plugin.v3.Close.Request\032$.cloudquery.pl" +
-      "ugin.v3.Close.Response\022m\n\016TestConnection" +
-      "\022,.cloudquery.plugin.v3.TestConnection.R" +
-      "equest\032-.cloudquery.plugin.v3.TestConnec" +
-      "tion.ResponseBS\n\027io.cloudquery.plugin.v3" +
-      "P\001Z6github.com/cloudquery/plugin-pb-go/p" +
-      "b/plugin/v3;pluginb\006proto3"
+      "chema.Response\022R\n\005Close\022#.cloudquery.plu" +
+      "gin.v3.Close.Request\032$.cloudquery.plugin" +
+      ".v3.Close.Response\022m\n\016TestConnection\022,.c" +
+      "loudquery.plugin.v3.TestConnection.Reque" +
+      "st\032-.cloudquery.plugin.v3.TestConnection" +
+      ".ResponseBS\n\027io.cloudquery.plugin.v3P\001Z6" +
+      "github.com/cloudquery/plugin-pb-go/pb/pl" +
+      "ugin/v3;pluginb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
