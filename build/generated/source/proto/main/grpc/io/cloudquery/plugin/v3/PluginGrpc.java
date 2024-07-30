@@ -301,7 +301,7 @@ public final class PluginGrpc {
       fullMethodName = SERVICE_NAME + '/' + "TransformSchema",
       requestType = io.cloudquery.plugin.v3.TransformSchema.Request.class,
       responseType = io.cloudquery.plugin.v3.TransformSchema.Response.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.TransformSchema.Request,
       io.cloudquery.plugin.v3.TransformSchema.Response> getTransformSchemaMethod() {
     io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.TransformSchema.Request, io.cloudquery.plugin.v3.TransformSchema.Response> getTransformSchemaMethod;
@@ -310,7 +310,7 @@ public final class PluginGrpc {
         if ((getTransformSchemaMethod = PluginGrpc.getTransformSchemaMethod) == null) {
           PluginGrpc.getTransformSchemaMethod = getTransformSchemaMethod =
               io.grpc.MethodDescriptor.<io.cloudquery.plugin.v3.TransformSchema.Request, io.cloudquery.plugin.v3.TransformSchema.Response>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TransformSchema"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
@@ -533,9 +533,9 @@ public final class PluginGrpc {
      * Transform schemas.
      * </pre>
      */
-    default io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.TransformSchema.Request> transformSchema(
+    default void transformSchema(io.cloudquery.plugin.v3.TransformSchema.Request request,
         io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.TransformSchema.Response> responseObserver) {
-      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getTransformSchemaMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTransformSchemaMethod(), responseObserver);
     }
 
     /**
@@ -693,10 +693,10 @@ public final class PluginGrpc {
      * Transform schemas.
      * </pre>
      */
-    public io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.TransformSchema.Request> transformSchema(
+    public void transformSchema(io.cloudquery.plugin.v3.TransformSchema.Request request,
         io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.TransformSchema.Response> responseObserver) {
-      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
-          getChannel().newCall(getTransformSchemaMethod(), getCallOptions()), responseObserver);
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTransformSchemaMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -815,6 +815,16 @@ public final class PluginGrpc {
 
     /**
      * <pre>
+     * Transform schemas.
+     * </pre>
+     */
+    public io.cloudquery.plugin.v3.TransformSchema.Response transformSchema(io.cloudquery.plugin.v3.TransformSchema.Request request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTransformSchemaMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Send signal to flush and close open connections
      * </pre>
      */
@@ -909,6 +919,17 @@ public final class PluginGrpc {
 
     /**
      * <pre>
+     * Transform schemas.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.cloudquery.plugin.v3.TransformSchema.Response> transformSchema(
+        io.cloudquery.plugin.v3.TransformSchema.Request request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTransformSchemaMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Send signal to flush and close open connections
      * </pre>
      */
@@ -937,11 +958,11 @@ public final class PluginGrpc {
   private static final int METHODID_GET_TABLES = 4;
   private static final int METHODID_SYNC = 5;
   private static final int METHODID_READ = 6;
-  private static final int METHODID_CLOSE = 7;
-  private static final int METHODID_TEST_CONNECTION = 8;
-  private static final int METHODID_WRITE = 9;
-  private static final int METHODID_TRANSFORM = 10;
-  private static final int METHODID_TRANSFORM_SCHEMA = 11;
+  private static final int METHODID_TRANSFORM_SCHEMA = 7;
+  private static final int METHODID_CLOSE = 8;
+  private static final int METHODID_TEST_CONNECTION = 9;
+  private static final int METHODID_WRITE = 10;
+  private static final int METHODID_TRANSFORM = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -988,6 +1009,10 @@ public final class PluginGrpc {
           serviceImpl.read((io.cloudquery.plugin.v3.Read.Request) request,
               (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Read.Response>) responseObserver);
           break;
+        case METHODID_TRANSFORM_SCHEMA:
+          serviceImpl.transformSchema((io.cloudquery.plugin.v3.TransformSchema.Request) request,
+              (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.TransformSchema.Response>) responseObserver);
+          break;
         case METHODID_CLOSE:
           serviceImpl.close((io.cloudquery.plugin.v3.Close.Request) request,
               (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Close.Response>) responseObserver);
@@ -1012,9 +1037,6 @@ public final class PluginGrpc {
         case METHODID_TRANSFORM:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.transform(
               (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Transform.Response>) responseObserver);
-        case METHODID_TRANSFORM_SCHEMA:
-          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.transformSchema(
-              (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.TransformSchema.Response>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -1088,7 +1110,7 @@ public final class PluginGrpc {
                 service, METHODID_TRANSFORM)))
         .addMethod(
           getTransformSchemaMethod(),
-          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               io.cloudquery.plugin.v3.TransformSchema.Request,
               io.cloudquery.plugin.v3.TransformSchema.Response>(
