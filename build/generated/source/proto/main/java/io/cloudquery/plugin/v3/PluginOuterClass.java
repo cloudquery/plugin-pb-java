@@ -216,6 +216,21 @@ public final class PluginOuterClass {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_cloudquery_plugin_v3_Transform_Response_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cloudquery_plugin_v3_TransformSchema_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cloudquery_plugin_v3_TransformSchema_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cloudquery_plugin_v3_TransformSchema_Request_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cloudquery_plugin_v3_TransformSchema_Request_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cloudquery_plugin_v3_TransformSchema_Response_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cloudquery_plugin_v3_TransformSchema_Response_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cloudquery_plugin_v3_Close_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -313,39 +328,44 @@ public final class PluginOuterClass {
       "record\030\004 \001(\0132/.cloudquery.plugin.v3.Writ" +
       "e.MessageDeleteRecordH\000B\t\n\007message\032\n\n\010Re" +
       "sponse\"B\n\tTransform\032\031\n\007Request\022\016\n\006record" +
-      "\030\001 \001(\014\032\032\n\010Response\022\016\n\006record\030\001 \001(\014\"\036\n\005Cl" +
-      "ose\032\t\n\007Request\032\n\n\010Response\"y\n\016TestConnec" +
-      "tion\032\027\n\007Request\022\014\n\004spec\030\001 \001(\014\032N\n\010Respons" +
-      "e\022\017\n\007success\030\001 \001(\010\022\024\n\014failure_code\030\002 \001(\t" +
-      "\022\033\n\023failure_description\030\003 \001(\t2\205\010\n\006Plugin" +
-      "\022X\n\007GetName\022%.cloudquery.plugin.v3.GetNa" +
-      "me.Request\032&.cloudquery.plugin.v3.GetNam" +
-      "e.Response\022a\n\nGetVersion\022(.cloudquery.pl" +
-      "ugin.v3.GetVersion.Request\032).cloudquery." +
-      "plugin.v3.GetVersion.Response\022j\n\rGetSpec" +
-      "Schema\022+.cloudquery.plugin.v3.GetSpecSch" +
-      "ema.Request\032,.cloudquery.plugin.v3.GetSp" +
-      "ecSchema.Response\022O\n\004Init\022\".cloudquery.p" +
-      "lugin.v3.Init.Request\032#.cloudquery.plugi" +
-      "n.v3.Init.Response\022^\n\tGetTables\022\'.cloudq" +
-      "uery.plugin.v3.GetTables.Request\032(.cloud" +
-      "query.plugin.v3.GetTables.Response\022Q\n\004Sy" +
-      "nc\022\".cloudquery.plugin.v3.Sync.Request\032#" +
-      ".cloudquery.plugin.v3.Sync.Response0\001\022Q\n" +
-      "\004Read\022\".cloudquery.plugin.v3.Read.Reques" +
-      "t\032#.cloudquery.plugin.v3.Read.Response0\001" +
-      "\022T\n\005Write\022#.cloudquery.plugin.v3.Write.R" +
-      "equest\032$.cloudquery.plugin.v3.Write.Resp" +
-      "onse(\001\022b\n\tTransform\022\'.cloudquery.plugin." +
-      "v3.Transform.Request\032(.cloudquery.plugin" +
-      ".v3.Transform.Response(\0010\001\022R\n\005Close\022#.cl" +
-      "oudquery.plugin.v3.Close.Request\032$.cloud" +
-      "query.plugin.v3.Close.Response\022m\n\016TestCo" +
-      "nnection\022,.cloudquery.plugin.v3.TestConn" +
-      "ection.Request\032-.cloudquery.plugin.v3.Te" +
-      "stConnection.ResponseBS\n\027io.cloudquery.p" +
-      "lugin.v3P\001Z6github.com/cloudquery/plugin" +
-      "-pb-go/pb/plugin/v3;pluginb\006proto3"
+      "\030\001 \001(\014\032\032\n\010Response\022\016\n\006record\030\001 \001(\014\"H\n\017Tr" +
+      "ansformSchema\032\031\n\007Request\022\016\n\006schema\030\001 \001(\014" +
+      "\032\032\n\010Response\022\016\n\006schema\030\001 \001(\014\"\036\n\005Close\032\t\n" +
+      "\007Request\032\n\n\010Response\"y\n\016TestConnection\032\027" +
+      "\n\007Request\022\014\n\004spec\030\001 \001(\014\032N\n\010Response\022\017\n\007s" +
+      "uccess\030\001 \001(\010\022\024\n\014failure_code\030\002 \001(\t\022\033\n\023fa" +
+      "ilure_description\030\003 \001(\t2\373\010\n\006Plugin\022X\n\007Ge" +
+      "tName\022%.cloudquery.plugin.v3.GetName.Req" +
+      "uest\032&.cloudquery.plugin.v3.GetName.Resp" +
+      "onse\022a\n\nGetVersion\022(.cloudquery.plugin.v" +
+      "3.GetVersion.Request\032).cloudquery.plugin" +
+      ".v3.GetVersion.Response\022j\n\rGetSpecSchema" +
+      "\022+.cloudquery.plugin.v3.GetSpecSchema.Re" +
+      "quest\032,.cloudquery.plugin.v3.GetSpecSche" +
+      "ma.Response\022O\n\004Init\022\".cloudquery.plugin." +
+      "v3.Init.Request\032#.cloudquery.plugin.v3.I" +
+      "nit.Response\022^\n\tGetTables\022\'.cloudquery.p" +
+      "lugin.v3.GetTables.Request\032(.cloudquery." +
+      "plugin.v3.GetTables.Response\022Q\n\004Sync\022\".c" +
+      "loudquery.plugin.v3.Sync.Request\032#.cloud" +
+      "query.plugin.v3.Sync.Response0\001\022Q\n\004Read\022" +
+      "\".cloudquery.plugin.v3.Read.Request\032#.cl" +
+      "oudquery.plugin.v3.Read.Response0\001\022T\n\005Wr" +
+      "ite\022#.cloudquery.plugin.v3.Write.Request" +
+      "\032$.cloudquery.plugin.v3.Write.Response(\001" +
+      "\022b\n\tTransform\022\'.cloudquery.plugin.v3.Tra" +
+      "nsform.Request\032(.cloudquery.plugin.v3.Tr" +
+      "ansform.Response(\0010\001\022t\n\017TransformSchema\022" +
+      "-.cloudquery.plugin.v3.TransformSchema.R" +
+      "equest\032..cloudquery.plugin.v3.TransformS" +
+      "chema.Response(\0010\001\022R\n\005Close\022#.cloudquery" +
+      ".plugin.v3.Close.Request\032$.cloudquery.pl" +
+      "ugin.v3.Close.Response\022m\n\016TestConnection" +
+      "\022,.cloudquery.plugin.v3.TestConnection.R" +
+      "equest\032-.cloudquery.plugin.v3.TestConnec" +
+      "tion.ResponseBS\n\027io.cloudquery.plugin.v3" +
+      "P\001Z6github.com/cloudquery/plugin-pb-go/p" +
+      "b/plugin/v3;pluginb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -580,8 +600,26 @@ public final class PluginOuterClass {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cloudquery_plugin_v3_Transform_Response_descriptor,
         new java.lang.String[] { "Record", });
-    internal_static_cloudquery_plugin_v3_Close_descriptor =
+    internal_static_cloudquery_plugin_v3_TransformSchema_descriptor =
       getDescriptor().getMessageTypes().get(12);
+    internal_static_cloudquery_plugin_v3_TransformSchema_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cloudquery_plugin_v3_TransformSchema_descriptor,
+        new java.lang.String[] { });
+    internal_static_cloudquery_plugin_v3_TransformSchema_Request_descriptor =
+      internal_static_cloudquery_plugin_v3_TransformSchema_descriptor.getNestedTypes().get(0);
+    internal_static_cloudquery_plugin_v3_TransformSchema_Request_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cloudquery_plugin_v3_TransformSchema_Request_descriptor,
+        new java.lang.String[] { "Schema", });
+    internal_static_cloudquery_plugin_v3_TransformSchema_Response_descriptor =
+      internal_static_cloudquery_plugin_v3_TransformSchema_descriptor.getNestedTypes().get(1);
+    internal_static_cloudquery_plugin_v3_TransformSchema_Response_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cloudquery_plugin_v3_TransformSchema_Response_descriptor,
+        new java.lang.String[] { "Schema", });
+    internal_static_cloudquery_plugin_v3_Close_descriptor =
+      getDescriptor().getMessageTypes().get(13);
     internal_static_cloudquery_plugin_v3_Close_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cloudquery_plugin_v3_Close_descriptor,
@@ -599,7 +637,7 @@ public final class PluginOuterClass {
         internal_static_cloudquery_plugin_v3_Close_Response_descriptor,
         new java.lang.String[] { });
     internal_static_cloudquery_plugin_v3_TestConnection_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_cloudquery_plugin_v3_TestConnection_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cloudquery_plugin_v3_TestConnection_descriptor,
