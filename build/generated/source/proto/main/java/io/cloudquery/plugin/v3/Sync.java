@@ -3024,6 +3024,21 @@ private static final long serialVersionUID = 0L;
      * <code>.cloudquery.plugin.v3.Sync.BackendOptions backend = 5;</code>
      */
     io.cloudquery.plugin.v3.Sync.BackendOptionsOrBuilder getBackendOrBuilder();
+
+    /**
+     * <code>optional .cloudquery.plugin.v3.Sync.Request.Shard shard = 6;</code>
+     * @return Whether the shard field is set.
+     */
+    boolean hasShard();
+    /**
+     * <code>optional .cloudquery.plugin.v3.Sync.Request.Shard shard = 6;</code>
+     * @return The shard.
+     */
+    io.cloudquery.plugin.v3.Sync.Request.Shard getShard();
+    /**
+     * <code>optional .cloudquery.plugin.v3.Sync.Request.Shard shard = 6;</code>
+     */
+    io.cloudquery.plugin.v3.Sync.Request.ShardOrBuilder getShardOrBuilder();
   }
   /**
    * Protobuf type {@code cloudquery.plugin.v3.Sync.Request}
@@ -3064,6 +3079,512 @@ private static final long serialVersionUID = 0L;
       return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_Request_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.cloudquery.plugin.v3.Sync.Request.class, io.cloudquery.plugin.v3.Sync.Request.Builder.class);
+    }
+
+    public interface ShardOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:cloudquery.plugin.v3.Sync.Request.Shard)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>int32 num = 1;</code>
+       * @return The num.
+       */
+      int getNum();
+
+      /**
+       * <code>int32 total = 2;</code>
+       * @return The total.
+       */
+      int getTotal();
+    }
+    /**
+     * Protobuf type {@code cloudquery.plugin.v3.Sync.Request.Shard}
+     */
+    public static final class Shard extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:cloudquery.plugin.v3.Sync.Request.Shard)
+        ShardOrBuilder {
+    private static final long serialVersionUID = 0L;
+      static {
+        com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+          /* major= */ 4,
+          /* minor= */ 28,
+          /* patch= */ 0,
+          /* suffix= */ "",
+          Shard.class.getName());
+      }
+      // Use Shard.newBuilder() to construct.
+      private Shard(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+      }
+      private Shard() {
+      }
+
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_Request_Shard_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_Request_Shard_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.cloudquery.plugin.v3.Sync.Request.Shard.class, io.cloudquery.plugin.v3.Sync.Request.Shard.Builder.class);
+      }
+
+      public static final int NUM_FIELD_NUMBER = 1;
+      private int num_ = 0;
+      /**
+       * <code>int32 num = 1;</code>
+       * @return The num.
+       */
+      @java.lang.Override
+      public int getNum() {
+        return num_;
+      }
+
+      public static final int TOTAL_FIELD_NUMBER = 2;
+      private int total_ = 0;
+      /**
+       * <code>int32 total = 2;</code>
+       * @return The total.
+       */
+      @java.lang.Override
+      public int getTotal() {
+        return total_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (num_ != 0) {
+          output.writeInt32(1, num_);
+        }
+        if (total_ != 0) {
+          output.writeInt32(2, total_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (num_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, num_);
+        }
+        if (total_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(2, total_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof io.cloudquery.plugin.v3.Sync.Request.Shard)) {
+          return super.equals(obj);
+        }
+        io.cloudquery.plugin.v3.Sync.Request.Shard other = (io.cloudquery.plugin.v3.Sync.Request.Shard) obj;
+
+        if (getNum()
+            != other.getNum()) return false;
+        if (getTotal()
+            != other.getTotal()) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NUM_FIELD_NUMBER;
+        hash = (53 * hash) + getNum();
+        hash = (37 * hash) + TOTAL_FIELD_NUMBER;
+        hash = (53 * hash) + getTotal();
+        hash = (29 * hash) + getUnknownFields().hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static io.cloudquery.plugin.v3.Sync.Request.Shard parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.cloudquery.plugin.v3.Sync.Request.Shard parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.cloudquery.plugin.v3.Sync.Request.Shard parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.cloudquery.plugin.v3.Sync.Request.Shard parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.cloudquery.plugin.v3.Sync.Request.Shard parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static io.cloudquery.plugin.v3.Sync.Request.Shard parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static io.cloudquery.plugin.v3.Sync.Request.Shard parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.cloudquery.plugin.v3.Sync.Request.Shard parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public static io.cloudquery.plugin.v3.Sync.Request.Shard parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+
+      public static io.cloudquery.plugin.v3.Sync.Request.Shard parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static io.cloudquery.plugin.v3.Sync.Request.Shard parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input);
+      }
+      public static io.cloudquery.plugin.v3.Sync.Request.Shard parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessage
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(io.cloudquery.plugin.v3.Sync.Request.Shard prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code cloudquery.plugin.v3.Sync.Request.Shard}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:cloudquery.plugin.v3.Sync.Request.Shard)
+          io.cloudquery.plugin.v3.Sync.Request.ShardOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_Request_Shard_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_Request_Shard_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  io.cloudquery.plugin.v3.Sync.Request.Shard.class, io.cloudquery.plugin.v3.Sync.Request.Shard.Builder.class);
+        }
+
+        // Construct using io.cloudquery.plugin.v3.Sync.Request.Shard.newBuilder()
+        private Builder() {
+
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          bitField0_ = 0;
+          num_ = 0;
+          total_ = 0;
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_Request_Shard_descriptor;
+        }
+
+        @java.lang.Override
+        public io.cloudquery.plugin.v3.Sync.Request.Shard getDefaultInstanceForType() {
+          return io.cloudquery.plugin.v3.Sync.Request.Shard.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public io.cloudquery.plugin.v3.Sync.Request.Shard build() {
+          io.cloudquery.plugin.v3.Sync.Request.Shard result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public io.cloudquery.plugin.v3.Sync.Request.Shard buildPartial() {
+          io.cloudquery.plugin.v3.Sync.Request.Shard result = new io.cloudquery.plugin.v3.Sync.Request.Shard(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartial0(io.cloudquery.plugin.v3.Sync.Request.Shard result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.num_ = num_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.total_ = total_;
+          }
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof io.cloudquery.plugin.v3.Sync.Request.Shard) {
+            return mergeFrom((io.cloudquery.plugin.v3.Sync.Request.Shard)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(io.cloudquery.plugin.v3.Sync.Request.Shard other) {
+          if (other == io.cloudquery.plugin.v3.Sync.Request.Shard.getDefaultInstance()) return this;
+          if (other.getNum() != 0) {
+            setNum(other.getNum());
+          }
+          if (other.getTotal() != 0) {
+            setTotal(other.getTotal());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  num_ = input.readInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 16: {
+                  total_ = input.readInt32();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 16
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.unwrapIOException();
+          } finally {
+            onChanged();
+          } // finally
+          return this;
+        }
+        private int bitField0_;
+
+        private int num_ ;
+        /**
+         * <code>int32 num = 1;</code>
+         * @return The num.
+         */
+        @java.lang.Override
+        public int getNum() {
+          return num_;
+        }
+        /**
+         * <code>int32 num = 1;</code>
+         * @param value The num to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNum(int value) {
+
+          num_ = value;
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 num = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNum() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          num_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int total_ ;
+        /**
+         * <code>int32 total = 2;</code>
+         * @return The total.
+         */
+        @java.lang.Override
+        public int getTotal() {
+          return total_;
+        }
+        /**
+         * <code>int32 total = 2;</code>
+         * @param value The total to set.
+         * @return This builder for chaining.
+         */
+        public Builder setTotal(int value) {
+
+          total_ = value;
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>int32 total = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearTotal() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          total_ = 0;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:cloudquery.plugin.v3.Sync.Request.Shard)
+      }
+
+      // @@protoc_insertion_point(class_scope:cloudquery.plugin.v3.Sync.Request.Shard)
+      private static final io.cloudquery.plugin.v3.Sync.Request.Shard DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new io.cloudquery.plugin.v3.Sync.Request.Shard();
+      }
+
+      public static io.cloudquery.plugin.v3.Sync.Request.Shard getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Shard>
+          PARSER = new com.google.protobuf.AbstractParser<Shard>() {
+        @java.lang.Override
+        public Shard parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
+        }
+      };
+
+      public static com.google.protobuf.Parser<Shard> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Shard> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Sync.Request.Shard getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
     }
 
     private int bitField0_;
@@ -3189,6 +3710,32 @@ private static final long serialVersionUID = 0L;
       return backend_ == null ? io.cloudquery.plugin.v3.Sync.BackendOptions.getDefaultInstance() : backend_;
     }
 
+    public static final int SHARD_FIELD_NUMBER = 6;
+    private io.cloudquery.plugin.v3.Sync.Request.Shard shard_;
+    /**
+     * <code>optional .cloudquery.plugin.v3.Sync.Request.Shard shard = 6;</code>
+     * @return Whether the shard field is set.
+     */
+    @java.lang.Override
+    public boolean hasShard() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional .cloudquery.plugin.v3.Sync.Request.Shard shard = 6;</code>
+     * @return The shard.
+     */
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.Sync.Request.Shard getShard() {
+      return shard_ == null ? io.cloudquery.plugin.v3.Sync.Request.Shard.getDefaultInstance() : shard_;
+    }
+    /**
+     * <code>optional .cloudquery.plugin.v3.Sync.Request.Shard shard = 6;</code>
+     */
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.Sync.Request.ShardOrBuilder getShardOrBuilder() {
+      return shard_ == null ? io.cloudquery.plugin.v3.Sync.Request.Shard.getDefaultInstance() : shard_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3217,6 +3764,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(5, getBackend());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(6, getShard());
       }
       getUnknownFields().writeTo(output);
     }
@@ -3255,6 +3805,10 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getBackend());
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getShard());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3282,6 +3836,11 @@ private static final long serialVersionUID = 0L;
       if (hasBackend()) {
         if (!getBackend()
             .equals(other.getBackend())) return false;
+      }
+      if (hasShard() != other.hasShard()) return false;
+      if (hasShard()) {
+        if (!getShard()
+            .equals(other.getShard())) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -3311,6 +3870,10 @@ private static final long serialVersionUID = 0L;
       if (hasBackend()) {
         hash = (37 * hash) + BACKEND_FIELD_NUMBER;
         hash = (53 * hash) + getBackend().hashCode();
+      }
+      if (hasShard()) {
+        hash = (37 * hash) + SHARD_FIELD_NUMBER;
+        hash = (53 * hash) + getShard().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -3443,6 +4006,7 @@ private static final long serialVersionUID = 0L;
         if (com.google.protobuf.GeneratedMessage
                 .alwaysUseFieldBuilders) {
           getBackendFieldBuilder();
+          getShardFieldBuilder();
         }
       }
       @java.lang.Override
@@ -3459,6 +4023,11 @@ private static final long serialVersionUID = 0L;
         if (backendBuilder_ != null) {
           backendBuilder_.dispose();
           backendBuilder_ = null;
+        }
+        shard_ = null;
+        if (shardBuilder_ != null) {
+          shardBuilder_.dispose();
+          shardBuilder_ = null;
         }
         return this;
       }
@@ -3514,6 +4083,12 @@ private static final long serialVersionUID = 0L;
               : backendBuilder_.build();
           to_bitField0_ |= 0x00000001;
         }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.shard_ = shardBuilder_ == null
+              ? shard_
+              : shardBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -3557,6 +4132,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasBackend()) {
           mergeBackend(other.getBackend());
+        }
+        if (other.hasShard()) {
+          mergeShard(other.getShard());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -3613,6 +4191,13 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000010;
                 break;
               } // case 42
+              case 50: {
+                input.readMessage(
+                    getShardFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4035,6 +4620,127 @@ private static final long serialVersionUID = 0L;
           backend_ = null;
         }
         return backendBuilder_;
+      }
+
+      private io.cloudquery.plugin.v3.Sync.Request.Shard shard_;
+      private com.google.protobuf.SingleFieldBuilder<
+          io.cloudquery.plugin.v3.Sync.Request.Shard, io.cloudquery.plugin.v3.Sync.Request.Shard.Builder, io.cloudquery.plugin.v3.Sync.Request.ShardOrBuilder> shardBuilder_;
+      /**
+       * <code>optional .cloudquery.plugin.v3.Sync.Request.Shard shard = 6;</code>
+       * @return Whether the shard field is set.
+       */
+      public boolean hasShard() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional .cloudquery.plugin.v3.Sync.Request.Shard shard = 6;</code>
+       * @return The shard.
+       */
+      public io.cloudquery.plugin.v3.Sync.Request.Shard getShard() {
+        if (shardBuilder_ == null) {
+          return shard_ == null ? io.cloudquery.plugin.v3.Sync.Request.Shard.getDefaultInstance() : shard_;
+        } else {
+          return shardBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .cloudquery.plugin.v3.Sync.Request.Shard shard = 6;</code>
+       */
+      public Builder setShard(io.cloudquery.plugin.v3.Sync.Request.Shard value) {
+        if (shardBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          shard_ = value;
+        } else {
+          shardBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .cloudquery.plugin.v3.Sync.Request.Shard shard = 6;</code>
+       */
+      public Builder setShard(
+          io.cloudquery.plugin.v3.Sync.Request.Shard.Builder builderForValue) {
+        if (shardBuilder_ == null) {
+          shard_ = builderForValue.build();
+        } else {
+          shardBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .cloudquery.plugin.v3.Sync.Request.Shard shard = 6;</code>
+       */
+      public Builder mergeShard(io.cloudquery.plugin.v3.Sync.Request.Shard value) {
+        if (shardBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) != 0) &&
+            shard_ != null &&
+            shard_ != io.cloudquery.plugin.v3.Sync.Request.Shard.getDefaultInstance()) {
+            getShardBuilder().mergeFrom(value);
+          } else {
+            shard_ = value;
+          }
+        } else {
+          shardBuilder_.mergeFrom(value);
+        }
+        if (shard_ != null) {
+          bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .cloudquery.plugin.v3.Sync.Request.Shard shard = 6;</code>
+       */
+      public Builder clearShard() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        shard_ = null;
+        if (shardBuilder_ != null) {
+          shardBuilder_.dispose();
+          shardBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .cloudquery.plugin.v3.Sync.Request.Shard shard = 6;</code>
+       */
+      public io.cloudquery.plugin.v3.Sync.Request.Shard.Builder getShardBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getShardFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .cloudquery.plugin.v3.Sync.Request.Shard shard = 6;</code>
+       */
+      public io.cloudquery.plugin.v3.Sync.Request.ShardOrBuilder getShardOrBuilder() {
+        if (shardBuilder_ != null) {
+          return shardBuilder_.getMessageOrBuilder();
+        } else {
+          return shard_ == null ?
+              io.cloudquery.plugin.v3.Sync.Request.Shard.getDefaultInstance() : shard_;
+        }
+      }
+      /**
+       * <code>optional .cloudquery.plugin.v3.Sync.Request.Shard shard = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          io.cloudquery.plugin.v3.Sync.Request.Shard, io.cloudquery.plugin.v3.Sync.Request.Shard.Builder, io.cloudquery.plugin.v3.Sync.Request.ShardOrBuilder> 
+          getShardFieldBuilder() {
+        if (shardBuilder_ == null) {
+          shardBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              io.cloudquery.plugin.v3.Sync.Request.Shard, io.cloudquery.plugin.v3.Sync.Request.Shard.Builder, io.cloudquery.plugin.v3.Sync.Request.ShardOrBuilder>(
+                  getShard(),
+                  getParentForChildren(),
+                  isClean());
+          shard_ = null;
+        }
+        return shardBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:cloudquery.plugin.v3.Sync.Request)

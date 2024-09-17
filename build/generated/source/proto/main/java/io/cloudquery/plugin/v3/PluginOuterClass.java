@@ -131,6 +131,11 @@ public final class PluginOuterClass {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_cloudquery_plugin_v3_Sync_Request_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cloudquery_plugin_v3_Sync_Request_Shard_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cloudquery_plugin_v3_Sync_Request_Shard_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cloudquery_plugin_v3_Sync_Response_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -281,91 +286,94 @@ public final class PluginOuterClass {
       "ponse\"v\n\tGetTables\032M\n\007Request\022\016\n\006tables\030" +
       "\001 \003(\t\022\023\n\013skip_tables\030\002 \003(\t\022\035\n\025skip_depen" +
       "dent_tables\030\003 \001(\010\032\032\n\010Response\022\016\n\006tables\030" +
-      "\001 \003(\014\"\275\005\n\004Sync\032\037\n\rMessageInsert\022\016\n\006recor" +
+      "\001 \003(\014\"\252\006\n\004Sync\032\037\n\rMessageInsert\022\016\n\006recor" +
       "d\030\001 \001(\014\032$\n\023MessageMigrateTable\022\r\n\005table\030" +
       "\001 \001(\014\032\244\001\n\023MessageDeleteRecord\022\022\n\ntable_n" +
       "ame\030\001 \001(\t\022;\n\014where_clause\030\002 \003(\0132%.cloudq" +
       "uery.plugin.v3.PredicatesGroup\022<\n\017table_" +
       "relations\030\003 \003(\0132#.cloudquery.plugin.v3.T" +
       "ableRelation\0328\n\016BackendOptions\022\022\n\ntable_" +
-      "name\030\001 \001(\t\022\022\n\nconnection\030\002 \001(\t\032\246\001\n\007Reque" +
+      "name\030\001 \001(\t\022\022\n\nconnection\030\002 \001(\t\032\223\002\n\007Reque" +
       "st\022\016\n\006tables\030\001 \003(\t\022\023\n\013skip_tables\030\002 \003(\t\022" +
       "\035\n\025skip_dependent_tables\030\003 \001(\010\022\033\n\023determ" +
       "inistic_cq_id\030\004 \001(\010\022:\n\007backend\030\005 \001(\0132).c" +
-      "loudquery.plugin.v3.Sync.BackendOptions\032" +
-      "\343\001\n\010Response\022G\n\rmigrate_table\030\001 \001(\0132..cl" +
-      "oudquery.plugin.v3.Sync.MessageMigrateTa" +
-      "bleH\000\022:\n\006insert\030\002 \001(\0132(.cloudquery.plugi" +
-      "n.v3.Sync.MessageInsertH\000\022G\n\rdelete_reco" +
-      "rd\030\003 \001(\0132..cloudquery.plugin.v3.Sync.Mes" +
-      "sageDeleteRecordH\000B\t\n\007message\"<\n\004Read\032\030\n" +
-      "\007Request\022\r\n\005table\030\001 \001(\014\032\032\n\010Response\022\016\n\006r" +
-      "ecord\030\001 \001(\014\"9\n\rTableRelation\022\022\n\ntable_na" +
-      "me\030\001 \001(\t\022\024\n\014parent_table\030\002 \001(\t\"{\n\tPredic" +
-      "ate\022:\n\010operator\030\001 \001(\0162(.cloudquery.plugi" +
-      "n.v3.Predicate.Operator\022\016\n\006column\030\002 \001(\t\022" +
-      "\016\n\006record\030\003 \001(\014\"\022\n\010Operator\022\006\n\002EQ\020\000\"\262\001\n\017" +
-      "PredicatesGroup\022I\n\rgrouping_type\030\001 \001(\01622" +
-      ".cloudquery.plugin.v3.PredicatesGroup.Gr" +
-      "oupingType\0223\n\npredicates\030\002 \003(\0132\037.cloudqu" +
-      "ery.plugin.v3.Predicate\"\037\n\014GroupingType\022" +
-      "\007\n\003AND\020\000\022\006\n\002OR\020\001\"\303\005\n\005Write\032;\n\023MessageMig" +
-      "rateTable\022\r\n\005table\030\001 \001(\014\022\025\n\rmigrate_forc" +
-      "e\030\002 \001(\010\032\037\n\rMessageInsert\022\016\n\006record\030\001 \001(\014" +
-      "\032\177\n\022MessageDeleteStale\022\021\n\005table\030\001 \001(\014B\002\030" +
-      "\001\022\023\n\013source_name\030\002 \001(\t\022-\n\tsync_time\030\003 \001(" +
-      "\0132\032.google.protobuf.Timestamp\022\022\n\ntable_n" +
-      "ame\030\004 \001(\t\032\244\001\n\023MessageDeleteRecord\022\022\n\ntab" +
-      "le_name\030\001 \001(\t\022;\n\014where_clause\030\002 \003(\0132%.cl" +
-      "oudquery.plugin.v3.PredicatesGroup\022<\n\017ta" +
-      "ble_relations\030\003 \003(\0132#.cloudquery.plugin." +
-      "v3.TableRelation\032\247\002\n\007Request\022H\n\rmigrate_" +
-      "table\030\001 \001(\0132/.cloudquery.plugin.v3.Write" +
-      ".MessageMigrateTableH\000\022;\n\006insert\030\002 \001(\0132)" +
-      ".cloudquery.plugin.v3.Write.MessageInser" +
-      "tH\000\022@\n\006delete\030\003 \001(\0132..cloudquery.plugin." +
-      "v3.Write.MessageDeleteStaleH\000\022H\n\rdelete_" +
-      "record\030\004 \001(\0132/.cloudquery.plugin.v3.Writ" +
-      "e.MessageDeleteRecordH\000B\t\n\007message\032\n\n\010Re" +
-      "sponse\"B\n\tTransform\032\031\n\007Request\022\016\n\006record" +
-      "\030\001 \001(\014\032\032\n\010Response\022\016\n\006record\030\001 \001(\014\"H\n\017Tr" +
-      "ansformSchema\032\031\n\007Request\022\016\n\006schema\030\001 \001(\014" +
-      "\032\032\n\010Response\022\016\n\006schema\030\001 \001(\014\"\036\n\005Close\032\t\n" +
-      "\007Request\032\n\n\010Response\"y\n\016TestConnection\032\027" +
-      "\n\007Request\022\014\n\004spec\030\001 \001(\014\032N\n\010Response\022\017\n\007s" +
-      "uccess\030\001 \001(\010\022\024\n\014failure_code\030\002 \001(\t\022\033\n\023fa" +
-      "ilure_description\030\003 \001(\t2\367\010\n\006Plugin\022X\n\007Ge" +
-      "tName\022%.cloudquery.plugin.v3.GetName.Req" +
-      "uest\032&.cloudquery.plugin.v3.GetName.Resp" +
-      "onse\022a\n\nGetVersion\022(.cloudquery.plugin.v" +
-      "3.GetVersion.Request\032).cloudquery.plugin" +
-      ".v3.GetVersion.Response\022j\n\rGetSpecSchema" +
-      "\022+.cloudquery.plugin.v3.GetSpecSchema.Re" +
-      "quest\032,.cloudquery.plugin.v3.GetSpecSche" +
-      "ma.Response\022O\n\004Init\022\".cloudquery.plugin." +
-      "v3.Init.Request\032#.cloudquery.plugin.v3.I" +
-      "nit.Response\022^\n\tGetTables\022\'.cloudquery.p" +
-      "lugin.v3.GetTables.Request\032(.cloudquery." +
-      "plugin.v3.GetTables.Response\022Q\n\004Sync\022\".c" +
-      "loudquery.plugin.v3.Sync.Request\032#.cloud" +
-      "query.plugin.v3.Sync.Response0\001\022Q\n\004Read\022" +
-      "\".cloudquery.plugin.v3.Read.Request\032#.cl" +
-      "oudquery.plugin.v3.Read.Response0\001\022T\n\005Wr" +
-      "ite\022#.cloudquery.plugin.v3.Write.Request" +
-      "\032$.cloudquery.plugin.v3.Write.Response(\001" +
-      "\022b\n\tTransform\022\'.cloudquery.plugin.v3.Tra" +
-      "nsform.Request\032(.cloudquery.plugin.v3.Tr" +
-      "ansform.Response(\0010\001\022p\n\017TransformSchema\022" +
-      "-.cloudquery.plugin.v3.TransformSchema.R" +
-      "equest\032..cloudquery.plugin.v3.TransformS" +
-      "chema.Response\022R\n\005Close\022#.cloudquery.plu" +
-      "gin.v3.Close.Request\032$.cloudquery.plugin" +
-      ".v3.Close.Response\022m\n\016TestConnection\022,.c" +
-      "loudquery.plugin.v3.TestConnection.Reque" +
-      "st\032-.cloudquery.plugin.v3.TestConnection" +
-      ".ResponseBS\n\027io.cloudquery.plugin.v3P\001Z6" +
-      "github.com/cloudquery/plugin-pb-go/pb/pl" +
-      "ugin/v3;pluginb\006proto3"
+      "loudquery.plugin.v3.Sync.BackendOptions\022" +
+      "<\n\005shard\030\006 \001(\0132(.cloudquery.plugin.v3.Sy" +
+      "nc.Request.ShardH\000\210\001\001\032#\n\005Shard\022\013\n\003num\030\001 " +
+      "\001(\005\022\r\n\005total\030\002 \001(\005B\010\n\006_shard\032\343\001\n\010Respons" +
+      "e\022G\n\rmigrate_table\030\001 \001(\0132..cloudquery.pl" +
+      "ugin.v3.Sync.MessageMigrateTableH\000\022:\n\006in" +
+      "sert\030\002 \001(\0132(.cloudquery.plugin.v3.Sync.M" +
+      "essageInsertH\000\022G\n\rdelete_record\030\003 \001(\0132.." +
+      "cloudquery.plugin.v3.Sync.MessageDeleteR" +
+      "ecordH\000B\t\n\007message\"<\n\004Read\032\030\n\007Request\022\r\n" +
+      "\005table\030\001 \001(\014\032\032\n\010Response\022\016\n\006record\030\001 \001(\014" +
+      "\"9\n\rTableRelation\022\022\n\ntable_name\030\001 \001(\t\022\024\n" +
+      "\014parent_table\030\002 \001(\t\"{\n\tPredicate\022:\n\010oper" +
+      "ator\030\001 \001(\0162(.cloudquery.plugin.v3.Predic" +
+      "ate.Operator\022\016\n\006column\030\002 \001(\t\022\016\n\006record\030\003" +
+      " \001(\014\"\022\n\010Operator\022\006\n\002EQ\020\000\"\262\001\n\017PredicatesG" +
+      "roup\022I\n\rgrouping_type\030\001 \001(\01622.cloudquery" +
+      ".plugin.v3.PredicatesGroup.GroupingType\022" +
+      "3\n\npredicates\030\002 \003(\0132\037.cloudquery.plugin." +
+      "v3.Predicate\"\037\n\014GroupingType\022\007\n\003AND\020\000\022\006\n" +
+      "\002OR\020\001\"\303\005\n\005Write\032;\n\023MessageMigrateTable\022\r" +
+      "\n\005table\030\001 \001(\014\022\025\n\rmigrate_force\030\002 \001(\010\032\037\n\r" +
+      "MessageInsert\022\016\n\006record\030\001 \001(\014\032\177\n\022Message" +
+      "DeleteStale\022\021\n\005table\030\001 \001(\014B\002\030\001\022\023\n\013source" +
+      "_name\030\002 \001(\t\022-\n\tsync_time\030\003 \001(\0132\032.google." +
+      "protobuf.Timestamp\022\022\n\ntable_name\030\004 \001(\t\032\244" +
+      "\001\n\023MessageDeleteRecord\022\022\n\ntable_name\030\001 \001" +
+      "(\t\022;\n\014where_clause\030\002 \003(\0132%.cloudquery.pl" +
+      "ugin.v3.PredicatesGroup\022<\n\017table_relatio" +
+      "ns\030\003 \003(\0132#.cloudquery.plugin.v3.TableRel" +
+      "ation\032\247\002\n\007Request\022H\n\rmigrate_table\030\001 \001(\013" +
+      "2/.cloudquery.plugin.v3.Write.MessageMig" +
+      "rateTableH\000\022;\n\006insert\030\002 \001(\0132).cloudquery" +
+      ".plugin.v3.Write.MessageInsertH\000\022@\n\006dele" +
+      "te\030\003 \001(\0132..cloudquery.plugin.v3.Write.Me" +
+      "ssageDeleteStaleH\000\022H\n\rdelete_record\030\004 \001(" +
+      "\0132/.cloudquery.plugin.v3.Write.MessageDe" +
+      "leteRecordH\000B\t\n\007message\032\n\n\010Response\"B\n\tT" +
+      "ransform\032\031\n\007Request\022\016\n\006record\030\001 \001(\014\032\032\n\010R" +
+      "esponse\022\016\n\006record\030\001 \001(\014\"H\n\017TransformSche" +
+      "ma\032\031\n\007Request\022\016\n\006schema\030\001 \001(\014\032\032\n\010Respons" +
+      "e\022\016\n\006schema\030\001 \001(\014\"\036\n\005Close\032\t\n\007Request\032\n\n" +
+      "\010Response\"y\n\016TestConnection\032\027\n\007Request\022\014" +
+      "\n\004spec\030\001 \001(\014\032N\n\010Response\022\017\n\007success\030\001 \001(" +
+      "\010\022\024\n\014failure_code\030\002 \001(\t\022\033\n\023failure_descr" +
+      "iption\030\003 \001(\t2\367\010\n\006Plugin\022X\n\007GetName\022%.clo" +
+      "udquery.plugin.v3.GetName.Request\032&.clou" +
+      "dquery.plugin.v3.GetName.Response\022a\n\nGet" +
+      "Version\022(.cloudquery.plugin.v3.GetVersio" +
+      "n.Request\032).cloudquery.plugin.v3.GetVers" +
+      "ion.Response\022j\n\rGetSpecSchema\022+.cloudque" +
+      "ry.plugin.v3.GetSpecSchema.Request\032,.clo" +
+      "udquery.plugin.v3.GetSpecSchema.Response" +
+      "\022O\n\004Init\022\".cloudquery.plugin.v3.Init.Req" +
+      "uest\032#.cloudquery.plugin.v3.Init.Respons" +
+      "e\022^\n\tGetTables\022\'.cloudquery.plugin.v3.Ge" +
+      "tTables.Request\032(.cloudquery.plugin.v3.G" +
+      "etTables.Response\022Q\n\004Sync\022\".cloudquery.p" +
+      "lugin.v3.Sync.Request\032#.cloudquery.plugi" +
+      "n.v3.Sync.Response0\001\022Q\n\004Read\022\".cloudquer" +
+      "y.plugin.v3.Read.Request\032#.cloudquery.pl" +
+      "ugin.v3.Read.Response0\001\022T\n\005Write\022#.cloud" +
+      "query.plugin.v3.Write.Request\032$.cloudque" +
+      "ry.plugin.v3.Write.Response(\001\022b\n\tTransfo" +
+      "rm\022\'.cloudquery.plugin.v3.Transform.Requ" +
+      "est\032(.cloudquery.plugin.v3.Transform.Res" +
+      "ponse(\0010\001\022p\n\017TransformSchema\022-.cloudquer" +
+      "y.plugin.v3.TransformSchema.Request\032..cl" +
+      "oudquery.plugin.v3.TransformSchema.Respo" +
+      "nse\022R\n\005Close\022#.cloudquery.plugin.v3.Clos" +
+      "e.Request\032$.cloudquery.plugin.v3.Close.R" +
+      "esponse\022m\n\016TestConnection\022,.cloudquery.p" +
+      "lugin.v3.TestConnection.Request\032-.cloudq" +
+      "uery.plugin.v3.TestConnection.ResponseBS" +
+      "\n\027io.cloudquery.plugin.v3P\001Z6github.com/" +
+      "cloudquery/plugin-pb-go/pb/plugin/v3;plu" +
+      "ginb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -497,7 +505,13 @@ public final class PluginOuterClass {
     internal_static_cloudquery_plugin_v3_Sync_Request_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cloudquery_plugin_v3_Sync_Request_descriptor,
-        new java.lang.String[] { "Tables", "SkipTables", "SkipDependentTables", "DeterministicCqId", "Backend", });
+        new java.lang.String[] { "Tables", "SkipTables", "SkipDependentTables", "DeterministicCqId", "Backend", "Shard", });
+    internal_static_cloudquery_plugin_v3_Sync_Request_Shard_descriptor =
+      internal_static_cloudquery_plugin_v3_Sync_Request_descriptor.getNestedTypes().get(0);
+    internal_static_cloudquery_plugin_v3_Sync_Request_Shard_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cloudquery_plugin_v3_Sync_Request_Shard_descriptor,
+        new java.lang.String[] { "Num", "Total", });
     internal_static_cloudquery_plugin_v3_Sync_Response_descriptor =
       internal_static_cloudquery_plugin_v3_Sync_descriptor.getNestedTypes().get(5);
     internal_static_cloudquery_plugin_v3_Sync_Response_fieldAccessorTable = new
