@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.25](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.24...v0.0.25) (2024-09-17)
+
+
+### Bug Fixes
+
+* Generate Java Code from `plugin-pb` ([#130](https://github.com/cloudquery/plugin-pb-java/issues/130)) ([e9e528f](https://github.com/cloudquery/plugin-pb-java/commit/e9e528f6d3d9f673bcfb2d2de7ce0052b6d85b06))
+
 ## [0.0.24](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.23...v0.0.24) (2024-09-01)
 
 
