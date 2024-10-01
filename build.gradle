@@ -40,7 +40,7 @@ dependencies {
 
     testImplementation "io.grpc:grpc-testing:${grpcVersion}"
     testImplementation "junit:junit:4.13.2"
-    testImplementation "org.mockito:mockito-core:5.13.0"
+    testImplementation "org.mockito:mockito-core:5.14.1"
 }
 
 protobuf {
