@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.28](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.27...v0.0.28) (2024-12-01)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency gradle to v8.11.1 ([#144](https://github.com/cloudquery/plugin-pb-java/issues/144)) ([bc7a3cf](https://github.com/cloudquery/plugin-pb-java/commit/bc7a3cfa74c69e731db32cddcce60c37b23c2309))
+
 ## [0.0.27](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.26...v0.0.27) (2024-11-01)
 
 
