@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.69.0)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: cloudquery/plugin/v3/plugin.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class PluginGrpc {
@@ -402,6 +402,21 @@ public final class PluginGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static PluginBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<PluginBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PluginBlockingV2Stub>() {
+        @java.lang.Override
+        public PluginBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PluginBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return PluginBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static PluginBlockingStub newBlockingStub(
@@ -724,6 +739,154 @@ public final class PluginGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Plugin.
+   */
+  public static final class PluginBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<PluginBlockingV2Stub> {
+    private PluginBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected PluginBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new PluginBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Get the name of the plugin
+     * </pre>
+     */
+    public io.cloudquery.plugin.v3.GetName.Response getName(io.cloudquery.plugin.v3.GetName.Request request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetNameMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get the current version of the plugin
+     * </pre>
+     */
+    public io.cloudquery.plugin.v3.GetVersion.Response getVersion(io.cloudquery.plugin.v3.GetVersion.Request request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetVersionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get plugin spec schema.
+     * This will allow validating the input even before calling Init.
+     * Should be called before Init.
+     * </pre>
+     */
+    public io.cloudquery.plugin.v3.GetSpecSchema.Response getSpecSchema(io.cloudquery.plugin.v3.GetSpecSchema.Request request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetSpecSchemaMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Configure the plugin with the given credentials and mode
+     * </pre>
+     */
+    public io.cloudquery.plugin.v3.Init.Response init(io.cloudquery.plugin.v3.Init.Request request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getInitMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get all tables the source plugin supports. Must be called after Init
+     * </pre>
+     */
+    public io.cloudquery.plugin.v3.GetTables.Response getTables(io.cloudquery.plugin.v3.GetTables.Request request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTablesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Start a sync on the source plugin. It streams messages as output.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, io.cloudquery.plugin.v3.Sync.Response>
+        sync(io.cloudquery.plugin.v3.Sync.Request request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getSyncMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Start a Read on the source plugin for a given table and schema. It streams messages as output.
+     * The plugin assume that that schema was used to also write the data beforehand
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, io.cloudquery.plugin.v3.Read.Response>
+        read(io.cloudquery.plugin.v3.Read.Request request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getReadMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Write resources. Write is the mirror of Sync, expecting a stream of messages as input.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<io.cloudquery.plugin.v3.Write.Request, io.cloudquery.plugin.v3.Write.Response>
+        write() {
+      return io.grpc.stub.ClientCalls.blockingClientStreamingCall(
+          getChannel(), getWriteMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * Transform resources.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<io.cloudquery.plugin.v3.Transform.Request, io.cloudquery.plugin.v3.Transform.Response>
+        transform() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getTransformMethod(), getCallOptions());
+    }
+
+    /**
+     * <pre>
+     * Transform schemas.
+     * </pre>
+     */
+    public io.cloudquery.plugin.v3.TransformSchema.Response transformSchema(io.cloudquery.plugin.v3.TransformSchema.Request request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTransformSchemaMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Send signal to flush and close open connections
+     * </pre>
+     */
+    public io.cloudquery.plugin.v3.Close.Response close(io.cloudquery.plugin.v3.Close.Request request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCloseMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Validate and test the connections used by the plugin
+     * </pre>
+     */
+    public io.cloudquery.plugin.v3.TestConnection.Response testConnection(io.cloudquery.plugin.v3.TestConnection.Request request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTestConnectionMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service Plugin.
    */
   public static final class PluginBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<PluginBlockingStub> {
