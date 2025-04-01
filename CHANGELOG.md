@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.31](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.30...v0.0.31) (2025-04-01)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency com.google.protobuf:protobuf-java-util to v4.30.1 ([#158](https://github.com/cloudquery/plugin-pb-java/issues/158)) ([62db41a](https://github.com/cloudquery/plugin-pb-java/commit/62db41a3d804f276521f20ca08eec818f8b3f0fd))
+* **deps:** Update dependency gradle to v8.13 ([#159](https://github.com/cloudquery/plugin-pb-java/issues/159)) ([14831ab](https://github.com/cloudquery/plugin-pb-java/commit/14831aba80d91e00471707a47b48b08ae9bfa260))
+* Generate Java Code from `plugin-pb` ([#161](https://github.com/cloudquery/plugin-pb-java/issues/161)) ([563f0ad](https://github.com/cloudquery/plugin-pb-java/commit/563f0ada62cbe3080af1176dba19466e00b7501b))
+
 ## [0.0.30](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.29...v0.0.30) (2025-02-01)
 
 
