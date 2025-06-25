@@ -2214,6 +2214,664 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface MessageErrorOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cloudquery.plugin.v3.Sync.MessageError)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string table_name = 1;</code>
+     * @return The tableName.
+     */
+    java.lang.String getTableName();
+    /**
+     * <code>string table_name = 1;</code>
+     * @return The bytes for tableName.
+     */
+    com.google.protobuf.ByteString
+        getTableNameBytes();
+
+    /**
+     * <code>string error = 2;</code>
+     * @return The error.
+     */
+    java.lang.String getError();
+    /**
+     * <code>string error = 2;</code>
+     * @return The bytes for error.
+     */
+    com.google.protobuf.ByteString
+        getErrorBytes();
+  }
+  /**
+   * Protobuf type {@code cloudquery.plugin.v3.Sync.MessageError}
+   */
+  public static final class MessageError extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:cloudquery.plugin.v3.Sync.MessageError)
+      MessageErrorOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 30,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        MessageError.class.getName());
+    }
+    // Use MessageError.newBuilder() to construct.
+    private MessageError(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private MessageError() {
+      tableName_ = "";
+      error_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_MessageError_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_MessageError_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.cloudquery.plugin.v3.Sync.MessageError.class, io.cloudquery.plugin.v3.Sync.MessageError.Builder.class);
+    }
+
+    public static final int TABLE_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tableName_ = "";
+    /**
+     * <code>string table_name = 1;</code>
+     * @return The tableName.
+     */
+    @java.lang.Override
+    public java.lang.String getTableName() {
+      java.lang.Object ref = tableName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tableName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string table_name = 1;</code>
+     * @return The bytes for tableName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTableNameBytes() {
+      java.lang.Object ref = tableName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tableName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ERROR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object error_ = "";
+    /**
+     * <code>string error = 2;</code>
+     * @return The error.
+     */
+    @java.lang.Override
+    public java.lang.String getError() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        error_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string error = 2;</code>
+     * @return The bytes for error.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getErrorBytes() {
+      java.lang.Object ref = error_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        error_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(tableName_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, tableName_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(error_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, error_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(tableName_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, tableName_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(error_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, error_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.cloudquery.plugin.v3.Sync.MessageError)) {
+        return super.equals(obj);
+      }
+      io.cloudquery.plugin.v3.Sync.MessageError other = (io.cloudquery.plugin.v3.Sync.MessageError) obj;
+
+      if (!getTableName()
+          .equals(other.getTableName())) return false;
+      if (!getError()
+          .equals(other.getError())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TABLE_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getTableName().hashCode();
+      hash = (37 * hash) + ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + getError().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.cloudquery.plugin.v3.Sync.MessageError parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageError parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageError parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageError parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageError parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageError parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageError parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageError parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static io.cloudquery.plugin.v3.Sync.MessageError parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static io.cloudquery.plugin.v3.Sync.MessageError parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageError parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageError parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.cloudquery.plugin.v3.Sync.MessageError prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cloudquery.plugin.v3.Sync.MessageError}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cloudquery.plugin.v3.Sync.MessageError)
+        io.cloudquery.plugin.v3.Sync.MessageErrorOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_MessageError_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_MessageError_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.cloudquery.plugin.v3.Sync.MessageError.class, io.cloudquery.plugin.v3.Sync.MessageError.Builder.class);
+      }
+
+      // Construct using io.cloudquery.plugin.v3.Sync.MessageError.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        tableName_ = "";
+        error_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_MessageError_descriptor;
+      }
+
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Sync.MessageError getDefaultInstanceForType() {
+        return io.cloudquery.plugin.v3.Sync.MessageError.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Sync.MessageError build() {
+        io.cloudquery.plugin.v3.Sync.MessageError result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Sync.MessageError buildPartial() {
+        io.cloudquery.plugin.v3.Sync.MessageError result = new io.cloudquery.plugin.v3.Sync.MessageError(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(io.cloudquery.plugin.v3.Sync.MessageError result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tableName_ = tableName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.error_ = error_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.cloudquery.plugin.v3.Sync.MessageError) {
+          return mergeFrom((io.cloudquery.plugin.v3.Sync.MessageError)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.cloudquery.plugin.v3.Sync.MessageError other) {
+        if (other == io.cloudquery.plugin.v3.Sync.MessageError.getDefaultInstance()) return this;
+        if (!other.getTableName().isEmpty()) {
+          tableName_ = other.tableName_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getError().isEmpty()) {
+          error_ = other.error_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                tableName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                error_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object tableName_ = "";
+      /**
+       * <code>string table_name = 1;</code>
+       * @return The tableName.
+       */
+      public java.lang.String getTableName() {
+        java.lang.Object ref = tableName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tableName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string table_name = 1;</code>
+       * @return The bytes for tableName.
+       */
+      public com.google.protobuf.ByteString
+          getTableNameBytes() {
+        java.lang.Object ref = tableName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tableName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string table_name = 1;</code>
+       * @param value The tableName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTableName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        tableName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string table_name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTableName() {
+        tableName_ = getDefaultInstance().getTableName();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string table_name = 1;</code>
+       * @param value The bytes for tableName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTableNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        tableName_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object error_ = "";
+      /**
+       * <code>string error = 2;</code>
+       * @return The error.
+       */
+      public java.lang.String getError() {
+        java.lang.Object ref = error_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          error_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string error = 2;</code>
+       * @return The bytes for error.
+       */
+      public com.google.protobuf.ByteString
+          getErrorBytes() {
+        java.lang.Object ref = error_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          error_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string error = 2;</code>
+       * @param value The error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setError(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        error_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string error = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearError() {
+        error_ = getDefaultInstance().getError();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string error = 2;</code>
+       * @param value The bytes for error to set.
+       * @return This builder for chaining.
+       */
+      public Builder setErrorBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        error_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:cloudquery.plugin.v3.Sync.MessageError)
+    }
+
+    // @@protoc_insertion_point(class_scope:cloudquery.plugin.v3.Sync.MessageError)
+    private static final io.cloudquery.plugin.v3.Sync.MessageError DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.cloudquery.plugin.v3.Sync.MessageError();
+    }
+
+    public static io.cloudquery.plugin.v3.Sync.MessageError getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MessageError>
+        PARSER = new com.google.protobuf.AbstractParser<MessageError>() {
+      @java.lang.Override
+      public MessageError parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MessageError> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MessageError> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.Sync.MessageError getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface BackendOptionsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cloudquery.plugin.v3.Sync.BackendOptions)
       com.google.protobuf.MessageOrBuilder {
@@ -4843,6 +5501,21 @@ private static final long serialVersionUID = 0L;
      */
     io.cloudquery.plugin.v3.Sync.MessageDeleteRecordOrBuilder getDeleteRecordOrBuilder();
 
+    /**
+     * <code>.cloudquery.plugin.v3.Sync.MessageError error = 4;</code>
+     * @return Whether the error field is set.
+     */
+    boolean hasError();
+    /**
+     * <code>.cloudquery.plugin.v3.Sync.MessageError error = 4;</code>
+     * @return The error.
+     */
+    io.cloudquery.plugin.v3.Sync.MessageError getError();
+    /**
+     * <code>.cloudquery.plugin.v3.Sync.MessageError error = 4;</code>
+     */
+    io.cloudquery.plugin.v3.Sync.MessageErrorOrBuilder getErrorOrBuilder();
+
     io.cloudquery.plugin.v3.Sync.Response.MessageCase getMessageCase();
   }
   /**
@@ -4891,6 +5564,7 @@ private static final long serialVersionUID = 0L;
       MIGRATE_TABLE(1),
       INSERT(2),
       DELETE_RECORD(3),
+      ERROR(4),
       MESSAGE_NOT_SET(0);
       private final int value;
       private MessageCase(int value) {
@@ -4911,6 +5585,7 @@ private static final long serialVersionUID = 0L;
           case 1: return MIGRATE_TABLE;
           case 2: return INSERT;
           case 3: return DELETE_RECORD;
+          case 4: return ERROR;
           case 0: return MESSAGE_NOT_SET;
           default: return null;
         }
@@ -5019,6 +5694,37 @@ private static final long serialVersionUID = 0L;
       return io.cloudquery.plugin.v3.Sync.MessageDeleteRecord.getDefaultInstance();
     }
 
+    public static final int ERROR_FIELD_NUMBER = 4;
+    /**
+     * <code>.cloudquery.plugin.v3.Sync.MessageError error = 4;</code>
+     * @return Whether the error field is set.
+     */
+    @java.lang.Override
+    public boolean hasError() {
+      return messageCase_ == 4;
+    }
+    /**
+     * <code>.cloudquery.plugin.v3.Sync.MessageError error = 4;</code>
+     * @return The error.
+     */
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.Sync.MessageError getError() {
+      if (messageCase_ == 4) {
+         return (io.cloudquery.plugin.v3.Sync.MessageError) message_;
+      }
+      return io.cloudquery.plugin.v3.Sync.MessageError.getDefaultInstance();
+    }
+    /**
+     * <code>.cloudquery.plugin.v3.Sync.MessageError error = 4;</code>
+     */
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.Sync.MessageErrorOrBuilder getErrorOrBuilder() {
+      if (messageCase_ == 4) {
+         return (io.cloudquery.plugin.v3.Sync.MessageError) message_;
+      }
+      return io.cloudquery.plugin.v3.Sync.MessageError.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5042,6 +5748,9 @@ private static final long serialVersionUID = 0L;
       if (messageCase_ == 3) {
         output.writeMessage(3, (io.cloudquery.plugin.v3.Sync.MessageDeleteRecord) message_);
       }
+      if (messageCase_ == 4) {
+        output.writeMessage(4, (io.cloudquery.plugin.v3.Sync.MessageError) message_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -5062,6 +5771,10 @@ private static final long serialVersionUID = 0L;
       if (messageCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, (io.cloudquery.plugin.v3.Sync.MessageDeleteRecord) message_);
+      }
+      if (messageCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (io.cloudquery.plugin.v3.Sync.MessageError) message_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -5092,6 +5805,10 @@ private static final long serialVersionUID = 0L;
           if (!getDeleteRecord()
               .equals(other.getDeleteRecord())) return false;
           break;
+        case 4:
+          if (!getError()
+              .equals(other.getError())) return false;
+          break;
         case 0:
         default:
       }
@@ -5118,6 +5835,10 @@ private static final long serialVersionUID = 0L;
         case 3:
           hash = (37 * hash) + DELETE_RECORD_FIELD_NUMBER;
           hash = (53 * hash) + getDeleteRecord().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + ERROR_FIELD_NUMBER;
+          hash = (53 * hash) + getError().hashCode();
           break;
         case 0:
         default:
@@ -5262,6 +5983,9 @@ private static final long serialVersionUID = 0L;
         if (deleteRecordBuilder_ != null) {
           deleteRecordBuilder_.clear();
         }
+        if (errorBuilder_ != null) {
+          errorBuilder_.clear();
+        }
         messageCase_ = 0;
         message_ = null;
         return this;
@@ -5315,6 +6039,10 @@ private static final long serialVersionUID = 0L;
             deleteRecordBuilder_ != null) {
           result.message_ = deleteRecordBuilder_.build();
         }
+        if (messageCase_ == 4 &&
+            errorBuilder_ != null) {
+          result.message_ = errorBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -5340,6 +6068,10 @@ private static final long serialVersionUID = 0L;
           }
           case DELETE_RECORD: {
             mergeDeleteRecord(other.getDeleteRecord());
+            break;
+          }
+          case ERROR: {
+            mergeError(other.getError());
             break;
           }
           case MESSAGE_NOT_SET: {
@@ -5393,6 +6125,13 @@ private static final long serialVersionUID = 0L;
                 messageCase_ = 3;
                 break;
               } // case 26
+              case 34: {
+                input.readMessage(
+                    internalGetErrorFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                messageCase_ = 4;
+                break;
+              } // case 34
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5849,6 +6588,148 @@ private static final long serialVersionUID = 0L;
         messageCase_ = 3;
         onChanged();
         return deleteRecordBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilder<
+          io.cloudquery.plugin.v3.Sync.MessageError, io.cloudquery.plugin.v3.Sync.MessageError.Builder, io.cloudquery.plugin.v3.Sync.MessageErrorOrBuilder> errorBuilder_;
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageError error = 4;</code>
+       * @return Whether the error field is set.
+       */
+      @java.lang.Override
+      public boolean hasError() {
+        return messageCase_ == 4;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageError error = 4;</code>
+       * @return The error.
+       */
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Sync.MessageError getError() {
+        if (errorBuilder_ == null) {
+          if (messageCase_ == 4) {
+            return (io.cloudquery.plugin.v3.Sync.MessageError) message_;
+          }
+          return io.cloudquery.plugin.v3.Sync.MessageError.getDefaultInstance();
+        } else {
+          if (messageCase_ == 4) {
+            return errorBuilder_.getMessage();
+          }
+          return io.cloudquery.plugin.v3.Sync.MessageError.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageError error = 4;</code>
+       */
+      public Builder setError(io.cloudquery.plugin.v3.Sync.MessageError value) {
+        if (errorBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          message_ = value;
+          onChanged();
+        } else {
+          errorBuilder_.setMessage(value);
+        }
+        messageCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageError error = 4;</code>
+       */
+      public Builder setError(
+          io.cloudquery.plugin.v3.Sync.MessageError.Builder builderForValue) {
+        if (errorBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          errorBuilder_.setMessage(builderForValue.build());
+        }
+        messageCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageError error = 4;</code>
+       */
+      public Builder mergeError(io.cloudquery.plugin.v3.Sync.MessageError value) {
+        if (errorBuilder_ == null) {
+          if (messageCase_ == 4 &&
+              message_ != io.cloudquery.plugin.v3.Sync.MessageError.getDefaultInstance()) {
+            message_ = io.cloudquery.plugin.v3.Sync.MessageError.newBuilder((io.cloudquery.plugin.v3.Sync.MessageError) message_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          if (messageCase_ == 4) {
+            errorBuilder_.mergeFrom(value);
+          } else {
+            errorBuilder_.setMessage(value);
+          }
+        }
+        messageCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageError error = 4;</code>
+       */
+      public Builder clearError() {
+        if (errorBuilder_ == null) {
+          if (messageCase_ == 4) {
+            messageCase_ = 0;
+            message_ = null;
+            onChanged();
+          }
+        } else {
+          if (messageCase_ == 4) {
+            messageCase_ = 0;
+            message_ = null;
+          }
+          errorBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageError error = 4;</code>
+       */
+      public io.cloudquery.plugin.v3.Sync.MessageError.Builder getErrorBuilder() {
+        return internalGetErrorFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageError error = 4;</code>
+       */
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Sync.MessageErrorOrBuilder getErrorOrBuilder() {
+        if ((messageCase_ == 4) && (errorBuilder_ != null)) {
+          return errorBuilder_.getMessageOrBuilder();
+        } else {
+          if (messageCase_ == 4) {
+            return (io.cloudquery.plugin.v3.Sync.MessageError) message_;
+          }
+          return io.cloudquery.plugin.v3.Sync.MessageError.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageError error = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          io.cloudquery.plugin.v3.Sync.MessageError, io.cloudquery.plugin.v3.Sync.MessageError.Builder, io.cloudquery.plugin.v3.Sync.MessageErrorOrBuilder> 
+          internalGetErrorFieldBuilder() {
+        if (errorBuilder_ == null) {
+          if (!(messageCase_ == 4)) {
+            message_ = io.cloudquery.plugin.v3.Sync.MessageError.getDefaultInstance();
+          }
+          errorBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              io.cloudquery.plugin.v3.Sync.MessageError, io.cloudquery.plugin.v3.Sync.MessageError.Builder, io.cloudquery.plugin.v3.Sync.MessageErrorOrBuilder>(
+                  (io.cloudquery.plugin.v3.Sync.MessageError) message_,
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        messageCase_ = 4;
+        onChanged();
+        return errorBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:cloudquery.plugin.v3.Sync.Response)
