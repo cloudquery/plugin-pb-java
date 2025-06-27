@@ -3697,6 +3697,16 @@ private static final long serialVersionUID = 0L;
      * <code>optional .cloudquery.plugin.v3.Sync.Request.Shard shard = 6;</code>
      */
     io.cloudquery.plugin.v3.Sync.Request.ShardOrBuilder getShardOrBuilder();
+
+    /**
+     * <pre>
+     * If true, the plugin will send error messages in the response stream
+     * </pre>
+     *
+     * <code>bool withErrorMessages = 7;</code>
+     * @return The withErrorMessages.
+     */
+    boolean getWithErrorMessages();
   }
   /**
    * Protobuf type {@code cloudquery.plugin.v3.Sync.Request}
@@ -4394,6 +4404,21 @@ private static final long serialVersionUID = 0L;
       return shard_ == null ? io.cloudquery.plugin.v3.Sync.Request.Shard.getDefaultInstance() : shard_;
     }
 
+    public static final int WITHERRORMESSAGES_FIELD_NUMBER = 7;
+    private boolean withErrorMessages_ = false;
+    /**
+     * <pre>
+     * If true, the plugin will send error messages in the response stream
+     * </pre>
+     *
+     * <code>bool withErrorMessages = 7;</code>
+     * @return The withErrorMessages.
+     */
+    @java.lang.Override
+    public boolean getWithErrorMessages() {
+      return withErrorMessages_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4425,6 +4450,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(6, getShard());
+      }
+      if (withErrorMessages_ != false) {
+        output.writeBool(7, withErrorMessages_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -4467,6 +4495,10 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getShard());
       }
+      if (withErrorMessages_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, withErrorMessages_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4500,6 +4532,8 @@ private static final long serialVersionUID = 0L;
         if (!getShard()
             .equals(other.getShard())) return false;
       }
+      if (getWithErrorMessages()
+          != other.getWithErrorMessages()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4533,6 +4567,9 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + SHARD_FIELD_NUMBER;
         hash = (53 * hash) + getShard().hashCode();
       }
+      hash = (37 * hash) + WITHERRORMESSAGES_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getWithErrorMessages());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4687,6 +4724,7 @@ private static final long serialVersionUID = 0L;
           shardBuilder_.dispose();
           shardBuilder_ = null;
         }
+        withErrorMessages_ = false;
         return this;
       }
 
@@ -4747,6 +4785,9 @@ private static final long serialVersionUID = 0L;
               : shardBuilder_.build();
           to_bitField0_ |= 0x00000002;
         }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.withErrorMessages_ = withErrorMessages_;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -4793,6 +4834,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasShard()) {
           mergeShard(other.getShard());
+        }
+        if (other.getWithErrorMessages() != false) {
+          setWithErrorMessages(other.getWithErrorMessages());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -4856,6 +4900,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000020;
                 break;
               } // case 50
+              case 56: {
+                withErrorMessages_ = input.readBool();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5399,6 +5448,50 @@ private static final long serialVersionUID = 0L;
           shard_ = null;
         }
         return shardBuilder_;
+      }
+
+      private boolean withErrorMessages_ ;
+      /**
+       * <pre>
+       * If true, the plugin will send error messages in the response stream
+       * </pre>
+       *
+       * <code>bool withErrorMessages = 7;</code>
+       * @return The withErrorMessages.
+       */
+      @java.lang.Override
+      public boolean getWithErrorMessages() {
+        return withErrorMessages_;
+      }
+      /**
+       * <pre>
+       * If true, the plugin will send error messages in the response stream
+       * </pre>
+       *
+       * <code>bool withErrorMessages = 7;</code>
+       * @param value The withErrorMessages to set.
+       * @return This builder for chaining.
+       */
+      public Builder setWithErrorMessages(boolean value) {
+
+        withErrorMessages_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If true, the plugin will send error messages in the response stream
+       * </pre>
+       *
+       * <code>bool withErrorMessages = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearWithErrorMessages() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        withErrorMessages_ = false;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:cloudquery.plugin.v3.Sync.Request)
