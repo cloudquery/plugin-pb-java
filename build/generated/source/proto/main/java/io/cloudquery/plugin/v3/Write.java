@@ -1036,7 +1036,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bytes table = 1 [deprecated = true];</code>
      * @deprecated cloudquery.plugin.v3.Write.MessageDeleteStale.table is deprecated.
-     *     See cloudquery/plugin/v3/plugin.proto;l=186
+     *     See cloudquery/plugin/v3/plugin.proto;l=187
      * @return The table.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString getTable();
@@ -1130,7 +1130,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bytes table = 1 [deprecated = true];</code>
      * @deprecated cloudquery.plugin.v3.Write.MessageDeleteStale.table is deprecated.
-     *     See cloudquery/plugin/v3/plugin.proto;l=186
+     *     See cloudquery/plugin/v3/plugin.proto;l=187
      * @return The table.
      */
     @java.lang.Override
@@ -1636,7 +1636,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>bytes table = 1 [deprecated = true];</code>
        * @deprecated cloudquery.plugin.v3.Write.MessageDeleteStale.table is deprecated.
-       *     See cloudquery/plugin/v3/plugin.proto;l=186
+       *     See cloudquery/plugin/v3/plugin.proto;l=187
        * @return The table.
        */
       @java.lang.Override
@@ -1650,7 +1650,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>bytes table = 1 [deprecated = true];</code>
        * @deprecated cloudquery.plugin.v3.Write.MessageDeleteStale.table is deprecated.
-       *     See cloudquery/plugin/v3/plugin.proto;l=186
+       *     See cloudquery/plugin/v3/plugin.proto;l=187
        * @param value The table to set.
        * @return This builder for chaining.
        */
@@ -1668,7 +1668,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>bytes table = 1 [deprecated = true];</code>
        * @deprecated cloudquery.plugin.v3.Write.MessageDeleteStale.table is deprecated.
-       *     See cloudquery/plugin/v3/plugin.proto;l=186
+       *     See cloudquery/plugin/v3/plugin.proto;l=187
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTable() {
