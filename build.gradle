@@ -23,7 +23,7 @@ repositories {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-def grpcVersion = '1.72.0'
+def grpcVersion = '1.73.0'
 def protobufVersion = '4.31.1'
 def protocVersion = protobufVersion
 
@@ -40,7 +40,7 @@ dependencies {
 
     testImplementation "io.grpc:grpc-testing:${grpcVersion}"
     testImplementation "junit:junit:4.13.2"
-    testImplementation "org.mockito:mockito-core:5.17.0"
+    testImplementation "org.mockito:mockito-core:5.18.0"
 }
 
 protobuf {
