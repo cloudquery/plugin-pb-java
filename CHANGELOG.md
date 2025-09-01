@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.0.35](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.34...v0.0.35) (2025-09-01)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency com.google.protobuf:protobuf-java-util to v4.32.0 ([#184](https://github.com/cloudquery/plugin-pb-java/issues/184)) ([92db071](https://github.com/cloudquery/plugin-pb-java/commit/92db0712b7d0ec568f9ef1e853f7cbe69f945a38))
+* **deps:** Update dependency gradle to v8.14.3 ([#176](https://github.com/cloudquery/plugin-pb-java/issues/176)) ([cbedc13](https://github.com/cloudquery/plugin-pb-java/commit/cbedc133ef131fa9a4508f9a41e75f2015cda819))
+* **deps:** Update dependency org.mockito:mockito-core to v5.18.0 ([#179](https://github.com/cloudquery/plugin-pb-java/issues/179)) ([5d68bb9](https://github.com/cloudquery/plugin-pb-java/commit/5d68bb9a253ff07ccf34b9564cdc7fbcac9a3193))
+* **deps:** Update dependency org.mockito:mockito-core to v5.19.0 ([#185](https://github.com/cloudquery/plugin-pb-java/issues/185)) ([7257475](https://github.com/cloudquery/plugin-pb-java/commit/725747542f245aa7c17bafa9d53c628757e98460))
+* **deps:** Update grpc-java monorepo to v1.73.0 ([#180](https://github.com/cloudquery/plugin-pb-java/issues/180)) ([4fb5584](https://github.com/cloudquery/plugin-pb-java/commit/4fb5584f8d0caf495188ab52bbd207c1b29cc6de))
+* **deps:** Update grpc-java monorepo to v1.75.0 ([#186](https://github.com/cloudquery/plugin-pb-java/issues/186)) ([e986243](https://github.com/cloudquery/plugin-pb-java/commit/e98624367c739db947084c19898260a36e7af016))
+* Generate Java Code from `plugin-pb` ([#182](https://github.com/cloudquery/plugin-pb-java/issues/182)) ([cf6f9ff](https://github.com/cloudquery/plugin-pb-java/commit/cf6f9ff2a6c8142b60c1db3410c632092b09ac7a))
+
 ## [0.0.34](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.33...v0.0.34) (2025-07-01)
 
 
