@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.73.0)",
-    comments = "Source: cloudquery/plugin/v3/plugin.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class PluginGrpc {
 
@@ -758,8 +755,8 @@ public final class PluginGrpc {
      * Get the name of the plugin
      * </pre>
      */
-    public io.cloudquery.plugin.v3.GetName.Response getName(io.cloudquery.plugin.v3.GetName.Request request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public io.cloudquery.plugin.v3.GetName.Response getName(io.cloudquery.plugin.v3.GetName.Request request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGetNameMethod(), getCallOptions(), request);
     }
 
@@ -768,8 +765,8 @@ public final class PluginGrpc {
      * Get the current version of the plugin
      * </pre>
      */
-    public io.cloudquery.plugin.v3.GetVersion.Response getVersion(io.cloudquery.plugin.v3.GetVersion.Request request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public io.cloudquery.plugin.v3.GetVersion.Response getVersion(io.cloudquery.plugin.v3.GetVersion.Request request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGetVersionMethod(), getCallOptions(), request);
     }
 
@@ -780,8 +777,8 @@ public final class PluginGrpc {
      * Should be called before Init.
      * </pre>
      */
-    public io.cloudquery.plugin.v3.GetSpecSchema.Response getSpecSchema(io.cloudquery.plugin.v3.GetSpecSchema.Request request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public io.cloudquery.plugin.v3.GetSpecSchema.Response getSpecSchema(io.cloudquery.plugin.v3.GetSpecSchema.Request request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGetSpecSchemaMethod(), getCallOptions(), request);
     }
 
@@ -790,8 +787,8 @@ public final class PluginGrpc {
      * Configure the plugin with the given credentials and mode
      * </pre>
      */
-    public io.cloudquery.plugin.v3.Init.Response init(io.cloudquery.plugin.v3.Init.Request request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public io.cloudquery.plugin.v3.Init.Response init(io.cloudquery.plugin.v3.Init.Request request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getInitMethod(), getCallOptions(), request);
     }
 
@@ -800,8 +797,8 @@ public final class PluginGrpc {
      * Get all tables the source plugin supports. Must be called after Init
      * </pre>
      */
-    public io.cloudquery.plugin.v3.GetTables.Response getTables(io.cloudquery.plugin.v3.GetTables.Request request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public io.cloudquery.plugin.v3.GetTables.Response getTables(io.cloudquery.plugin.v3.GetTables.Request request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGetTablesMethod(), getCallOptions(), request);
     }
 
@@ -859,8 +856,8 @@ public final class PluginGrpc {
      * Transform schemas.
      * </pre>
      */
-    public io.cloudquery.plugin.v3.TransformSchema.Response transformSchema(io.cloudquery.plugin.v3.TransformSchema.Request request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public io.cloudquery.plugin.v3.TransformSchema.Response transformSchema(io.cloudquery.plugin.v3.TransformSchema.Request request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getTransformSchemaMethod(), getCallOptions(), request);
     }
 
@@ -869,8 +866,8 @@ public final class PluginGrpc {
      * Send signal to flush and close open connections
      * </pre>
      */
-    public io.cloudquery.plugin.v3.Close.Response close(io.cloudquery.plugin.v3.Close.Request request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public io.cloudquery.plugin.v3.Close.Response close(io.cloudquery.plugin.v3.Close.Request request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getCloseMethod(), getCallOptions(), request);
     }
 
@@ -879,8 +876,8 @@ public final class PluginGrpc {
      * Validate and test the connections used by the plugin
      * </pre>
      */
-    public io.cloudquery.plugin.v3.TestConnection.Response testConnection(io.cloudquery.plugin.v3.TestConnection.Request request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public io.cloudquery.plugin.v3.TestConnection.Response testConnection(io.cloudquery.plugin.v3.TestConnection.Request request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getTestConnectionMethod(), getCallOptions(), request);
     }
   }
