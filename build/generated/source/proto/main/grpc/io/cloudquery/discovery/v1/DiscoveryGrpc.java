@@ -4,9 +4,6 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
-@javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.73.0)",
-    comments = "Source: cloudquery/discovery/v1/discovery.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DiscoveryGrpc {
 
@@ -180,8 +177,8 @@ public final class DiscoveryGrpc {
      * Get the name of the plugin
      * </pre>
      */
-    public io.cloudquery.discovery.v1.GetVersions.Response getVersions(io.cloudquery.discovery.v1.GetVersions.Request request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+    public io.cloudquery.discovery.v1.GetVersions.Response getVersions(io.cloudquery.discovery.v1.GetVersions.Request request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGetVersionsMethod(), getCallOptions(), request);
     }
   }
