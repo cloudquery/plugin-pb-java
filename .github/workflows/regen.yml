@@ -4,6 +4,9 @@ on:
     - cron: "0 8 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   regen:
     timeout-minutes: 30
@@ -13,9 +16,9 @@ jobs:
         uses: actions/checkout@v4
       - uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '18'
-          cache: 'gradle'
+          distribution: "temurin"
+          java-version: "18"
+          cache: "gradle"
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@f9c9c575b8b21b6485636a91ffecd10e558c62f6
       - name: Generate code
