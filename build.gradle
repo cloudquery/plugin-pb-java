@@ -6,7 +6,9 @@ plugins {
     id "maven-publish"
 }
 
-mainClassName = 'main.Main'
+application {
+    mainClass = 'main.Main'
+}
 
 group 'io.cloudquery'
 // x-release-please-start-version
@@ -20,8 +22,10 @@ repositories {
     mavenLocal()
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+java {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
 
 def grpcVersion = '1.75.0'
 def protobufVersion = '4.33.0'
