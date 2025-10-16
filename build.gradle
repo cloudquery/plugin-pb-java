@@ -6,7 +6,9 @@ plugins {
     id "maven-publish"
 }
 
-mainClassName = 'main.Main'
+application {
+    mainClass = 'main.Main'
+}
 
 group 'io.cloudquery'
 // x-release-please-start-version
