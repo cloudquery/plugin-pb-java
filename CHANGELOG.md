@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.40](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.39...v0.0.40) (2025-10-16)
+
+
+### Bug Fixes
+
+* Typo in publish.yml for package publishing step ([#207](https://github.com/cloudquery/plugin-pb-java/issues/207)) ([365bcf9](https://github.com/cloudquery/plugin-pb-java/commit/365bcf9298cd860d19e6211b822bf69b61cc55e7))
+
 ## [0.0.39](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.38...v0.0.39) (2025-10-16)
 
 
