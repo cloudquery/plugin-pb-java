@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.38](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.37...v0.0.38) (2025-10-16)
+
+
+### Bug Fixes
+
+* Publish step in GitHub Actions workflow ([#203](https://github.com/cloudquery/plugin-pb-java/issues/203)) ([6c6e828](https://github.com/cloudquery/plugin-pb-java/commit/6c6e828cbf2001382b5a95d03f0c6bfe23b5d67f))
+
 ## [0.0.37](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.36...v0.0.37) (2025-10-16)
 
 
