@@ -25,5 +25,5 @@ jobs:
       - name: Publish Packagee
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./gradlew package
+        run: ./gradlew publish
         
