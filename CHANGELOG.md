@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.39](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.38...v0.0.39) (2025-10-16)
+
+
+### Bug Fixes
+
+* Change Gradle command from package to publish ([#205](https://github.com/cloudquery/plugin-pb-java/issues/205)) ([88e9d4a](https://github.com/cloudquery/plugin-pb-java/commit/88e9d4a63b179a4a92a6e58a94e019a37cc607bf))
+
 ## [0.0.38](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.37...v0.0.38) (2025-10-16)
 
 
