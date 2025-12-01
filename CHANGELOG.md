@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.0.41](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.40...v0.0.41) (2025-12-01)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency com.google.protobuf:protobuf-java-util to v4.33.1 ([#213](https://github.com/cloudquery/plugin-pb-java/issues/213)) ([f718ee3](https://github.com/cloudquery/plugin-pb-java/commit/f718ee391c2d2fd041c794eba9cf7801ebaff880))
+* **deps:** Update dependency gradle to v9.2.1 ([#214](https://github.com/cloudquery/plugin-pb-java/issues/214)) ([476d854](https://github.com/cloudquery/plugin-pb-java/commit/476d8541038a49f90941584c4f29e76fea18bc7b))
+* **deps:** Update grpc-java monorepo to v1.77.0 ([#215](https://github.com/cloudquery/plugin-pb-java/issues/215)) ([bdfeae6](https://github.com/cloudquery/plugin-pb-java/commit/bdfeae6eeee392aef812ba6b1c3d2d3c21c0a797))
+* Generate Java Code from `plugin-pb` ([#209](https://github.com/cloudquery/plugin-pb-java/issues/209)) ([afce142](https://github.com/cloudquery/plugin-pb-java/commit/afce1425fa179706a575703fd3f6320e38e2efce))
+* Generate Java Code from `plugin-pb` ([#216](https://github.com/cloudquery/plugin-pb-java/issues/216)) ([1051a64](https://github.com/cloudquery/plugin-pb-java/commit/1051a641f5579eda9e9e5ea936678f8e51ccd8c3))
+
 ## [0.0.40](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.39...v0.0.40) (2025-10-16)
 
 
