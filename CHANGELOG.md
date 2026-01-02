@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.0.41](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.40...v0.0.41) (2026-01-02)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency com.google.protobuf:protobuf-java-util to v4.33.1 ([#213](https://github.com/cloudquery/plugin-pb-java/issues/213)) ([f718ee3](https://github.com/cloudquery/plugin-pb-java/commit/f718ee391c2d2fd041c794eba9cf7801ebaff880))
+* **deps:** Update dependency com.google.protobuf:protobuf-java-util to v4.33.2 ([#218](https://github.com/cloudquery/plugin-pb-java/issues/218)) ([f8ecd4f](https://github.com/cloudquery/plugin-pb-java/commit/f8ecd4fa189c63da7eab7ec400b35cb6f715a16a))
+* **deps:** Update dependency gradle to v9.2.1 ([#214](https://github.com/cloudquery/plugin-pb-java/issues/214)) ([476d854](https://github.com/cloudquery/plugin-pb-java/commit/476d8541038a49f90941584c4f29e76fea18bc7b))
+* **deps:** Update dependency org.mockito:mockito-core to v5.21.0 ([#220](https://github.com/cloudquery/plugin-pb-java/issues/220)) ([d810cbc](https://github.com/cloudquery/plugin-pb-java/commit/d810cbc6755326b3ffa219429e9cf17a581fafe1))
+* **deps:** Update grpc-java monorepo to v1.77.0 ([#215](https://github.com/cloudquery/plugin-pb-java/issues/215)) ([bdfeae6](https://github.com/cloudquery/plugin-pb-java/commit/bdfeae6eeee392aef812ba6b1c3d2d3c21c0a797))
+* **deps:** Update grpc-java monorepo to v1.78.0 ([#221](https://github.com/cloudquery/plugin-pb-java/issues/221)) ([39cb209](https://github.com/cloudquery/plugin-pb-java/commit/39cb209f990b128c3b6cad625118f7adc917eb54))
+* **deps:** Update plugin com.google.protobuf to v0.9.6 ([#219](https://github.com/cloudquery/plugin-pb-java/issues/219)) ([e1aca1f](https://github.com/cloudquery/plugin-pb-java/commit/e1aca1f1432f3765142998524864db804895c1d8))
+* Generate Java Code from `plugin-pb` ([#209](https://github.com/cloudquery/plugin-pb-java/issues/209)) ([afce142](https://github.com/cloudquery/plugin-pb-java/commit/afce1425fa179706a575703fd3f6320e38e2efce))
+* Generate Java Code from `plugin-pb` ([#216](https://github.com/cloudquery/plugin-pb-java/issues/216)) ([1051a64](https://github.com/cloudquery/plugin-pb-java/commit/1051a641f5579eda9e9e5ea936678f8e51ccd8c3))
+* Generate Java Code from `plugin-pb` ([#223](https://github.com/cloudquery/plugin-pb-java/issues/223)) ([8b7c1cb](https://github.com/cloudquery/plugin-pb-java/commit/8b7c1cbce88b5fbdf2173ee54a5f4c67b798b83b))
+
 ## [0.0.40](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.39...v0.0.40) (2025-10-16)
 
 
