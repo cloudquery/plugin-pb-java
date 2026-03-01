@@ -27,7 +27,7 @@ java {
     targetCompatibility = 1.8
 }
 
-def grpcVersion = '1.78.0'
+def grpcVersion = '1.79.0'
 def protobufVersion = '4.33.5'
 def protocVersion = protobufVersion
 
