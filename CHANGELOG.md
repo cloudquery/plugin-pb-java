@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.44](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.43...v0.0.44) (2026-03-25)
+
+
+### Bug Fixes
+
+* **deps:** Pin dependencies ([#236](https://github.com/cloudquery/plugin-pb-java/issues/236)) ([3999148](https://github.com/cloudquery/plugin-pb-java/commit/3999148ea0496f10012413e0266dfbfc75878ea5))
+
 ## [0.0.43](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.42...v0.0.43) (2026-03-01)
 
 
