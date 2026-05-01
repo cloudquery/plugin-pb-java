@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.46](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.45...v0.0.46) (2026-05-01)
+
+
+### Bug Fixes
+
+* **deps:** Update plugin com.google.protobuf to v0.10.0 ([#251](https://github.com/cloudquery/plugin-pb-java/issues/251)) ([14b4b39](https://github.com/cloudquery/plugin-pb-java/commit/14b4b39a6f740c7c47b0b094b2091eef0bdeeb6a))
+* Generate Java Code from `plugin-pb` ([#254](https://github.com/cloudquery/plugin-pb-java/issues/254)) ([3ccc243](https://github.com/cloudquery/plugin-pb-java/commit/3ccc24303f65c6125329ed4e7a27e65b5998e514))
+
 ## [0.0.45](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.44...v0.0.45) (2026-04-01)
 
 
