@@ -1,0 +1,245 @@
+syntax = "proto3";
+package cloudquery.plugin.v3;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/cloudquery/plugin-pb-go/pb/plugin/v3;plugin";
+option java_package = "io.cloudquery.plugin.v3";
+option java_multiple_files = true;
+
+service Plugin {
+  // Get the name of the plugin
+  rpc GetName(GetName.Request) returns (GetName.Response);
+  // Get the current version of the plugin
+  rpc GetVersion(GetVersion.Request) returns (GetVersion.Response);
+  // Get plugin spec schema.
+  // This will allow validating the input even before calling Init.
+  // Should be called before Init.
+  rpc GetSpecSchema(GetSpecSchema.Request) returns (GetSpecSchema.Response);
+  // Configure the plugin with the given credentials and mode
+  rpc Init(Init.Request) returns (Init.Response);
+  // Get all tables the source plugin supports. Must be called after Init
+  rpc GetTables(GetTables.Request) returns (GetTables.Response);
+  // Start a sync on the source plugin. It streams messages as output.
+  rpc Sync(Sync.Request) returns (stream Sync.Response);
+  // Start a Read on the source plugin for a given table and schema. It streams messages as output.
+  // The plugin assume that that schema was used to also write the data beforehand
+  rpc Read(Read.Request) returns (stream Read.Response);
+  // Write resources. Write is the mirror of Sync, expecting a stream of messages as input.
+  rpc Write(stream Write.Request) returns (Write.Response);
+  // Transform resources.
+  rpc Transform(stream Transform.Request) returns (stream Transform.Response);
+  // Transform schemas.
+  rpc TransformSchema(TransformSchema.Request) returns (TransformSchema.Response);
+  // Send signal to flush and close open connections
+  rpc Close(Close.Request) returns (Close.Response);
+  // Validate and test the connections used by the plugin
+  rpc TestConnection(TestConnection.Request) returns (TestConnection.Response);
+}
+
+message GetName {
+  message Request {}
+  message Response {
+    string name = 1;
+  }
+}
+
+message GetVersion {
+  message Request {}
+  message Response {
+    string version = 1;
+  }
+}
+
+message GetSpecSchema {
+  message Request {}
+  message Response {
+    // Should be a valid JSON schema for the plugin spec.
+    // See https://json-schema.org for more details.
+    optional string json_schema = 1;
+  }
+}
+
+message Init {
+  message Request {
+    bytes spec = 1; // Internal plugin-specific spec
+    bool no_connection = 2; // A flag to indicate plugins should skip establishing a connection
+    string invocation_id = 3; // unique execution_id that will identify the invocation (sync, migrate etc)
+  }
+  message Response {}
+}
+
+message GetTables {
+  message Request {
+    repeated string tables = 1;
+    repeated string skip_tables = 2;
+    bool skip_dependent_tables = 3;
+  }
+  message Response {
+    // marshalled []arrow.Schema
+    repeated bytes tables = 1;
+  }
+}
+
+message Sync {
+  message MessageInsert {
+    // marshalled arrow.Record
+    bytes record = 1;
+  }
+  message MessageMigrateTable {
+    // marshalled arrow.Schema
+    bytes table = 1;
+  }
+  message MessageDeleteRecord {
+    string table_name = 1;
+    repeated PredicatesGroup where_clause = 2;
+    repeated TableRelation table_relations = 3;
+  }
+  message MessageError {
+    string table_name = 1;
+    string error = 2;
+  }
+
+
+  message BackendOptions {
+    // table name to use for state backend
+    string table_name = 1;
+    // connection path to use for state backend
+    string connection = 2;
+  }
+  message Request {
+    message Shard {
+      int32 num = 1;
+      int32 total = 2;
+    }
+    repeated string tables = 1;
+    repeated string skip_tables = 2;
+    bool skip_dependent_tables = 3;
+    bool deterministic_cq_id = 4;
+    BackendOptions backend = 5;
+    optional Shard shard = 6;
+    bool withErrorMessages = 7; // If true, the plugin will send error messages in the response stream
+  }
+  message Response {
+    oneof message {
+      Sync.MessageMigrateTable migrate_table = 1;
+      Sync.MessageInsert insert = 2;
+      Sync.MessageDeleteRecord delete_record = 3;
+      Sync.MessageError error = 4;
+    }
+  }
+}
+
+message Read {
+  message Request {
+    // marshalled arrow.Schema
+    bytes table = 1;
+  }
+  message Response {
+    // marshalled arrow.Record
+    bytes record = 1;
+  }
+}
+
+message TableRelation {
+  string table_name = 1;
+  string parent_table = 2;
+}
+
+
+
+message Predicate {
+  enum Operator {
+    EQ = 0;
+    // LT = 1;
+    // LTE = 2;
+    // GT = 3;  
+    // GTE = 4;
+  }
+
+  Operator operator = 1;
+  string column = 2;
+  // marshalled arrow.Record
+  bytes record = 3;
+}
+
+message PredicatesGroup {
+  enum GroupingType {
+    AND = 0;
+    OR = 1;
+  }
+  GroupingType grouping_type = 1;
+	repeated Predicate predicates = 2;
+
+}
+
+message Write {
+  message MessageMigrateTable {
+    // marshalled arrow.Schema
+    bytes table = 1;
+    bool migrate_force = 2;
+  }
+  message MessageInsert {
+    // marshalled arrow.Record
+    bytes record = 1;
+  }
+  message MessageDeleteStale {
+    // marshalled arrow.Schema
+    bytes table = 1 [deprecated = true];
+    string source_name = 2;
+    google.protobuf.Timestamp sync_time = 3;
+    string table_name = 4;
+  }
+  message MessageDeleteRecord {
+    string table_name = 1;
+    repeated PredicatesGroup where_clause = 2;
+    repeated TableRelation table_relations = 3;
+  }
+  message Request {
+    oneof message {
+      Write.MessageMigrateTable migrate_table = 1;
+      Write.MessageInsert insert = 2;
+      Write.MessageDeleteStale delete = 3;
+      Write.MessageDeleteRecord delete_record = 4; 
+    }
+  }
+  message Response {}
+}
+
+message Transform {
+  message Request {
+    // marshalled arrow.Record
+    bytes record = 1;
+  }
+  message Response {
+    // marshalled arrow.Record
+    bytes record = 1;
+  }
+}
+
+message TransformSchema {
+  message Request {
+    // marshalled arrow.Schema
+    bytes schema = 1;
+  }
+  message Response {
+    // marshalled arrow.Schema
+    bytes schema = 1;
+  }
+}
+
+message Close {
+  message Request {}
+  message Response {}
+}
+
+message TestConnection {
+  message Request{
+    bytes spec = 1; // Internal plugin-specific spec
+  }
+  message Response{
+    bool success = 1;
+    string failure_code = 2;
+    string failure_description = 3;
+  }
+}
