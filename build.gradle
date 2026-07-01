@@ -28,7 +28,7 @@ java {
 }
 
 def grpcVersion = '1.81.0'
-def protobufVersion = '4.35.0'
+def protobufVersion = '4.35.1'
 def protocVersion = protobufVersion
 
 dependencies {
