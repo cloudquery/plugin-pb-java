@@ -384,6 +384,37 @@ public final class PluginGrpc {
     return getTestConnectionMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.AssessTables.Request,
+      io.cloudquery.plugin.v3.AssessTables.Response> getAssessTablesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AssessTables",
+      requestType = io.cloudquery.plugin.v3.AssessTables.Request.class,
+      responseType = io.cloudquery.plugin.v3.AssessTables.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.AssessTables.Request,
+      io.cloudquery.plugin.v3.AssessTables.Response> getAssessTablesMethod() {
+    io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.AssessTables.Request, io.cloudquery.plugin.v3.AssessTables.Response> getAssessTablesMethod;
+    if ((getAssessTablesMethod = PluginGrpc.getAssessTablesMethod) == null) {
+      synchronized (PluginGrpc.class) {
+        if ((getAssessTablesMethod = PluginGrpc.getAssessTablesMethod) == null) {
+          PluginGrpc.getAssessTablesMethod = getAssessTablesMethod =
+              io.grpc.MethodDescriptor.<io.cloudquery.plugin.v3.AssessTables.Request, io.cloudquery.plugin.v3.AssessTables.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AssessTables"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.cloudquery.plugin.v3.AssessTables.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.cloudquery.plugin.v3.AssessTables.Response.getDefaultInstance()))
+              .setSchemaDescriptor(new PluginMethodDescriptorSupplier("AssessTables"))
+              .build();
+        }
+      }
+    }
+    return getAssessTablesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -569,6 +600,17 @@ public final class PluginGrpc {
         io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.TestConnection.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTestConnectionMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Assess how the destination plugin would apply table schema changes, without writing anything.
+     * Plugins that do not support assessment return Unimplemented.
+     * </pre>
+     */
+    default void assessTables(io.cloudquery.plugin.v3.AssessTables.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.AssessTables.Response> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssessTablesMethod(), responseObserver);
+    }
   }
 
   /**
@@ -732,6 +774,18 @@ public final class PluginGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getTestConnectionMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Assess how the destination plugin would apply table schema changes, without writing anything.
+     * Plugins that do not support assessment return Unimplemented.
+     * </pre>
+     */
+    public void assessTables(io.cloudquery.plugin.v3.AssessTables.Request request,
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.AssessTables.Response> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAssessTablesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -880,6 +934,17 @@ public final class PluginGrpc {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getTestConnectionMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Assess how the destination plugin would apply table schema changes, without writing anything.
+     * Plugins that do not support assessment return Unimplemented.
+     * </pre>
+     */
+    public io.cloudquery.plugin.v3.AssessTables.Response assessTables(io.cloudquery.plugin.v3.AssessTables.Request request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getAssessTablesMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -1002,6 +1067,17 @@ public final class PluginGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getTestConnectionMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Assess how the destination plugin would apply table schema changes, without writing anything.
+     * Plugins that do not support assessment return Unimplemented.
+     * </pre>
+     */
+    public io.cloudquery.plugin.v3.AssessTables.Response assessTables(io.cloudquery.plugin.v3.AssessTables.Request request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAssessTablesMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -1109,6 +1185,18 @@ public final class PluginGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getTestConnectionMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Assess how the destination plugin would apply table schema changes, without writing anything.
+     * Plugins that do not support assessment return Unimplemented.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<io.cloudquery.plugin.v3.AssessTables.Response> assessTables(
+        io.cloudquery.plugin.v3.AssessTables.Request request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAssessTablesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_NAME = 0;
@@ -1121,8 +1209,9 @@ public final class PluginGrpc {
   private static final int METHODID_TRANSFORM_SCHEMA = 7;
   private static final int METHODID_CLOSE = 8;
   private static final int METHODID_TEST_CONNECTION = 9;
-  private static final int METHODID_WRITE = 10;
-  private static final int METHODID_TRANSFORM = 11;
+  private static final int METHODID_ASSESS_TABLES = 10;
+  private static final int METHODID_WRITE = 11;
+  private static final int METHODID_TRANSFORM = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1180,6 +1269,10 @@ public final class PluginGrpc {
         case METHODID_TEST_CONNECTION:
           serviceImpl.testConnection((io.cloudquery.plugin.v3.TestConnection.Request) request,
               (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.TestConnection.Response>) responseObserver);
+          break;
+        case METHODID_ASSESS_TABLES:
+          serviceImpl.assessTables((io.cloudquery.plugin.v3.AssessTables.Request) request,
+              (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.AssessTables.Response>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1289,6 +1382,13 @@ public final class PluginGrpc {
               io.cloudquery.plugin.v3.TestConnection.Request,
               io.cloudquery.plugin.v3.TestConnection.Response>(
                 service, METHODID_TEST_CONNECTION)))
+        .addMethod(
+          getAssessTablesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              io.cloudquery.plugin.v3.AssessTables.Request,
+              io.cloudquery.plugin.v3.AssessTables.Response>(
+                service, METHODID_ASSESS_TABLES)))
         .build();
   }
 
@@ -1349,6 +1449,7 @@ public final class PluginGrpc {
               .addMethod(getTransformSchemaMethod())
               .addMethod(getCloseMethod())
               .addMethod(getTestConnectionMethod())
+              .addMethod(getAssessTablesMethod())
               .build();
         }
       }
