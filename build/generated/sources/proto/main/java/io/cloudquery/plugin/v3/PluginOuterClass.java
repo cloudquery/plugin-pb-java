@@ -386,7 +386,7 @@ public final class PluginOuterClass extends com.google.protobuf.GeneratedFile {
       "se\032\t\n\007Request\032\n\n\010Response\"y\n\016TestConnect" +
       "ion\032\027\n\007Request\022\014\n\004spec\030\001 \001(\014\032N\n\010Response" +
       "\022\017\n\007success\030\001 \001(\010\022\024\n\014failure_code\030\002 \001(\t\022" +
-      "\033\n\023failure_description\030\003 \001(\t\"\336\010\n\014AssessT" +
+      "\033\n\023failure_description\030\003 \001(\t\"\301\010\n\014AssessT" +
       "ables\0321\n\tTablePair\022\021\n\told_table\030\001 \001(\014\022\021\n" +
       "\tnew_table\030\002 \001(\014\032B\n\010Evidence\022\027\n\017syntheti" +
       "c_value\030\001 \001(\t\022\016\n\006before\030\002 \001(\t\022\r\n\005after\030\003" +
@@ -396,59 +396,58 @@ public final class PluginOuterClass extends com.google.protobuf.GeneratedFile {
       " \001(\t\022\020\n\010new_type\030\004 \001(\t\022\032\n\022safe_mode_beha" +
       "vior\030\005 \001(\t\022\034\n\024forced_mode_behavior\030\006 \001(\t" +
       "\022=\n\010evidence\030\007 \003(\0132+.cloudquery.plugin.v" +
-      "3.AssessTables.Evidence\032\336\002\n\014TableFinding" +
+      "3.AssessTables.Evidence\032\301\002\n\014TableFinding" +
       "\022\022\n\ntable_name\030\001 \001(\t\022=\n\010category\030\002 \001(\0162+" +
       ".cloudquery.plugin.v3.AssessTables.Categ" +
       "ory\022\032\n\022safe_mode_behavior\030\003 \001(\t\022\034\n\024force" +
       "d_mode_behavior\030\004 \001(\t\022A\n\007columns\030\005 \003(\01320" +
       ".cloudquery.plugin.v3.AssessTables.Colum" +
       "nFinding\022=\n\010evidence\030\006 \003(\0132+.cloudquery." +
-      "plugin.v3.AssessTables.Evidence\022\033\n\023cover" +
-      "age_incomplete\030\007 \001(\010\022\"\n\032coverage_incompl" +
-      "ete_reason\030\010 \001(\t\032^\n\007Request\022<\n\006tables\030\001 " +
-      "\003(\0132,.cloudquery.plugin.v3.AssessTables." +
-      "TablePair\022\025\n\rmigrate_force\030\002 \001(\010\032K\n\010Resp" +
-      "onse\022?\n\006tables\030\001 \003(\0132/.cloudquery.plugin" +
-      ".v3.AssessTables.TableFinding\"\305\001\n\010Catego" +
-      "ry\022\024\n\020CATEGORY_UNKNOWN\020\000\022\026\n\022CATEGORY_NO_" +
-      "CHANGE\020\001\022%\n!CATEGORY_AUTOMATICALLY_MIGRA" +
-      "TABLE\020\002\022&\n\"CATEGORY_MANUAL_MIGRATION_REQ" +
-      "UIRED\020\003\022\032\n\026CATEGORY_TABLE_REMOVED\020\004\022 \n\034C" +
-      "ATEGORY_FILE_SCHEMA_CHANGED\020\0052\340\t\n\006Plugin" +
-      "\022X\n\007GetName\022%.cloudquery.plugin.v3.GetNa" +
-      "me.Request\032&.cloudquery.plugin.v3.GetNam" +
-      "e.Response\022a\n\nGetVersion\022(.cloudquery.pl" +
-      "ugin.v3.GetVersion.Request\032).cloudquery." +
-      "plugin.v3.GetVersion.Response\022j\n\rGetSpec" +
-      "Schema\022+.cloudquery.plugin.v3.GetSpecSch" +
-      "ema.Request\032,.cloudquery.plugin.v3.GetSp" +
-      "ecSchema.Response\022O\n\004Init\022\".cloudquery.p" +
-      "lugin.v3.Init.Request\032#.cloudquery.plugi" +
-      "n.v3.Init.Response\022^\n\tGetTables\022\'.cloudq" +
-      "uery.plugin.v3.GetTables.Request\032(.cloud" +
-      "query.plugin.v3.GetTables.Response\022Q\n\004Sy" +
-      "nc\022\".cloudquery.plugin.v3.Sync.Request\032#" +
-      ".cloudquery.plugin.v3.Sync.Response0\001\022Q\n" +
-      "\004Read\022\".cloudquery.plugin.v3.Read.Reques" +
-      "t\032#.cloudquery.plugin.v3.Read.Response0\001" +
-      "\022T\n\005Write\022#.cloudquery.plugin.v3.Write.R" +
-      "equest\032$.cloudquery.plugin.v3.Write.Resp" +
-      "onse(\001\022b\n\tTransform\022\'.cloudquery.plugin." +
-      "v3.Transform.Request\032(.cloudquery.plugin" +
-      ".v3.Transform.Response(\0010\001\022p\n\017TransformS" +
-      "chema\022-.cloudquery.plugin.v3.TransformSc" +
-      "hema.Request\032..cloudquery.plugin.v3.Tran" +
-      "sformSchema.Response\022R\n\005Close\022#.cloudque" +
-      "ry.plugin.v3.Close.Request\032$.cloudquery." +
-      "plugin.v3.Close.Response\022m\n\016TestConnecti" +
-      "on\022,.cloudquery.plugin.v3.TestConnection" +
-      ".Request\032-.cloudquery.plugin.v3.TestConn" +
-      "ection.Response\022g\n\014AssessTables\022*.cloudq" +
-      "uery.plugin.v3.AssessTables.Request\032+.cl" +
-      "oudquery.plugin.v3.AssessTables.Response" +
-      "BS\n\027io.cloudquery.plugin.v3P\001Z6github.co" +
-      "m/cloudquery/plugin-pb-go/pb/plugin/v3;p" +
-      "luginb\006proto3"
+      "plugin.v3.AssessTables.Evidence\022\"\n\032incom" +
+      "plete_coverage_reason\030\007 \001(\t\032^\n\007Request\022<" +
+      "\n\006tables\030\001 \003(\0132,.cloudquery.plugin.v3.As" +
+      "sessTables.TablePair\022\025\n\rmigrate_force\030\002 " +
+      "\001(\010\032K\n\010Response\022?\n\006tables\030\001 \003(\0132/.cloudq" +
+      "uery.plugin.v3.AssessTables.TableFinding" +
+      "\"\305\001\n\010Category\022\024\n\020CATEGORY_UNKNOWN\020\000\022\026\n\022C" +
+      "ATEGORY_NO_CHANGE\020\001\022%\n!CATEGORY_AUTOMATI" +
+      "CALLY_MIGRATABLE\020\002\022&\n\"CATEGORY_MANUAL_MI" +
+      "GRATION_REQUIRED\020\003\022\032\n\026CATEGORY_TABLE_REM" +
+      "OVED\020\004\022 \n\034CATEGORY_FILE_SCHEMA_CHANGED\020\005" +
+      "2\340\t\n\006Plugin\022X\n\007GetName\022%.cloudquery.plug" +
+      "in.v3.GetName.Request\032&.cloudquery.plugi" +
+      "n.v3.GetName.Response\022a\n\nGetVersion\022(.cl" +
+      "oudquery.plugin.v3.GetVersion.Request\032)." +
+      "cloudquery.plugin.v3.GetVersion.Response" +
+      "\022j\n\rGetSpecSchema\022+.cloudquery.plugin.v3" +
+      ".GetSpecSchema.Request\032,.cloudquery.plug" +
+      "in.v3.GetSpecSchema.Response\022O\n\004Init\022\".c" +
+      "loudquery.plugin.v3.Init.Request\032#.cloud" +
+      "query.plugin.v3.Init.Response\022^\n\tGetTabl" +
+      "es\022\'.cloudquery.plugin.v3.GetTables.Requ" +
+      "est\032(.cloudquery.plugin.v3.GetTables.Res" +
+      "ponse\022Q\n\004Sync\022\".cloudquery.plugin.v3.Syn" +
+      "c.Request\032#.cloudquery.plugin.v3.Sync.Re" +
+      "sponse0\001\022Q\n\004Read\022\".cloudquery.plugin.v3." +
+      "Read.Request\032#.cloudquery.plugin.v3.Read" +
+      ".Response0\001\022T\n\005Write\022#.cloudquery.plugin" +
+      ".v3.Write.Request\032$.cloudquery.plugin.v3" +
+      ".Write.Response(\001\022b\n\tTransform\022\'.cloudqu" +
+      "ery.plugin.v3.Transform.Request\032(.cloudq" +
+      "uery.plugin.v3.Transform.Response(\0010\001\022p\n" +
+      "\017TransformSchema\022-.cloudquery.plugin.v3." +
+      "TransformSchema.Request\032..cloudquery.plu" +
+      "gin.v3.TransformSchema.Response\022R\n\005Close" +
+      "\022#.cloudquery.plugin.v3.Close.Request\032$." +
+      "cloudquery.plugin.v3.Close.Response\022m\n\016T" +
+      "estConnection\022,.cloudquery.plugin.v3.Tes" +
+      "tConnection.Request\032-.cloudquery.plugin." +
+      "v3.TestConnection.Response\022g\n\014AssessTabl" +
+      "es\022*.cloudquery.plugin.v3.AssessTables.R" +
+      "equest\032+.cloudquery.plugin.v3.AssessTabl" +
+      "es.ResponseBS\n\027io.cloudquery.plugin.v3P\001" +
+      "Z6github.com/cloudquery/plugin-pb-go/pb/" +
+      "plugin/v3;pluginb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -778,7 +777,7 @@ public final class PluginOuterClass extends com.google.protobuf.GeneratedFile {
     internal_static_cloudquery_plugin_v3_AssessTables_TableFinding_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cloudquery_plugin_v3_AssessTables_TableFinding_descriptor,
-        new java.lang.String[] { "TableName", "Category", "SafeModeBehavior", "ForcedModeBehavior", "Columns", "Evidence", "CoverageIncomplete", "CoverageIncompleteReason", });
+        new java.lang.String[] { "TableName", "Category", "SafeModeBehavior", "ForcedModeBehavior", "Columns", "Evidence", "IncompleteCoverageReason", });
     internal_static_cloudquery_plugin_v3_AssessTables_Request_descriptor =
       internal_static_cloudquery_plugin_v3_AssessTables_descriptor.getNestedType(4);
     internal_static_cloudquery_plugin_v3_AssessTables_Request_fieldAccessorTable = new

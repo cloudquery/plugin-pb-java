@@ -49,6 +49,10 @@ private static final long serialVersionUID = 0L;
   }
 
   /**
+   * <pre>
+   * TABLE_REMOVED applies to tables only, all other values apply to tables and columns
+   * </pre>
+   *
    * Protobuf enum {@code cloudquery.plugin.v3.AssessTables.Category}
    */
   public enum Category
@@ -1713,6 +1717,10 @@ private static final long serialVersionUID = 0L;
         int index);
   }
   /**
+   * <pre>
+   * Safe mode is a migration with migrate_force false, forced mode with migrate_force true
+   * </pre>
+   *
    * Protobuf type {@code cloudquery.plugin.v3.AssessTables.ColumnFinding}
    */
   public static final class ColumnFinding extends
@@ -2252,6 +2260,10 @@ private static final long serialVersionUID = 0L;
       return builder;
     }
     /**
+     * <pre>
+     * Safe mode is a migration with migrate_force false, forced mode with migrate_force true
+     * </pre>
+     *
      * Protobuf type {@code cloudquery.plugin.v3.AssessTables.ColumnFinding}
      */
     public static final class Builder extends
@@ -3331,22 +3343,24 @@ private static final long serialVersionUID = 0L;
         int index);
 
     /**
-     * <code>bool coverage_incomplete = 7;</code>
-     * @return The coverageIncomplete.
+     * <pre>
+     * Non-empty when the assessment could not cover the whole table
+     * </pre>
+     *
+     * <code>string incomplete_coverage_reason = 7;</code>
+     * @return The incompleteCoverageReason.
      */
-    boolean getCoverageIncomplete();
-
+    java.lang.String getIncompleteCoverageReason();
     /**
-     * <code>string coverage_incomplete_reason = 8;</code>
-     * @return The coverageIncompleteReason.
-     */
-    java.lang.String getCoverageIncompleteReason();
-    /**
-     * <code>string coverage_incomplete_reason = 8;</code>
-     * @return The bytes for coverageIncompleteReason.
+     * <pre>
+     * Non-empty when the assessment could not cover the whole table
+     * </pre>
+     *
+     * <code>string incomplete_coverage_reason = 7;</code>
+     * @return The bytes for incompleteCoverageReason.
      */
     com.google.protobuf.ByteString
-        getCoverageIncompleteReasonBytes();
+        getIncompleteCoverageReasonBytes();
   }
   /**
    * Protobuf type {@code cloudquery.plugin.v3.AssessTables.TableFinding}
@@ -3376,7 +3390,7 @@ private static final long serialVersionUID = 0L;
       forcedModeBehavior_ = "";
       columns_ = java.util.Collections.emptyList();
       evidence_ = java.util.Collections.emptyList();
-      coverageIncompleteReason_ = "";
+      incompleteCoverageReason_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -3614,50 +3628,47 @@ private static final long serialVersionUID = 0L;
       return evidence_.get(index);
     }
 
-    public static final int COVERAGE_INCOMPLETE_FIELD_NUMBER = 7;
-    private boolean coverageIncomplete_ = false;
-    /**
-     * <code>bool coverage_incomplete = 7;</code>
-     * @return The coverageIncomplete.
-     */
-    @java.lang.Override
-    public boolean getCoverageIncomplete() {
-      return coverageIncomplete_;
-    }
-
-    public static final int COVERAGE_INCOMPLETE_REASON_FIELD_NUMBER = 8;
+    public static final int INCOMPLETE_COVERAGE_REASON_FIELD_NUMBER = 7;
     @SuppressWarnings("serial")
-    private volatile java.lang.Object coverageIncompleteReason_ = "";
+    private volatile java.lang.Object incompleteCoverageReason_ = "";
     /**
-     * <code>string coverage_incomplete_reason = 8;</code>
-     * @return The coverageIncompleteReason.
+     * <pre>
+     * Non-empty when the assessment could not cover the whole table
+     * </pre>
+     *
+     * <code>string incomplete_coverage_reason = 7;</code>
+     * @return The incompleteCoverageReason.
      */
     @java.lang.Override
-    public java.lang.String getCoverageIncompleteReason() {
-      java.lang.Object ref = coverageIncompleteReason_;
+    public java.lang.String getIncompleteCoverageReason() {
+      java.lang.Object ref = incompleteCoverageReason_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        coverageIncompleteReason_ = s;
+        incompleteCoverageReason_ = s;
         return s;
       }
     }
     /**
-     * <code>string coverage_incomplete_reason = 8;</code>
-     * @return The bytes for coverageIncompleteReason.
+     * <pre>
+     * Non-empty when the assessment could not cover the whole table
+     * </pre>
+     *
+     * <code>string incomplete_coverage_reason = 7;</code>
+     * @return The bytes for incompleteCoverageReason.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getCoverageIncompleteReasonBytes() {
-      java.lang.Object ref = coverageIncompleteReason_;
+        getIncompleteCoverageReasonBytes() {
+      java.lang.Object ref = incompleteCoverageReason_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        coverageIncompleteReason_ = b;
+        incompleteCoverageReason_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -3696,11 +3707,8 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < evidence_.size(); i++) {
         output.writeMessage(6, evidence_.get(i));
       }
-      if (coverageIncomplete_ != false) {
-        output.writeBool(7, coverageIncomplete_);
-      }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(coverageIncompleteReason_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 8, coverageIncompleteReason_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(incompleteCoverageReason_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 7, incompleteCoverageReason_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3737,12 +3745,8 @@ private static final long serialVersionUID = 0L;
             }
             size += 1 * count;
           }
-      if (coverageIncomplete_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, coverageIncomplete_);
-      }
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(coverageIncompleteReason_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(8, coverageIncompleteReason_);
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(incompleteCoverageReason_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(7, incompleteCoverageReason_);
       }
       return size;
     }
@@ -3779,10 +3783,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getColumnsList())) return false;
       if (!getEvidenceList()
           .equals(other.getEvidenceList())) return false;
-      if (getCoverageIncomplete()
-          != other.getCoverageIncomplete()) return false;
-      if (!getCoverageIncompleteReason()
-          .equals(other.getCoverageIncompleteReason())) return false;
+      if (!getIncompleteCoverageReason()
+          .equals(other.getIncompleteCoverageReason())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3810,11 +3812,8 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + EVIDENCE_FIELD_NUMBER;
         hash = (53 * hash) + getEvidenceList().hashCode();
       }
-      hash = (37 * hash) + COVERAGE_INCOMPLETE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getCoverageIncomplete());
-      hash = (37 * hash) + COVERAGE_INCOMPLETE_REASON_FIELD_NUMBER;
-      hash = (53 * hash) + getCoverageIncompleteReason().hashCode();
+      hash = (37 * hash) + INCOMPLETE_COVERAGE_REASON_FIELD_NUMBER;
+      hash = (53 * hash) + getIncompleteCoverageReason().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3964,8 +3963,7 @@ private static final long serialVersionUID = 0L;
           evidenceBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000020);
-        coverageIncomplete_ = false;
-        coverageIncompleteReason_ = "";
+        incompleteCoverageReason_ = "";
         return this;
       }
 
@@ -4034,10 +4032,7 @@ private static final long serialVersionUID = 0L;
           result.forcedModeBehavior_ = forcedModeBehavior_;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
-          result.coverageIncomplete_ = coverageIncomplete_;
-        }
-        if (((from_bitField0_ & 0x00000080) != 0)) {
-          result.coverageIncompleteReason_ = coverageIncompleteReason_;
+          result.incompleteCoverageReason_ = incompleteCoverageReason_;
         }
       }
 
@@ -4123,12 +4118,9 @@ private static final long serialVersionUID = 0L;
             }
           }
         }
-        if (other.getCoverageIncomplete() != false) {
-          setCoverageIncomplete(other.getCoverageIncomplete());
-        }
-        if (!other.getCoverageIncompleteReason().isEmpty()) {
-          coverageIncompleteReason_ = other.coverageIncompleteReason_;
-          bitField0_ |= 0x00000080;
+        if (!other.getIncompleteCoverageReason().isEmpty()) {
+          incompleteCoverageReason_ = other.incompleteCoverageReason_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -4201,16 +4193,11 @@ private static final long serialVersionUID = 0L;
                 }
                 break;
               } // case 50
-              case 56: {
-                coverageIncomplete_ = input.readBool();
+              case 58: {
+                incompleteCoverageReason_ = input.readStringRequireUtf8();
                 bitField0_ |= 0x00000040;
                 break;
-              } // case 56
-              case 66: {
-                coverageIncompleteReason_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000080;
-                break;
-              } // case 66
+              } // case 58
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4964,106 +4951,94 @@ private static final long serialVersionUID = 0L;
         return evidenceBuilder_;
       }
 
-      private boolean coverageIncomplete_ ;
+      private java.lang.Object incompleteCoverageReason_ = "";
       /**
-       * <code>bool coverage_incomplete = 7;</code>
-       * @return The coverageIncomplete.
+       * <pre>
+       * Non-empty when the assessment could not cover the whole table
+       * </pre>
+       *
+       * <code>string incomplete_coverage_reason = 7;</code>
+       * @return The incompleteCoverageReason.
        */
-      @java.lang.Override
-      public boolean getCoverageIncomplete() {
-        return coverageIncomplete_;
-      }
-      /**
-       * <code>bool coverage_incomplete = 7;</code>
-       * @param value The coverageIncomplete to set.
-       * @return This builder for chaining.
-       */
-      public Builder setCoverageIncomplete(boolean value) {
-
-        coverageIncomplete_ = value;
-        bitField0_ |= 0x00000040;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool coverage_incomplete = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearCoverageIncomplete() {
-        bitField0_ = (bitField0_ & ~0x00000040);
-        coverageIncomplete_ = false;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object coverageIncompleteReason_ = "";
-      /**
-       * <code>string coverage_incomplete_reason = 8;</code>
-       * @return The coverageIncompleteReason.
-       */
-      public java.lang.String getCoverageIncompleteReason() {
-        java.lang.Object ref = coverageIncompleteReason_;
+      public java.lang.String getIncompleteCoverageReason() {
+        java.lang.Object ref = incompleteCoverageReason_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          coverageIncompleteReason_ = s;
+          incompleteCoverageReason_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string coverage_incomplete_reason = 8;</code>
-       * @return The bytes for coverageIncompleteReason.
+       * <pre>
+       * Non-empty when the assessment could not cover the whole table
+       * </pre>
+       *
+       * <code>string incomplete_coverage_reason = 7;</code>
+       * @return The bytes for incompleteCoverageReason.
        */
       public com.google.protobuf.ByteString
-          getCoverageIncompleteReasonBytes() {
-        java.lang.Object ref = coverageIncompleteReason_;
+          getIncompleteCoverageReasonBytes() {
+        java.lang.Object ref = incompleteCoverageReason_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          coverageIncompleteReason_ = b;
+          incompleteCoverageReason_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string coverage_incomplete_reason = 8;</code>
-       * @param value The coverageIncompleteReason to set.
+       * <pre>
+       * Non-empty when the assessment could not cover the whole table
+       * </pre>
+       *
+       * <code>string incomplete_coverage_reason = 7;</code>
+       * @param value The incompleteCoverageReason to set.
        * @return This builder for chaining.
        */
-      public Builder setCoverageIncompleteReason(
+      public Builder setIncompleteCoverageReason(
           java.lang.String value) {
         java.util.Objects.requireNonNull(value);
-        coverageIncompleteReason_ = value;
-        bitField0_ |= 0x00000080;
+        incompleteCoverageReason_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
       /**
-       * <code>string coverage_incomplete_reason = 8;</code>
+       * <pre>
+       * Non-empty when the assessment could not cover the whole table
+       * </pre>
+       *
+       * <code>string incomplete_coverage_reason = 7;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCoverageIncompleteReason() {
-        coverageIncompleteReason_ = getDefaultInstance().getCoverageIncompleteReason();
-        bitField0_ = (bitField0_ & ~0x00000080);
+      public Builder clearIncompleteCoverageReason() {
+        incompleteCoverageReason_ = getDefaultInstance().getIncompleteCoverageReason();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
       /**
-       * <code>string coverage_incomplete_reason = 8;</code>
-       * @param value The bytes for coverageIncompleteReason to set.
+       * <pre>
+       * Non-empty when the assessment could not cover the whole table
+       * </pre>
+       *
+       * <code>string incomplete_coverage_reason = 7;</code>
+       * @param value The bytes for incompleteCoverageReason to set.
        * @return This builder for chaining.
        */
-      public Builder setCoverageIncompleteReasonBytes(
+      public Builder setIncompleteCoverageReasonBytes(
           com.google.protobuf.ByteString value) {
         java.util.Objects.requireNonNull(value);
         checkByteStringIsUtf8(value);
-        coverageIncompleteReason_ = value;
-        bitField0_ |= 0x00000080;
+        incompleteCoverageReason_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
