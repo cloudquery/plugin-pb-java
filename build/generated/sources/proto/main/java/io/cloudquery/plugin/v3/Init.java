@@ -790,6 +790,16 @@ private static final long serialVersionUID = 0L;
   public interface ResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cloudquery.plugin.v3.Init.Response)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The plugin supports WriteStream and Write.MessageFlush
+     * </pre>
+     *
+     * <code>bool supports_flush = 1;</code>
+     * @return The supportsFlush.
+     */
+    boolean getSupportsFlush();
   }
   /**
    * Protobuf type {@code cloudquery.plugin.v3.Init.Response}
@@ -833,6 +843,21 @@ private static final long serialVersionUID = 0L;
               io.cloudquery.plugin.v3.Init.Response.class, io.cloudquery.plugin.v3.Init.Response.Builder.class);
     }
 
+    public static final int SUPPORTS_FLUSH_FIELD_NUMBER = 1;
+    private boolean supportsFlush_ = false;
+    /**
+     * <pre>
+     * The plugin supports WriteStream and Write.MessageFlush
+     * </pre>
+     *
+     * <code>bool supports_flush = 1;</code>
+     * @return The supportsFlush.
+     */
+    @java.lang.Override
+    public boolean getSupportsFlush() {
+      return supportsFlush_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -847,7 +872,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (supportsFlush_ != false) {
+        output.writeBool(1, supportsFlush_);
+      }
       getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (supportsFlush_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, supportsFlush_);
+      }
+      return size;
     }
     @java.lang.Override
     public int getSerializedSize() {
@@ -855,6 +891,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
+      size += computeSerializedSize_0();
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -870,6 +907,8 @@ private static final long serialVersionUID = 0L;
       }
       io.cloudquery.plugin.v3.Init.Response other = (io.cloudquery.plugin.v3.Init.Response) obj;
 
+      if (getSupportsFlush()
+          != other.getSupportsFlush()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -881,6 +920,9 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUPPORTS_FLUSH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSupportsFlush());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1011,6 +1053,8 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        supportsFlush_ = false;
         return this;
       }
 
@@ -1037,8 +1081,16 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public io.cloudquery.plugin.v3.Init.Response buildPartial() {
         io.cloudquery.plugin.v3.Init.Response result = new io.cloudquery.plugin.v3.Init.Response(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(io.cloudquery.plugin.v3.Init.Response result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.supportsFlush_ = supportsFlush_;
+        }
       }
 
       @java.lang.Override
@@ -1053,6 +1105,9 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.cloudquery.plugin.v3.Init.Response other) {
         if (other == io.cloudquery.plugin.v3.Init.Response.getDefaultInstance()) return this;
+        if (other.getSupportsFlush() != false) {
+          setSupportsFlush(other.getSupportsFlush());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1077,6 +1132,11 @@ private static final long serialVersionUID = 0L;
               case 0:
                 done = true;
                 break;
+              case 8: {
+                supportsFlush_ = input.readBool();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1090,6 +1150,51 @@ private static final long serialVersionUID = 0L;
         } finally {
           onChanged();
         } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private boolean supportsFlush_ ;
+      /**
+       * <pre>
+       * The plugin supports WriteStream and Write.MessageFlush
+       * </pre>
+       *
+       * <code>bool supports_flush = 1;</code>
+       * @return The supportsFlush.
+       */
+      @java.lang.Override
+      public boolean getSupportsFlush() {
+        return supportsFlush_;
+      }
+      /**
+       * <pre>
+       * The plugin supports WriteStream and Write.MessageFlush
+       * </pre>
+       *
+       * <code>bool supports_flush = 1;</code>
+       * @param value The supportsFlush to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupportsFlush(boolean value) {
+
+        supportsFlush_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The plugin supports WriteStream and Write.MessageFlush
+       * </pre>
+       *
+       * <code>bool supports_flush = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSupportsFlush() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        supportsFlush_ = false;
+        onChanged();
         return this;
       }
 

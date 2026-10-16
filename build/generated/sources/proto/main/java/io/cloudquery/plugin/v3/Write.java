@@ -1056,7 +1056,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bytes table = 1 [deprecated = true];</code>
      * @deprecated cloudquery.plugin.v3.Write.MessageDeleteStale.table is deprecated.
-     *     See cloudquery/plugin/v3/plugin.proto;l=190
+     *     See cloudquery/plugin/v3/plugin.proto;l=216
      * @return The table.
      */
     @java.lang.Deprecated com.google.protobuf.ByteString getTable();
@@ -1155,7 +1155,7 @@ private static final long serialVersionUID = 0L;
      *
      * <code>bytes table = 1 [deprecated = true];</code>
      * @deprecated cloudquery.plugin.v3.Write.MessageDeleteStale.table is deprecated.
-     *     See cloudquery/plugin/v3/plugin.proto;l=190
+     *     See cloudquery/plugin/v3/plugin.proto;l=216
      * @return The table.
      */
     @java.lang.Override
@@ -1663,7 +1663,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>bytes table = 1 [deprecated = true];</code>
        * @deprecated cloudquery.plugin.v3.Write.MessageDeleteStale.table is deprecated.
-       *     See cloudquery/plugin/v3/plugin.proto;l=190
+       *     See cloudquery/plugin/v3/plugin.proto;l=216
        * @return The table.
        */
       @java.lang.Override
@@ -1677,7 +1677,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>bytes table = 1 [deprecated = true];</code>
        * @deprecated cloudquery.plugin.v3.Write.MessageDeleteStale.table is deprecated.
-       *     See cloudquery/plugin/v3/plugin.proto;l=190
+       *     See cloudquery/plugin/v3/plugin.proto;l=216
        * @param value The table to set.
        * @return This builder for chaining.
        */
@@ -1695,7 +1695,7 @@ private static final long serialVersionUID = 0L;
        *
        * <code>bytes table = 1 [deprecated = true];</code>
        * @deprecated cloudquery.plugin.v3.Write.MessageDeleteStale.table is deprecated.
-       *     See cloudquery/plugin/v3/plugin.proto;l=190
+       *     See cloudquery/plugin/v3/plugin.proto;l=216
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTable() {
@@ -3286,6 +3286,456 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface MessageFlushOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cloudquery.plugin.v3.Write.MessageFlush)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>uint64 id = 1;</code>
+     * @return The id.
+     */
+    long getId();
+  }
+  /**
+   * <pre>
+   * Commit every message sent before this one. Only valid on WriteStream.
+   * </pre>
+   *
+   * Protobuf type {@code cloudquery.plugin.v3.Write.MessageFlush}
+   */
+  public static final class MessageFlush extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:cloudquery.plugin.v3.Write.MessageFlush)
+      MessageFlushOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 36,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        "MessageFlush");
+    }
+    // Use MessageFlush.newBuilder() to construct.
+    private MessageFlush(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private MessageFlush() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Write_MessageFlush_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Write_MessageFlush_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Write_MessageFlush_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.cloudquery.plugin.v3.Write.MessageFlush.class, io.cloudquery.plugin.v3.Write.MessageFlush.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private long id_ = 0L;
+    /**
+     * <code>uint64 id = 1;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (id_ != 0L) {
+        output.writeUInt64(1, id_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (id_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, id_);
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.cloudquery.plugin.v3.Write.MessageFlush)) {
+        return super.equals(obj);
+      }
+      io.cloudquery.plugin.v3.Write.MessageFlush other = (io.cloudquery.plugin.v3.Write.MessageFlush) obj;
+
+      if (getId()
+          != other.getId()) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getId());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.cloudquery.plugin.v3.Write.MessageFlush parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageFlush parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageFlush parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageFlush parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageFlush parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageFlush parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageFlush parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageFlush parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static io.cloudquery.plugin.v3.Write.MessageFlush parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static io.cloudquery.plugin.v3.Write.MessageFlush parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageFlush parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.cloudquery.plugin.v3.Write.MessageFlush parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.cloudquery.plugin.v3.Write.MessageFlush prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Commit every message sent before this one. Only valid on WriteStream.
+     * </pre>
+     *
+     * Protobuf type {@code cloudquery.plugin.v3.Write.MessageFlush}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cloudquery.plugin.v3.Write.MessageFlush)
+        io.cloudquery.plugin.v3.Write.MessageFlushOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Write_MessageFlush_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Write_MessageFlush_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.cloudquery.plugin.v3.Write.MessageFlush.class, io.cloudquery.plugin.v3.Write.MessageFlush.Builder.class);
+      }
+
+      // Construct using io.cloudquery.plugin.v3.Write.MessageFlush.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        id_ = 0L;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Write_MessageFlush_descriptor;
+      }
+
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Write.MessageFlush getDefaultInstanceForType() {
+        return io.cloudquery.plugin.v3.Write.MessageFlush.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Write.MessageFlush build() {
+        io.cloudquery.plugin.v3.Write.MessageFlush result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Write.MessageFlush buildPartial() {
+        io.cloudquery.plugin.v3.Write.MessageFlush result = new io.cloudquery.plugin.v3.Write.MessageFlush(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(io.cloudquery.plugin.v3.Write.MessageFlush result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.cloudquery.plugin.v3.Write.MessageFlush) {
+          return mergeFrom((io.cloudquery.plugin.v3.Write.MessageFlush)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.cloudquery.plugin.v3.Write.MessageFlush other) {
+        if (other == io.cloudquery.plugin.v3.Write.MessageFlush.getDefaultInstance()) return this;
+        if (other.getId() != 0L) {
+          setId(other.getId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        java.util.Objects.requireNonNull(extensionRegistry);
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                id_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long id_ ;
+      /**
+       * <code>uint64 id = 1;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public long getId() {
+        return id_;
+      }
+      /**
+       * <code>uint64 id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(long value) {
+
+        id_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        id_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:cloudquery.plugin.v3.Write.MessageFlush)
+    }
+
+    // @@protoc_insertion_point(class_scope:cloudquery.plugin.v3.Write.MessageFlush)
+    private static final io.cloudquery.plugin.v3.Write.MessageFlush DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.cloudquery.plugin.v3.Write.MessageFlush();
+    }
+
+    public static io.cloudquery.plugin.v3.Write.MessageFlush getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MessageFlush>
+        PARSER = new com.google.protobuf.AbstractParser<MessageFlush>() {
+      @java.lang.Override
+      public MessageFlush parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MessageFlush> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MessageFlush> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.Write.MessageFlush getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface RequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cloudquery.plugin.v3.Write.Request)
       com.google.protobuf.MessageOrBuilder {
@@ -3350,6 +3800,21 @@ private static final long serialVersionUID = 0L;
      */
     io.cloudquery.plugin.v3.Write.MessageDeleteRecordOrBuilder getDeleteRecordOrBuilder();
 
+    /**
+     * <code>.cloudquery.plugin.v3.Write.MessageFlush flush = 5;</code>
+     * @return Whether the flush field is set.
+     */
+    boolean hasFlush();
+    /**
+     * <code>.cloudquery.plugin.v3.Write.MessageFlush flush = 5;</code>
+     * @return The flush.
+     */
+    io.cloudquery.plugin.v3.Write.MessageFlush getFlush();
+    /**
+     * <code>.cloudquery.plugin.v3.Write.MessageFlush flush = 5;</code>
+     */
+    io.cloudquery.plugin.v3.Write.MessageFlushOrBuilder getFlushOrBuilder();
+
     io.cloudquery.plugin.v3.Write.Request.MessageCase getMessageCase();
   }
   /**
@@ -3404,6 +3869,7 @@ private static final long serialVersionUID = 0L;
       INSERT(2),
       DELETE(3),
       DELETE_RECORD(4),
+      FLUSH(5),
       MESSAGE_NOT_SET(0);
       private final int value;
       private MessageCase(int value) {
@@ -3425,6 +3891,7 @@ private static final long serialVersionUID = 0L;
           case 2: return INSERT;
           case 3: return DELETE;
           case 4: return DELETE_RECORD;
+          case 5: return FLUSH;
           case 0: return MESSAGE_NOT_SET;
           default: return null;
         }
@@ -3564,6 +4031,37 @@ private static final long serialVersionUID = 0L;
       return io.cloudquery.plugin.v3.Write.MessageDeleteRecord.getDefaultInstance();
     }
 
+    public static final int FLUSH_FIELD_NUMBER = 5;
+    /**
+     * <code>.cloudquery.plugin.v3.Write.MessageFlush flush = 5;</code>
+     * @return Whether the flush field is set.
+     */
+    @java.lang.Override
+    public boolean hasFlush() {
+      return messageCase_ == 5;
+    }
+    /**
+     * <code>.cloudquery.plugin.v3.Write.MessageFlush flush = 5;</code>
+     * @return The flush.
+     */
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.Write.MessageFlush getFlush() {
+      if (messageCase_ == 5) {
+         return (io.cloudquery.plugin.v3.Write.MessageFlush) message_;
+      }
+      return io.cloudquery.plugin.v3.Write.MessageFlush.getDefaultInstance();
+    }
+    /**
+     * <code>.cloudquery.plugin.v3.Write.MessageFlush flush = 5;</code>
+     */
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.Write.MessageFlushOrBuilder getFlushOrBuilder() {
+      if (messageCase_ == 5) {
+         return (io.cloudquery.plugin.v3.Write.MessageFlush) message_;
+      }
+      return io.cloudquery.plugin.v3.Write.MessageFlush.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3590,6 +4088,9 @@ private static final long serialVersionUID = 0L;
       if (messageCase_ == 4) {
         output.writeMessage(4, (io.cloudquery.plugin.v3.Write.MessageDeleteRecord) message_);
       }
+      if (messageCase_ == 5) {
+        output.writeMessage(5, (io.cloudquery.plugin.v3.Write.MessageFlush) message_);
+      }
       getUnknownFields().writeTo(output);
     }
     private int computeSerializedSize_0() {
@@ -3609,6 +4110,10 @@ private static final long serialVersionUID = 0L;
       if (messageCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, (io.cloudquery.plugin.v3.Write.MessageDeleteRecord) message_);
+      }
+      if (messageCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (io.cloudquery.plugin.v3.Write.MessageFlush) message_);
       }
       return size;
     }
@@ -3652,6 +4157,10 @@ private static final long serialVersionUID = 0L;
           if (!getDeleteRecord()
               .equals(other.getDeleteRecord())) return false;
           break;
+        case 5:
+          if (!getFlush()
+              .equals(other.getFlush())) return false;
+          break;
         case 0:
         default:
       }
@@ -3682,6 +4191,10 @@ private static final long serialVersionUID = 0L;
         case 4:
           hash = (37 * hash) + DELETE_RECORD_FIELD_NUMBER;
           hash = (53 * hash) + getDeleteRecord().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + FLUSH_FIELD_NUMBER;
+          hash = (53 * hash) + getFlush().hashCode();
           break;
         case 0:
         default:
@@ -3829,6 +4342,9 @@ private static final long serialVersionUID = 0L;
         if (deleteRecordBuilder_ != null) {
           deleteRecordBuilder_.clear();
         }
+        if (flushBuilder_ != null) {
+          flushBuilder_.clear();
+        }
         messageCase_ = 0;
         message_ = null;
         return this;
@@ -3886,6 +4402,10 @@ private static final long serialVersionUID = 0L;
             deleteRecordBuilder_ != null) {
           result.message_ = deleteRecordBuilder_.build();
         }
+        if (messageCase_ == 5 &&
+            flushBuilder_ != null) {
+          result.message_ = flushBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -3915,6 +4435,10 @@ private static final long serialVersionUID = 0L;
           }
           case DELETE_RECORD: {
             mergeDeleteRecord(other.getDeleteRecord());
+            break;
+          }
+          case FLUSH: {
+            mergeFlush(other.getFlush());
             break;
           }
           case MESSAGE_NOT_SET: {
@@ -3973,6 +4497,13 @@ private static final long serialVersionUID = 0L;
                 messageCase_ = 4;
                 break;
               } // case 34
+              case 42: {
+                input.readMessage(
+                    internalGetFlushFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                messageCase_ = 5;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4565,6 +5096,146 @@ private static final long serialVersionUID = 0L;
         return deleteRecordBuilder_;
       }
 
+      private com.google.protobuf.SingleFieldBuilder<
+          io.cloudquery.plugin.v3.Write.MessageFlush, io.cloudquery.plugin.v3.Write.MessageFlush.Builder, io.cloudquery.plugin.v3.Write.MessageFlushOrBuilder> flushBuilder_;
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageFlush flush = 5;</code>
+       * @return Whether the flush field is set.
+       */
+      @java.lang.Override
+      public boolean hasFlush() {
+        return messageCase_ == 5;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageFlush flush = 5;</code>
+       * @return The flush.
+       */
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Write.MessageFlush getFlush() {
+        if (flushBuilder_ == null) {
+          if (messageCase_ == 5) {
+            return (io.cloudquery.plugin.v3.Write.MessageFlush) message_;
+          }
+          return io.cloudquery.plugin.v3.Write.MessageFlush.getDefaultInstance();
+        } else {
+          if (messageCase_ == 5) {
+            return flushBuilder_.getMessage();
+          }
+          return io.cloudquery.plugin.v3.Write.MessageFlush.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageFlush flush = 5;</code>
+       */
+      public Builder setFlush(io.cloudquery.plugin.v3.Write.MessageFlush value) {
+        if (flushBuilder_ == null) {
+          java.util.Objects.requireNonNull(value);
+          message_ = value;
+          onChanged();
+        } else {
+          flushBuilder_.setMessage(value);
+        }
+        messageCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageFlush flush = 5;</code>
+       */
+      public Builder setFlush(
+          io.cloudquery.plugin.v3.Write.MessageFlush.Builder builderForValue) {
+        if (flushBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          flushBuilder_.setMessage(builderForValue.build());
+        }
+        messageCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageFlush flush = 5;</code>
+       */
+      public Builder mergeFlush(io.cloudquery.plugin.v3.Write.MessageFlush value) {
+        if (flushBuilder_ == null) {
+          if (messageCase_ == 5 &&
+              message_ != io.cloudquery.plugin.v3.Write.MessageFlush.getDefaultInstance()) {
+            message_ = io.cloudquery.plugin.v3.Write.MessageFlush.newBuilder((io.cloudquery.plugin.v3.Write.MessageFlush) message_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          if (messageCase_ == 5) {
+            flushBuilder_.mergeFrom(value);
+          } else {
+            flushBuilder_.setMessage(value);
+          }
+        }
+        messageCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageFlush flush = 5;</code>
+       */
+      public Builder clearFlush() {
+        if (flushBuilder_ == null) {
+          if (messageCase_ == 5) {
+            messageCase_ = 0;
+            message_ = null;
+            onChanged();
+          }
+        } else {
+          if (messageCase_ == 5) {
+            messageCase_ = 0;
+            message_ = null;
+          }
+          flushBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageFlush flush = 5;</code>
+       */
+      public io.cloudquery.plugin.v3.Write.MessageFlush.Builder getFlushBuilder() {
+        return internalGetFlushFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageFlush flush = 5;</code>
+       */
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Write.MessageFlushOrBuilder getFlushOrBuilder() {
+        if ((messageCase_ == 5) && (flushBuilder_ != null)) {
+          return flushBuilder_.getMessageOrBuilder();
+        } else {
+          if (messageCase_ == 5) {
+            return (io.cloudquery.plugin.v3.Write.MessageFlush) message_;
+          }
+          return io.cloudquery.plugin.v3.Write.MessageFlush.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Write.MessageFlush flush = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          io.cloudquery.plugin.v3.Write.MessageFlush, io.cloudquery.plugin.v3.Write.MessageFlush.Builder, io.cloudquery.plugin.v3.Write.MessageFlushOrBuilder> 
+          internalGetFlushFieldBuilder() {
+        if (flushBuilder_ == null) {
+          if (!(messageCase_ == 5)) {
+            message_ = io.cloudquery.plugin.v3.Write.MessageFlush.getDefaultInstance();
+          }
+          flushBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              io.cloudquery.plugin.v3.Write.MessageFlush, io.cloudquery.plugin.v3.Write.MessageFlush.Builder, io.cloudquery.plugin.v3.Write.MessageFlushOrBuilder>(
+                  (io.cloudquery.plugin.v3.Write.MessageFlush) message_,
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        messageCase_ = 5;
+        onChanged();
+        return flushBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:cloudquery.plugin.v3.Write.Request)
     }
 
@@ -4619,6 +5290,85 @@ private static final long serialVersionUID = 0L;
   public interface ResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cloudquery.plugin.v3.Write.Response)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * WriteStream only: id of the Write.MessageFlush that completed
+     * </pre>
+     *
+     * <code>uint64 flush_id = 1;</code>
+     * @return The flushId.
+     */
+    long getFlushId();
+
+    /**
+     * <pre>
+     * WriteStream only: why some messages sent since the previous flush may not have been committed. A failure may be
+     * reported only once, so a later flush can succeed although earlier messages were lost: clients must treat the
+     * first failure as final. A plugin may end the stream after reporting a failure, or instead of reporting it.
+     * </pre>
+     *
+     * <code>string flush_error = 2;</code>
+     * @return The flushError.
+     */
+    java.lang.String getFlushError();
+    /**
+     * <pre>
+     * WriteStream only: why some messages sent since the previous flush may not have been committed. A failure may be
+     * reported only once, so a later flush can succeed although earlier messages were lost: clients must treat the
+     * first failure as final. A plugin may end the stream after reporting a failure, or instead of reporting it.
+     * </pre>
+     *
+     * <code>string flush_error = 2;</code>
+     * @return The bytes for flushError.
+     */
+    com.google.protobuf.ByteString
+        getFlushErrorBytes();
+
+    /**
+     * <pre>
+     * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+     * cannot tell, in which case messages of any table may have been lost.
+     * </pre>
+     *
+     * <code>repeated string failed_tables = 3;</code>
+     * @return A list containing the failedTables.
+     */
+    java.util.List<java.lang.String>
+        getFailedTablesList();
+    /**
+     * <pre>
+     * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+     * cannot tell, in which case messages of any table may have been lost.
+     * </pre>
+     *
+     * <code>repeated string failed_tables = 3;</code>
+     * @return The count of failedTables.
+     */
+    int getFailedTablesCount();
+    /**
+     * <pre>
+     * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+     * cannot tell, in which case messages of any table may have been lost.
+     * </pre>
+     *
+     * <code>repeated string failed_tables = 3;</code>
+     * @param index The index of the element to return.
+     * @return The failedTables at the given index.
+     */
+    java.lang.String getFailedTables(int index);
+    /**
+     * <pre>
+     * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+     * cannot tell, in which case messages of any table may have been lost.
+     * </pre>
+     *
+     * <code>repeated string failed_tables = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the failedTables at the given index.
+     */
+    com.google.protobuf.ByteString
+        getFailedTablesBytes(int index);
   }
   /**
    * Protobuf type {@code cloudquery.plugin.v3.Write.Response}
@@ -4642,6 +5392,9 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Response() {
+      flushError_ = "";
+      failedTables_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -4662,6 +5415,129 @@ private static final long serialVersionUID = 0L;
               io.cloudquery.plugin.v3.Write.Response.class, io.cloudquery.plugin.v3.Write.Response.Builder.class);
     }
 
+    public static final int FLUSH_ID_FIELD_NUMBER = 1;
+    private long flushId_ = 0L;
+    /**
+     * <pre>
+     * WriteStream only: id of the Write.MessageFlush that completed
+     * </pre>
+     *
+     * <code>uint64 flush_id = 1;</code>
+     * @return The flushId.
+     */
+    @java.lang.Override
+    public long getFlushId() {
+      return flushId_;
+    }
+
+    public static final int FLUSH_ERROR_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object flushError_ = "";
+    /**
+     * <pre>
+     * WriteStream only: why some messages sent since the previous flush may not have been committed. A failure may be
+     * reported only once, so a later flush can succeed although earlier messages were lost: clients must treat the
+     * first failure as final. A plugin may end the stream after reporting a failure, or instead of reporting it.
+     * </pre>
+     *
+     * <code>string flush_error = 2;</code>
+     * @return The flushError.
+     */
+    @java.lang.Override
+    public java.lang.String getFlushError() {
+      java.lang.Object ref = flushError_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        flushError_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * WriteStream only: why some messages sent since the previous flush may not have been committed. A failure may be
+     * reported only once, so a later flush can succeed although earlier messages were lost: clients must treat the
+     * first failure as final. A plugin may end the stream after reporting a failure, or instead of reporting it.
+     * </pre>
+     *
+     * <code>string flush_error = 2;</code>
+     * @return The bytes for flushError.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFlushErrorBytes() {
+      java.lang.Object ref = flushError_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        flushError_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FAILED_TABLES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList failedTables_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <pre>
+     * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+     * cannot tell, in which case messages of any table may have been lost.
+     * </pre>
+     *
+     * <code>repeated string failed_tables = 3;</code>
+     * @return A list containing the failedTables.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFailedTablesList() {
+      return failedTables_;
+    }
+    /**
+     * <pre>
+     * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+     * cannot tell, in which case messages of any table may have been lost.
+     * </pre>
+     *
+     * <code>repeated string failed_tables = 3;</code>
+     * @return The count of failedTables.
+     */
+    public int getFailedTablesCount() {
+      return failedTables_.size();
+    }
+    /**
+     * <pre>
+     * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+     * cannot tell, in which case messages of any table may have been lost.
+     * </pre>
+     *
+     * <code>repeated string failed_tables = 3;</code>
+     * @param index The index of the element to return.
+     * @return The failedTables at the given index.
+     */
+    public java.lang.String getFailedTables(int index) {
+      return failedTables_.get(index);
+    }
+    /**
+     * <pre>
+     * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+     * cannot tell, in which case messages of any table may have been lost.
+     * </pre>
+     *
+     * <code>repeated string failed_tables = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the failedTables at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getFailedTablesBytes(int index) {
+      return failedTables_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4676,7 +5552,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (flushId_ != 0L) {
+        output.writeUInt64(1, flushId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(flushError_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, flushError_);
+      }
+      for (int i = 0; i < failedTables_.size(); i++) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, failedTables_.getRaw(i));
+      }
       getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (flushId_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, flushId_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(flushError_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, flushError_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < failedTables_.size(); i++) {
+          dataSize += computeStringSizeNoTag(failedTables_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getFailedTablesList().size();
+      }
+      return size;
     }
     @java.lang.Override
     public int getSerializedSize() {
@@ -4684,6 +5588,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
+      size += computeSerializedSize_0();
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -4699,6 +5604,12 @@ private static final long serialVersionUID = 0L;
       }
       io.cloudquery.plugin.v3.Write.Response other = (io.cloudquery.plugin.v3.Write.Response) obj;
 
+      if (getFlushId()
+          != other.getFlushId()) return false;
+      if (!getFlushError()
+          .equals(other.getFlushError())) return false;
+      if (!getFailedTablesList()
+          .equals(other.getFailedTablesList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4710,6 +5621,15 @@ private static final long serialVersionUID = 0L;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FLUSH_ID_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFlushId());
+      hash = (37 * hash) + FLUSH_ERROR_FIELD_NUMBER;
+      hash = (53 * hash) + getFlushError().hashCode();
+      if (getFailedTablesCount() > 0) {
+        hash = (37 * hash) + FAILED_TABLES_FIELD_NUMBER;
+        hash = (53 * hash) + getFailedTablesList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4840,6 +5760,11 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        flushId_ = 0L;
+        flushError_ = "";
+        failedTables_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -4866,8 +5791,23 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public io.cloudquery.plugin.v3.Write.Response buildPartial() {
         io.cloudquery.plugin.v3.Write.Response result = new io.cloudquery.plugin.v3.Write.Response(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(io.cloudquery.plugin.v3.Write.Response result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.flushId_ = flushId_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.flushError_ = flushError_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          failedTables_.makeImmutable();
+          result.failedTables_ = failedTables_;
+        }
       }
 
       @java.lang.Override
@@ -4882,6 +5822,24 @@ private static final long serialVersionUID = 0L;
 
       public Builder mergeFrom(io.cloudquery.plugin.v3.Write.Response other) {
         if (other == io.cloudquery.plugin.v3.Write.Response.getDefaultInstance()) return this;
+        if (other.getFlushId() != 0L) {
+          setFlushId(other.getFlushId());
+        }
+        if (!other.getFlushError().isEmpty()) {
+          flushError_ = other.flushError_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.failedTables_.isEmpty()) {
+          if (failedTables_.isEmpty()) {
+            failedTables_ = other.failedTables_;
+            bitField0_ |= 0x00000004;
+          } else {
+            ensureFailedTablesIsMutable();
+            failedTables_.addAll(other.failedTables_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -4906,6 +5864,21 @@ private static final long serialVersionUID = 0L;
               case 0:
                 done = true;
                 break;
+              case 8: {
+                flushId_ = input.readUInt64();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              case 18: {
+                flushError_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                ensureFailedTablesIsMutable();
+                failedTables_.add(input.readStringRequireUtf8());
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -4919,6 +5892,309 @@ private static final long serialVersionUID = 0L;
         } finally {
           onChanged();
         } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private long flushId_ ;
+      /**
+       * <pre>
+       * WriteStream only: id of the Write.MessageFlush that completed
+       * </pre>
+       *
+       * <code>uint64 flush_id = 1;</code>
+       * @return The flushId.
+       */
+      @java.lang.Override
+      public long getFlushId() {
+        return flushId_;
+      }
+      /**
+       * <pre>
+       * WriteStream only: id of the Write.MessageFlush that completed
+       * </pre>
+       *
+       * <code>uint64 flush_id = 1;</code>
+       * @param value The flushId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlushId(long value) {
+
+        flushId_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WriteStream only: id of the Write.MessageFlush that completed
+       * </pre>
+       *
+       * <code>uint64 flush_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFlushId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        flushId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object flushError_ = "";
+      /**
+       * <pre>
+       * WriteStream only: why some messages sent since the previous flush may not have been committed. A failure may be
+       * reported only once, so a later flush can succeed although earlier messages were lost: clients must treat the
+       * first failure as final. A plugin may end the stream after reporting a failure, or instead of reporting it.
+       * </pre>
+       *
+       * <code>string flush_error = 2;</code>
+       * @return The flushError.
+       */
+      public java.lang.String getFlushError() {
+        java.lang.Object ref = flushError_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          flushError_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * WriteStream only: why some messages sent since the previous flush may not have been committed. A failure may be
+       * reported only once, so a later flush can succeed although earlier messages were lost: clients must treat the
+       * first failure as final. A plugin may end the stream after reporting a failure, or instead of reporting it.
+       * </pre>
+       *
+       * <code>string flush_error = 2;</code>
+       * @return The bytes for flushError.
+       */
+      public com.google.protobuf.ByteString
+          getFlushErrorBytes() {
+        java.lang.Object ref = flushError_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          flushError_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * WriteStream only: why some messages sent since the previous flush may not have been committed. A failure may be
+       * reported only once, so a later flush can succeed although earlier messages were lost: clients must treat the
+       * first failure as final. A plugin may end the stream after reporting a failure, or instead of reporting it.
+       * </pre>
+       *
+       * <code>string flush_error = 2;</code>
+       * @param value The flushError to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlushError(
+          java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        flushError_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WriteStream only: why some messages sent since the previous flush may not have been committed. A failure may be
+       * reported only once, so a later flush can succeed although earlier messages were lost: clients must treat the
+       * first failure as final. A plugin may end the stream after reporting a failure, or instead of reporting it.
+       * </pre>
+       *
+       * <code>string flush_error = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFlushError() {
+        flushError_ = getDefaultInstance().getFlushError();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WriteStream only: why some messages sent since the previous flush may not have been committed. A failure may be
+       * reported only once, so a later flush can succeed although earlier messages were lost: clients must treat the
+       * first failure as final. A plugin may end the stream after reporting a failure, or instead of reporting it.
+       * </pre>
+       *
+       * <code>string flush_error = 2;</code>
+       * @param value The bytes for flushError to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFlushErrorBytes(
+          com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        checkByteStringIsUtf8(value);
+        flushError_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringArrayList failedTables_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureFailedTablesIsMutable() {
+        if (!failedTables_.isModifiable()) {
+          failedTables_ = new com.google.protobuf.LazyStringArrayList(failedTables_);
+        }
+        bitField0_ |= 0x00000004;
+      }
+      /**
+       * <pre>
+       * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+       * cannot tell, in which case messages of any table may have been lost.
+       * </pre>
+       *
+       * <code>repeated string failed_tables = 3;</code>
+       * @return A list containing the failedTables.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getFailedTablesList() {
+        failedTables_.makeImmutable();
+        return failedTables_;
+      }
+      /**
+       * <pre>
+       * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+       * cannot tell, in which case messages of any table may have been lost.
+       * </pre>
+       *
+       * <code>repeated string failed_tables = 3;</code>
+       * @return The count of failedTables.
+       */
+      public int getFailedTablesCount() {
+        return failedTables_.size();
+      }
+      /**
+       * <pre>
+       * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+       * cannot tell, in which case messages of any table may have been lost.
+       * </pre>
+       *
+       * <code>repeated string failed_tables = 3;</code>
+       * @param index The index of the element to return.
+       * @return The failedTables at the given index.
+       */
+      public java.lang.String getFailedTables(int index) {
+        return failedTables_.get(index);
+      }
+      /**
+       * <pre>
+       * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+       * cannot tell, in which case messages of any table may have been lost.
+       * </pre>
+       *
+       * <code>repeated string failed_tables = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the failedTables at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getFailedTablesBytes(int index) {
+        return failedTables_.getByteString(index);
+      }
+      /**
+       * <pre>
+       * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+       * cannot tell, in which case messages of any table may have been lost.
+       * </pre>
+       *
+       * <code>repeated string failed_tables = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The failedTables to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFailedTables(
+          int index, java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        ensureFailedTablesIsMutable();
+        failedTables_.set(index, value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+       * cannot tell, in which case messages of any table may have been lost.
+       * </pre>
+       *
+       * <code>repeated string failed_tables = 3;</code>
+       * @param value The failedTables to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFailedTables(
+          java.lang.String value) {
+        java.util.Objects.requireNonNull(value);
+        ensureFailedTablesIsMutable();
+        failedTables_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+       * cannot tell, in which case messages of any table may have been lost.
+       * </pre>
+       *
+       * <code>repeated string failed_tables = 3;</code>
+       * @param values The failedTables to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllFailedTables(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureFailedTablesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, failedTables_);
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+       * cannot tell, in which case messages of any table may have been lost.
+       * </pre>
+       *
+       * <code>repeated string failed_tables = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFailedTables() {
+        failedTables_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * WriteStream only: with flush_error, the tables whose messages may not have been committed. Empty if the plugin
+       * cannot tell, in which case messages of any table may have been lost.
+       * </pre>
+       *
+       * <code>repeated string failed_tables = 3;</code>
+       * @param value The bytes of the failedTables to add.
+       * @return This builder for chaining.
+       */
+      public Builder addFailedTablesBytes(
+          com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        checkByteStringIsUtf8(value);
+        ensureFailedTablesIsMutable();
+        failedTables_.add(value);
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
 

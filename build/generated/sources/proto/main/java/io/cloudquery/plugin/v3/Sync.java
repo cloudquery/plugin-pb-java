@@ -2904,6 +2904,492 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface MessageCheckpointOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cloudquery.plugin.v3.Sync.MessageCheckpoint)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * marshalled arrow.Record
+     * </pre>
+     *
+     * <code>bytes record = 1;</code>
+     * @return The record.
+     */
+    com.google.protobuf.ByteString getRecord();
+  }
+  /**
+   * <pre>
+   * State backend rows to persist once every message sent before the checkpoint is committed to all destinations.
+   * Only sent when Sync.Request.supports_checkpoints is set.
+   *
+   * The record must:
+   * - have the cq:table_name schema metadata set to Sync.BackendOptions.table_name
+   * - have a "key" column and a "value" column, both of the arrow utf8 type (not large_utf8)
+   * - have a "version" column of the arrow uint64 type, if the state table has one
+   * - hold only the keys that changed. Each row is an upsert of its key; keys not in the record keep their state.
+   * When the same key is in several checkpoints, the row with the highest version wins, or the last row without a version column.
+   * </pre>
+   *
+   * Protobuf type {@code cloudquery.plugin.v3.Sync.MessageCheckpoint}
+   */
+  public static final class MessageCheckpoint extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:cloudquery.plugin.v3.Sync.MessageCheckpoint)
+      MessageCheckpointOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 36,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        "MessageCheckpoint");
+    }
+    // Use MessageCheckpoint.newBuilder() to construct.
+    private MessageCheckpoint(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private MessageCheckpoint() {
+      record_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_MessageCheckpoint_descriptor;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+      return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_MessageCheckpoint_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_MessageCheckpoint_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.cloudquery.plugin.v3.Sync.MessageCheckpoint.class, io.cloudquery.plugin.v3.Sync.MessageCheckpoint.Builder.class);
+    }
+
+    public static final int RECORD_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString record_ = com.google.protobuf.ByteString.EMPTY;
+    /**
+     * <pre>
+     * marshalled arrow.Record
+     * </pre>
+     *
+     * <code>bytes record = 1;</code>
+     * @return The record.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString getRecord() {
+      return record_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!record_.isEmpty()) {
+        output.writeBytes(1, record_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+    private int computeSerializedSize_0() {
+      int size = 0;
+      if (!record_.isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, record_);
+      }
+      return size;
+    }
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += computeSerializedSize_0();
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.cloudquery.plugin.v3.Sync.MessageCheckpoint)) {
+        return super.equals(obj);
+      }
+      io.cloudquery.plugin.v3.Sync.MessageCheckpoint other = (io.cloudquery.plugin.v3.Sync.MessageCheckpoint) obj;
+
+      if (!getRecord()
+          .equals(other.getRecord())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RECORD_FIELD_NUMBER;
+      hash = (53 * hash) + getRecord().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.cloudquery.plugin.v3.Sync.MessageCheckpoint parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageCheckpoint parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageCheckpoint parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageCheckpoint parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageCheckpoint parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageCheckpoint parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageCheckpoint parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageCheckpoint parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static io.cloudquery.plugin.v3.Sync.MessageCheckpoint parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static io.cloudquery.plugin.v3.Sync.MessageCheckpoint parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageCheckpoint parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.cloudquery.plugin.v3.Sync.MessageCheckpoint parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.cloudquery.plugin.v3.Sync.MessageCheckpoint prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * State backend rows to persist once every message sent before the checkpoint is committed to all destinations.
+     * Only sent when Sync.Request.supports_checkpoints is set.
+     *
+     * The record must:
+     * - have the cq:table_name schema metadata set to Sync.BackendOptions.table_name
+     * - have a "key" column and a "value" column, both of the arrow utf8 type (not large_utf8)
+     * - have a "version" column of the arrow uint64 type, if the state table has one
+     * - hold only the keys that changed. Each row is an upsert of its key; keys not in the record keep their state.
+     * When the same key is in several checkpoints, the row with the highest version wins, or the last row without a version column.
+     * </pre>
+     *
+     * Protobuf type {@code cloudquery.plugin.v3.Sync.MessageCheckpoint}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cloudquery.plugin.v3.Sync.MessageCheckpoint)
+        io.cloudquery.plugin.v3.Sync.MessageCheckpointOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_MessageCheckpoint_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_MessageCheckpoint_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.cloudquery.plugin.v3.Sync.MessageCheckpoint.class, io.cloudquery.plugin.v3.Sync.MessageCheckpoint.Builder.class);
+      }
+
+      // Construct using io.cloudquery.plugin.v3.Sync.MessageCheckpoint.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        record_ = com.google.protobuf.ByteString.EMPTY;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.cloudquery.plugin.v3.PluginOuterClass.internal_static_cloudquery_plugin_v3_Sync_MessageCheckpoint_descriptor;
+      }
+
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Sync.MessageCheckpoint getDefaultInstanceForType() {
+        return io.cloudquery.plugin.v3.Sync.MessageCheckpoint.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Sync.MessageCheckpoint build() {
+        io.cloudquery.plugin.v3.Sync.MessageCheckpoint result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Sync.MessageCheckpoint buildPartial() {
+        io.cloudquery.plugin.v3.Sync.MessageCheckpoint result = new io.cloudquery.plugin.v3.Sync.MessageCheckpoint(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(io.cloudquery.plugin.v3.Sync.MessageCheckpoint result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.record_ = record_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.cloudquery.plugin.v3.Sync.MessageCheckpoint) {
+          return mergeFrom((io.cloudquery.plugin.v3.Sync.MessageCheckpoint)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.cloudquery.plugin.v3.Sync.MessageCheckpoint other) {
+        if (other == io.cloudquery.plugin.v3.Sync.MessageCheckpoint.getDefaultInstance()) return this;
+        if (!other.getRecord().isEmpty()) {
+          setRecord(other.getRecord());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        java.util.Objects.requireNonNull(extensionRegistry);
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                record_ = input.readBytes();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString record_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <pre>
+       * marshalled arrow.Record
+       * </pre>
+       *
+       * <code>bytes record = 1;</code>
+       * @return The record.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString getRecord() {
+        return record_;
+      }
+      /**
+       * <pre>
+       * marshalled arrow.Record
+       * </pre>
+       *
+       * <code>bytes record = 1;</code>
+       * @param value The record to set.
+       * @return This builder for chaining.
+       */
+      public Builder setRecord(com.google.protobuf.ByteString value) {
+        java.util.Objects.requireNonNull(value);
+        record_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * marshalled arrow.Record
+       * </pre>
+       *
+       * <code>bytes record = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearRecord() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        record_ = getDefaultInstance().getRecord();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:cloudquery.plugin.v3.Sync.MessageCheckpoint)
+    }
+
+    // @@protoc_insertion_point(class_scope:cloudquery.plugin.v3.Sync.MessageCheckpoint)
+    private static final io.cloudquery.plugin.v3.Sync.MessageCheckpoint DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.cloudquery.plugin.v3.Sync.MessageCheckpoint();
+    }
+
+    public static io.cloudquery.plugin.v3.Sync.MessageCheckpoint getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MessageCheckpoint>
+        PARSER = new com.google.protobuf.AbstractParser<MessageCheckpoint>() {
+      @java.lang.Override
+      public MessageCheckpoint parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<MessageCheckpoint> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MessageCheckpoint> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.Sync.MessageCheckpoint getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface BackendOptionsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:cloudquery.plugin.v3.Sync.BackendOptions)
       com.google.protobuf.MessageOrBuilder {
@@ -3746,6 +4232,17 @@ private static final long serialVersionUID = 0L;
      * @return The withErrorMessages.
      */
     boolean getWithErrorMessages();
+
+    /**
+     * <pre>
+     * If true, the client persists state backend writes from Sync.MessageCheckpoint,
+     * so the plugin sends them on the stream instead of writing to the state backend
+     * </pre>
+     *
+     * <code>bool supports_checkpoints = 8;</code>
+     * @return The supportsCheckpoints.
+     */
+    boolean getSupportsCheckpoints();
   }
   /**
    * Protobuf type {@code cloudquery.plugin.v3.Sync.Request}
@@ -4470,6 +4967,22 @@ private static final long serialVersionUID = 0L;
       return withErrorMessages_;
     }
 
+    public static final int SUPPORTS_CHECKPOINTS_FIELD_NUMBER = 8;
+    private boolean supportsCheckpoints_ = false;
+    /**
+     * <pre>
+     * If true, the client persists state backend writes from Sync.MessageCheckpoint,
+     * so the plugin sends them on the stream instead of writing to the state backend
+     * </pre>
+     *
+     * <code>bool supports_checkpoints = 8;</code>
+     * @return The supportsCheckpoints.
+     */
+    @java.lang.Override
+    public boolean getSupportsCheckpoints() {
+      return supportsCheckpoints_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -4504,6 +5017,9 @@ private static final long serialVersionUID = 0L;
       }
       if (withErrorMessages_ != false) {
         output.writeBool(7, withErrorMessages_);
+      }
+      if (supportsCheckpoints_ != false) {
+        output.writeBool(8, supportsCheckpoints_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -4544,6 +5060,10 @@ private static final long serialVersionUID = 0L;
       if (withErrorMessages_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, withErrorMessages_);
+      }
+      if (supportsCheckpoints_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, supportsCheckpoints_);
       }
       return size;
     }
@@ -4589,6 +5109,8 @@ private static final long serialVersionUID = 0L;
       }
       if (getWithErrorMessages()
           != other.getWithErrorMessages()) return false;
+      if (getSupportsCheckpoints()
+          != other.getSupportsCheckpoints()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4625,6 +5147,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + WITHERRORMESSAGES_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getWithErrorMessages());
+      hash = (37 * hash) + SUPPORTS_CHECKPOINTS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getSupportsCheckpoints());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4780,6 +5305,7 @@ private static final long serialVersionUID = 0L;
           shardBuilder_ = null;
         }
         withErrorMessages_ = false;
+        supportsCheckpoints_ = false;
         return this;
       }
 
@@ -4843,6 +5369,9 @@ private static final long serialVersionUID = 0L;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.withErrorMessages_ = withErrorMessages_;
         }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.supportsCheckpoints_ = supportsCheckpoints_;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -4892,6 +5421,9 @@ private static final long serialVersionUID = 0L;
         }
         if (other.getWithErrorMessages() != false) {
           setWithErrorMessages(other.getWithErrorMessages());
+        }
+        if (other.getSupportsCheckpoints() != false) {
+          setSupportsCheckpoints(other.getSupportsCheckpoints());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -4956,6 +5488,11 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000040;
                 break;
               } // case 56
+              case 64: {
+                supportsCheckpoints_ = input.readBool();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 64
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5541,6 +6078,53 @@ private static final long serialVersionUID = 0L;
         return this;
       }
 
+      private boolean supportsCheckpoints_ ;
+      /**
+       * <pre>
+       * If true, the client persists state backend writes from Sync.MessageCheckpoint,
+       * so the plugin sends them on the stream instead of writing to the state backend
+       * </pre>
+       *
+       * <code>bool supports_checkpoints = 8;</code>
+       * @return The supportsCheckpoints.
+       */
+      @java.lang.Override
+      public boolean getSupportsCheckpoints() {
+        return supportsCheckpoints_;
+      }
+      /**
+       * <pre>
+       * If true, the client persists state backend writes from Sync.MessageCheckpoint,
+       * so the plugin sends them on the stream instead of writing to the state backend
+       * </pre>
+       *
+       * <code>bool supports_checkpoints = 8;</code>
+       * @param value The supportsCheckpoints to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSupportsCheckpoints(boolean value) {
+
+        supportsCheckpoints_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * If true, the client persists state backend writes from Sync.MessageCheckpoint,
+       * so the plugin sends them on the stream instead of writing to the state backend
+       * </pre>
+       *
+       * <code>bool supports_checkpoints = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSupportsCheckpoints() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        supportsCheckpoints_ = false;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:cloudquery.plugin.v3.Sync.Request)
     }
 
@@ -5656,6 +6240,21 @@ private static final long serialVersionUID = 0L;
      */
     io.cloudquery.plugin.v3.Sync.MessageErrorOrBuilder getErrorOrBuilder();
 
+    /**
+     * <code>.cloudquery.plugin.v3.Sync.MessageCheckpoint checkpoint = 5;</code>
+     * @return Whether the checkpoint field is set.
+     */
+    boolean hasCheckpoint();
+    /**
+     * <code>.cloudquery.plugin.v3.Sync.MessageCheckpoint checkpoint = 5;</code>
+     * @return The checkpoint.
+     */
+    io.cloudquery.plugin.v3.Sync.MessageCheckpoint getCheckpoint();
+    /**
+     * <code>.cloudquery.plugin.v3.Sync.MessageCheckpoint checkpoint = 5;</code>
+     */
+    io.cloudquery.plugin.v3.Sync.MessageCheckpointOrBuilder getCheckpointOrBuilder();
+
     io.cloudquery.plugin.v3.Sync.Response.MessageCase getMessageCase();
   }
   /**
@@ -5710,6 +6309,7 @@ private static final long serialVersionUID = 0L;
       INSERT(2),
       DELETE_RECORD(3),
       ERROR(4),
+      CHECKPOINT(5),
       MESSAGE_NOT_SET(0);
       private final int value;
       private MessageCase(int value) {
@@ -5731,6 +6331,7 @@ private static final long serialVersionUID = 0L;
           case 2: return INSERT;
           case 3: return DELETE_RECORD;
           case 4: return ERROR;
+          case 5: return CHECKPOINT;
           case 0: return MESSAGE_NOT_SET;
           default: return null;
         }
@@ -5870,6 +6471,37 @@ private static final long serialVersionUID = 0L;
       return io.cloudquery.plugin.v3.Sync.MessageError.getDefaultInstance();
     }
 
+    public static final int CHECKPOINT_FIELD_NUMBER = 5;
+    /**
+     * <code>.cloudquery.plugin.v3.Sync.MessageCheckpoint checkpoint = 5;</code>
+     * @return Whether the checkpoint field is set.
+     */
+    @java.lang.Override
+    public boolean hasCheckpoint() {
+      return messageCase_ == 5;
+    }
+    /**
+     * <code>.cloudquery.plugin.v3.Sync.MessageCheckpoint checkpoint = 5;</code>
+     * @return The checkpoint.
+     */
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.Sync.MessageCheckpoint getCheckpoint() {
+      if (messageCase_ == 5) {
+         return (io.cloudquery.plugin.v3.Sync.MessageCheckpoint) message_;
+      }
+      return io.cloudquery.plugin.v3.Sync.MessageCheckpoint.getDefaultInstance();
+    }
+    /**
+     * <code>.cloudquery.plugin.v3.Sync.MessageCheckpoint checkpoint = 5;</code>
+     */
+    @java.lang.Override
+    public io.cloudquery.plugin.v3.Sync.MessageCheckpointOrBuilder getCheckpointOrBuilder() {
+      if (messageCase_ == 5) {
+         return (io.cloudquery.plugin.v3.Sync.MessageCheckpoint) message_;
+      }
+      return io.cloudquery.plugin.v3.Sync.MessageCheckpoint.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5896,6 +6528,9 @@ private static final long serialVersionUID = 0L;
       if (messageCase_ == 4) {
         output.writeMessage(4, (io.cloudquery.plugin.v3.Sync.MessageError) message_);
       }
+      if (messageCase_ == 5) {
+        output.writeMessage(5, (io.cloudquery.plugin.v3.Sync.MessageCheckpoint) message_);
+      }
       getUnknownFields().writeTo(output);
     }
     private int computeSerializedSize_0() {
@@ -5915,6 +6550,10 @@ private static final long serialVersionUID = 0L;
       if (messageCase_ == 4) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, (io.cloudquery.plugin.v3.Sync.MessageError) message_);
+      }
+      if (messageCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (io.cloudquery.plugin.v3.Sync.MessageCheckpoint) message_);
       }
       return size;
     }
@@ -5958,6 +6597,10 @@ private static final long serialVersionUID = 0L;
           if (!getError()
               .equals(other.getError())) return false;
           break;
+        case 5:
+          if (!getCheckpoint()
+              .equals(other.getCheckpoint())) return false;
+          break;
         case 0:
         default:
       }
@@ -5988,6 +6631,10 @@ private static final long serialVersionUID = 0L;
         case 4:
           hash = (37 * hash) + ERROR_FIELD_NUMBER;
           hash = (53 * hash) + getError().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + CHECKPOINT_FIELD_NUMBER;
+          hash = (53 * hash) + getCheckpoint().hashCode();
           break;
         case 0:
         default:
@@ -6135,6 +6782,9 @@ private static final long serialVersionUID = 0L;
         if (errorBuilder_ != null) {
           errorBuilder_.clear();
         }
+        if (checkpointBuilder_ != null) {
+          checkpointBuilder_.clear();
+        }
         messageCase_ = 0;
         message_ = null;
         return this;
@@ -6192,6 +6842,10 @@ private static final long serialVersionUID = 0L;
             errorBuilder_ != null) {
           result.message_ = errorBuilder_.build();
         }
+        if (messageCase_ == 5 &&
+            checkpointBuilder_ != null) {
+          result.message_ = checkpointBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -6221,6 +6875,10 @@ private static final long serialVersionUID = 0L;
           }
           case ERROR: {
             mergeError(other.getError());
+            break;
+          }
+          case CHECKPOINT: {
+            mergeCheckpoint(other.getCheckpoint());
             break;
           }
           case MESSAGE_NOT_SET: {
@@ -6279,6 +6937,13 @@ private static final long serialVersionUID = 0L;
                 messageCase_ = 4;
                 break;
               } // case 34
+              case 42: {
+                input.readMessage(
+                    internalGetCheckpointFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                messageCase_ = 5;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6869,6 +7534,146 @@ private static final long serialVersionUID = 0L;
         messageCase_ = 4;
         onChanged();
         return errorBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilder<
+          io.cloudquery.plugin.v3.Sync.MessageCheckpoint, io.cloudquery.plugin.v3.Sync.MessageCheckpoint.Builder, io.cloudquery.plugin.v3.Sync.MessageCheckpointOrBuilder> checkpointBuilder_;
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageCheckpoint checkpoint = 5;</code>
+       * @return Whether the checkpoint field is set.
+       */
+      @java.lang.Override
+      public boolean hasCheckpoint() {
+        return messageCase_ == 5;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageCheckpoint checkpoint = 5;</code>
+       * @return The checkpoint.
+       */
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Sync.MessageCheckpoint getCheckpoint() {
+        if (checkpointBuilder_ == null) {
+          if (messageCase_ == 5) {
+            return (io.cloudquery.plugin.v3.Sync.MessageCheckpoint) message_;
+          }
+          return io.cloudquery.plugin.v3.Sync.MessageCheckpoint.getDefaultInstance();
+        } else {
+          if (messageCase_ == 5) {
+            return checkpointBuilder_.getMessage();
+          }
+          return io.cloudquery.plugin.v3.Sync.MessageCheckpoint.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageCheckpoint checkpoint = 5;</code>
+       */
+      public Builder setCheckpoint(io.cloudquery.plugin.v3.Sync.MessageCheckpoint value) {
+        if (checkpointBuilder_ == null) {
+          java.util.Objects.requireNonNull(value);
+          message_ = value;
+          onChanged();
+        } else {
+          checkpointBuilder_.setMessage(value);
+        }
+        messageCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageCheckpoint checkpoint = 5;</code>
+       */
+      public Builder setCheckpoint(
+          io.cloudquery.plugin.v3.Sync.MessageCheckpoint.Builder builderForValue) {
+        if (checkpointBuilder_ == null) {
+          message_ = builderForValue.build();
+          onChanged();
+        } else {
+          checkpointBuilder_.setMessage(builderForValue.build());
+        }
+        messageCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageCheckpoint checkpoint = 5;</code>
+       */
+      public Builder mergeCheckpoint(io.cloudquery.plugin.v3.Sync.MessageCheckpoint value) {
+        if (checkpointBuilder_ == null) {
+          if (messageCase_ == 5 &&
+              message_ != io.cloudquery.plugin.v3.Sync.MessageCheckpoint.getDefaultInstance()) {
+            message_ = io.cloudquery.plugin.v3.Sync.MessageCheckpoint.newBuilder((io.cloudquery.plugin.v3.Sync.MessageCheckpoint) message_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            message_ = value;
+          }
+          onChanged();
+        } else {
+          if (messageCase_ == 5) {
+            checkpointBuilder_.mergeFrom(value);
+          } else {
+            checkpointBuilder_.setMessage(value);
+          }
+        }
+        messageCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageCheckpoint checkpoint = 5;</code>
+       */
+      public Builder clearCheckpoint() {
+        if (checkpointBuilder_ == null) {
+          if (messageCase_ == 5) {
+            messageCase_ = 0;
+            message_ = null;
+            onChanged();
+          }
+        } else {
+          if (messageCase_ == 5) {
+            messageCase_ = 0;
+            message_ = null;
+          }
+          checkpointBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageCheckpoint checkpoint = 5;</code>
+       */
+      public io.cloudquery.plugin.v3.Sync.MessageCheckpoint.Builder getCheckpointBuilder() {
+        return internalGetCheckpointFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageCheckpoint checkpoint = 5;</code>
+       */
+      @java.lang.Override
+      public io.cloudquery.plugin.v3.Sync.MessageCheckpointOrBuilder getCheckpointOrBuilder() {
+        if ((messageCase_ == 5) && (checkpointBuilder_ != null)) {
+          return checkpointBuilder_.getMessageOrBuilder();
+        } else {
+          if (messageCase_ == 5) {
+            return (io.cloudquery.plugin.v3.Sync.MessageCheckpoint) message_;
+          }
+          return io.cloudquery.plugin.v3.Sync.MessageCheckpoint.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.cloudquery.plugin.v3.Sync.MessageCheckpoint checkpoint = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          io.cloudquery.plugin.v3.Sync.MessageCheckpoint, io.cloudquery.plugin.v3.Sync.MessageCheckpoint.Builder, io.cloudquery.plugin.v3.Sync.MessageCheckpointOrBuilder> 
+          internalGetCheckpointFieldBuilder() {
+        if (checkpointBuilder_ == null) {
+          if (!(messageCase_ == 5)) {
+            message_ = io.cloudquery.plugin.v3.Sync.MessageCheckpoint.getDefaultInstance();
+          }
+          checkpointBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              io.cloudquery.plugin.v3.Sync.MessageCheckpoint, io.cloudquery.plugin.v3.Sync.MessageCheckpoint.Builder, io.cloudquery.plugin.v3.Sync.MessageCheckpointOrBuilder>(
+                  (io.cloudquery.plugin.v3.Sync.MessageCheckpoint) message_,
+                  getParentForChildren(),
+                  isClean());
+          message_ = null;
+        }
+        messageCase_ = 5;
+        onChanged();
+        return checkpointBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:cloudquery.plugin.v3.Sync.Response)
