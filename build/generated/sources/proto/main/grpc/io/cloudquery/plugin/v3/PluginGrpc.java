@@ -415,6 +415,37 @@ public final class PluginGrpc {
     return getAssessTablesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Write.Request,
+      io.cloudquery.plugin.v3.Write.Response> getWriteStreamMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "WriteStream",
+      requestType = io.cloudquery.plugin.v3.Write.Request.class,
+      responseType = io.cloudquery.plugin.v3.Write.Response.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+  public static io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Write.Request,
+      io.cloudquery.plugin.v3.Write.Response> getWriteStreamMethod() {
+    io.grpc.MethodDescriptor<io.cloudquery.plugin.v3.Write.Request, io.cloudquery.plugin.v3.Write.Response> getWriteStreamMethod;
+    if ((getWriteStreamMethod = PluginGrpc.getWriteStreamMethod) == null) {
+      synchronized (PluginGrpc.class) {
+        if ((getWriteStreamMethod = PluginGrpc.getWriteStreamMethod) == null) {
+          PluginGrpc.getWriteStreamMethod = getWriteStreamMethod =
+              io.grpc.MethodDescriptor.<io.cloudquery.plugin.v3.Write.Request, io.cloudquery.plugin.v3.Write.Response>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "WriteStream"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.cloudquery.plugin.v3.Write.Request.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  io.cloudquery.plugin.v3.Write.Response.getDefaultInstance()))
+              .setSchemaDescriptor(new PluginMethodDescriptorSupplier("WriteStream"))
+              .build();
+        }
+      }
+    }
+    return getWriteStreamMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -611,6 +642,20 @@ public final class PluginGrpc {
         io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.AssessTables.Response> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssessTablesMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Write resources, like Write, and also accept Write.MessageFlush.
+     * The plugin sends one Write.Response per Write.MessageFlush, once it has tried to commit every message sent before
+     * the flush. Write.Response.flush_error is set if some messages sent since the previous flush may not have been
+     * committed.
+     * Only use it with plugins that set Init.Response.supports_flush.
+     * </pre>
+     */
+    default io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Write.Request> writeStream(
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Write.Response> responseObserver) {
+      return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getWriteStreamMethod(), responseObserver);
+    }
   }
 
   /**
@@ -786,6 +831,21 @@ public final class PluginGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAssessTablesMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Write resources, like Write, and also accept Write.MessageFlush.
+     * The plugin sends one Write.Response per Write.MessageFlush, once it has tried to commit every message sent before
+     * the flush. Write.Response.flush_error is set if some messages sent since the previous flush may not have been
+     * committed.
+     * Only use it with plugins that set Init.Response.supports_flush.
+     * </pre>
+     */
+    public io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Write.Request> writeStream(
+        io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Write.Response> responseObserver) {
+      return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
+          getChannel().newCall(getWriteStreamMethod(), getCallOptions()), responseObserver);
+    }
   }
 
   /**
@@ -944,6 +1004,22 @@ public final class PluginGrpc {
     public io.cloudquery.plugin.v3.AssessTables.Response assessTables(io.cloudquery.plugin.v3.AssessTables.Request request) throws io.grpc.StatusException {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getAssessTablesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Write resources, like Write, and also accept Write.MessageFlush.
+     * The plugin sends one Write.Response per Write.MessageFlush, once it has tried to commit every message sent before
+     * the flush. Write.Response.flush_error is set if some messages sent since the previous flush may not have been
+     * committed.
+     * Only use it with plugins that set Init.Response.supports_flush.
+     * </pre>
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<io.cloudquery.plugin.v3.Write.Request, io.cloudquery.plugin.v3.Write.Response>
+        writeStream() {
+      return io.grpc.stub.ClientCalls.blockingBidiStreamingCall(
+          getChannel(), getWriteStreamMethod(), getCallOptions());
     }
   }
 
@@ -1212,6 +1288,7 @@ public final class PluginGrpc {
   private static final int METHODID_ASSESS_TABLES = 10;
   private static final int METHODID_WRITE = 11;
   private static final int METHODID_TRANSFORM = 12;
+  private static final int METHODID_WRITE_STREAM = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1290,6 +1367,9 @@ public final class PluginGrpc {
         case METHODID_TRANSFORM:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.transform(
               (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Transform.Response>) responseObserver);
+        case METHODID_WRITE_STREAM:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.writeStream(
+              (io.grpc.stub.StreamObserver<io.cloudquery.plugin.v3.Write.Response>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -1389,6 +1469,13 @@ public final class PluginGrpc {
               io.cloudquery.plugin.v3.AssessTables.Request,
               io.cloudquery.plugin.v3.AssessTables.Response>(
                 service, METHODID_ASSESS_TABLES)))
+        .addMethod(
+          getWriteStreamMethod(),
+          io.grpc.stub.ServerCalls.asyncBidiStreamingCall(
+            new MethodHandlers<
+              io.cloudquery.plugin.v3.Write.Request,
+              io.cloudquery.plugin.v3.Write.Response>(
+                service, METHODID_WRITE_STREAM)))
         .build();
   }
 
@@ -1450,6 +1537,7 @@ public final class PluginGrpc {
               .addMethod(getCloseMethod())
               .addMethod(getTestConnectionMethod())
               .addMethod(getAssessTablesMethod())
+              .addMethod(getWriteStreamMethod())
               .build();
         }
       }
