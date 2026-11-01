@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.0.47](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.46...v0.0.47) (2026-11-01)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency org.mockito:mockito-core to v5.24.0 ([#282](https://github.com/cloudquery/plugin-pb-java/issues/282)) ([4df1cb4](https://github.com/cloudquery/plugin-pb-java/commit/4df1cb4dcb1e4d544706324a6361f6fa980c9e9b))
+* **deps:** Update Gradle to v9.8.2 ([#283](https://github.com/cloudquery/plugin-pb-java/issues/283)) ([e8480be](https://github.com/cloudquery/plugin-pb-java/commit/e8480be0e974bdf881abb5a2994b2002bac35313))
+* **deps:** Update grpc-java monorepo to v1.85.1 ([#284](https://github.com/cloudquery/plugin-pb-java/issues/284)) ([11763fd](https://github.com/cloudquery/plugin-pb-java/commit/11763fd2d175feee77bc2555987d2ad52315d2e2))
+
 ## [0.0.46](https://github.com/cloudquery/plugin-pb-java/compare/v0.0.45...v0.0.46) (2026-10-16)
 
 
